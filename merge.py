@@ -1,23 +1,41 @@
 import os
+import sys
 import json
 from datetime import datetime
 
-# --- modules (بدون core) ---
-from downloader import download_sources
-from parser import parse_sources
-from validator import validate_configs
-from normalizer import normalize
-from deduplicator import deduplicate_configs
-from database import load_db, update_db, save_db
-from exporter import export_all
-from logger import log
+# =========================
+# FIX PATH (حل مشکل core)
+# =========================
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CORE_DIR = os.path.join(BASE_DIR, "core")
+
+sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, CORE_DIR)
+
+# =========================
+# IMPORTS
+# =========================
+from core.downloader import download_sources
+from core.parser import parse_sources
+from core.validator import validate_configs
+from core.normalizer import normalize
+from core.deduplicator import deduplicate_configs
+from core.database import load_db, update_db, save_db
+from core.exporter import export_all
+from core.logger import log
 
 
+# =========================
+# FILE PATHS
+# =========================
 SOURCES_FILE = "sources/sources.txt"
 DB_FILE = "database/database.json"
 STATS_FILE = "stats/stats.json"
 
 
+# =========================
+# LOAD SOURCES
+# =========================
 def load_sources():
     if not os.path.exists(SOURCES_FILE):
         return []
@@ -26,38 +44,44 @@ def load_sources():
         return [x.strip() for x in f if x.strip()]
 
 
+# =========================
+# SAVE STATS
+# =========================
 def save_stats(stats):
     os.makedirs("stats", exist_ok=True)
+
     with open(STATS_FILE, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2)
 
 
+# =========================
+# MAIN PROCESS
+# =========================
 def main():
     log("=== RUN START ===")
 
     sources = load_sources()
     db = load_db(DB_FILE)
 
-    raw = download_sources(sources)
-    parsed = parse_sources(raw)
+    raw_data = download_sources(sources)
+    parsed = parse_sources(raw_data)
     valid = validate_configs(parsed)
     normalized = normalize(valid)
 
     unique, removed_dup = deduplicate_configs(normalized, db)
 
     db, new_count, expired_count = update_db(db, unique)
-
     save_db(DB_FILE, db)
 
     export_all(unique)
 
     stats = {
+        "run_time": str(datetime.utcnow()),
         "sources_total": len(sources),
         "configs_found": len(valid),
         "duplicates_removed": removed_dup,
         "new_configs": new_count,
-        "expired_removed": expired_count,
-        "run_time": str(datetime.utcnow())
+        "expired_removed": expired_count
     }
 
     save_stats(stats)
