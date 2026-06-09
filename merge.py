@@ -1,19 +1,50 @@
 import requests
 
-with open("sources.txt", "r") as f:
-    urls = [line.strip() for line in f if line.strip()]
+# لینک اصلی که لیست repo ها داخلشه
+SOURCE_LIST_URL = "https://raw.githubusercontent.com/hasanzamari/my-subscription/main/sources.txt"
 
-all_configs = []
+def extract_urls():
+    try:
+        r = requests.get(SOURCE_LIST_URL, timeout=10)
+        lines = r.text.splitlines()
+        return [x.strip() for x in lines if x.strip()]
+    except:
+        return []
 
-for url in urls:
+def fetch_content(url):
     try:
         r = requests.get(url, timeout=10)
         if r.status_code == 200:
-            all_configs.append(r.text)
+            return r.text
     except:
         pass
+    return None
 
-with open("all.txt", "w", encoding="utf-8") as f:
-    f.write("\n".join(all_configs))
+def is_valid(text):
+    if not text:
+        return False
+    if len(text) < 10:
+        return False
+    return True
 
-print("Done")
+def main():
+    urls = extract_urls()
+
+    results = []
+    seen = set()
+
+    for url in urls:
+        content = fetch_content(url)
+
+        if is_valid(content):
+            if content not in seen:
+                seen.add(content)
+                results.append(content)
+
+    with open("all.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(results))
+
+    print(f"Done. {len(results)} configs saved.")
+
+if __name__ == "__main__":
+    main()
