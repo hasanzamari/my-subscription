@@ -1,19 +1,16 @@
 import requests
 
-# اینجا لیست repo ها رو می‌گذاریم (بعداً اتوماتش می‌کنیم)
-REPOS = [
-    "AvenCores/goida-vpn-configs"
-]
+REPOS = ["AvenCores/goida-vpn-configs"]
 
-def get_repo_files(repo):
-    url = f"https://api.github.com/repos/{repo}/contents"
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code == 200:
-            return r.json()
-    except:
-        pass
-    return []
+def get_all_files(repo):
+    url = f"https://api.github.com/repos/{repo}/git/trees/main?recursive=1"
+    r = requests.get(url, timeout=10)
+
+    if r.status_code != 200:
+        return []
+
+    data = r.json()
+    return data.get("tree", [])
 
 def fetch(url):
     try:
@@ -30,38 +27,30 @@ def is_config(text):
 
     t = text.lower()
 
-    # حذف HTML
-    if "<html" in t or "doctype html" in t:
+    if "<html" in t:
         return False
 
-    # فیلتر اولیه کانفیگ‌ها (v2ray / sub / base64 / json)
-    keywords = ["vmess", "vless", "trojan", "ss://", "ssr://"]
-
-    if any(k in text for k in keywords):
-        return True
-
-    # اگر خیلی کوتاه یا بی‌معنی بود
-    if len(text) < 30:
-        return False
-
-    return True
+    return any(k in t for k in ["vmess", "vless", "trojan", "ss://", "ssr://"])
 
 def main():
     results = []
     seen = set()
 
     for repo in REPOS:
-        items = get_repo_files(repo)
+        files = get_all_files(repo)
 
-        for item in items:
-            if item.get("type") != "file":
+        for f in files:
+            if f.get("type") != "blob":
                 continue
 
-            download_url = item.get("download_url")
-            if not download_url:
+            path = f.get("path", "")
+
+            if not any(ext in path for ext in [".txt", ".sub", ".json", ".yaml", ""]):
                 continue
 
-            content = fetch(download_url)
+            raw_url = f"https://raw.githubusercontent.com/{repo}/main/{path}"
+
+            content = fetch(raw_url)
 
             if is_config(content):
                 if content not in seen:
@@ -71,7 +60,7 @@ def main():
     with open("all.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(results))
 
-    print(f"Done: {len(results)} configs")
+    print("Done:", len(results))
 
 if __name__ == "__main__":
     main()
