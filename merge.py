@@ -4,29 +4,29 @@ import json
 from datetime import datetime
 
 # =========================
-# FIX PATH (حل مشکل core)
+# FIX PATH (برای GitHub Actions)
 # =========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CORE_DIR = os.path.join(BASE_DIR, "core")
+CORE_DIR = os.path.join(BASE_DIR, "Core")
 
 sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, CORE_DIR)
 
 # =========================
-# IMPORTS
+# IMPORTS (دقیقاً مطابق Core)
 # =========================
-from core.downloader import download_sources
-from core.parser import parse_sources
-from core.validator import validate_configs
-from core.normalizer import normalize
-from core.deduplicator import deduplicate_configs
-from core.database import load_db, update_db, save_db
-from core.exporter import export_all
-from core.logger import log
+from Core.downloader import download_sources
+from Core.parser import parse_sources
+from Core.validator import validate_configs
+from Core.normalizer import normalize
+from Core.deduplicator import deduplicate_configs
+from Core.database import load_db, update_db, save_db
+from Core.exporter import export_all
+from Core.logger import log
 
 
 # =========================
-# FILE PATHS
+# PATHS
 # =========================
 SOURCES_FILE = "sources/sources.txt"
 DB_FILE = "database/database.json"
@@ -55,7 +55,7 @@ def save_stats(stats):
 
 
 # =========================
-# MAIN PROCESS
+# MAIN PIPELINE
 # =========================
 def main():
     log("=== RUN START ===")
@@ -63,8 +63,8 @@ def main():
     sources = load_sources()
     db = load_db(DB_FILE)
 
-    raw_data = download_sources(sources)
-    parsed = parse_sources(raw_data)
+    raw = download_sources(sources)
+    parsed = parse_sources(raw)
     valid = validate_configs(parsed)
     normalized = normalize(valid)
 
