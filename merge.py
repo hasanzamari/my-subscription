@@ -1,61 +1,47 @@
 import requests
+import base64
 
 INDEX_REPO = "AvenCores/goida-vpn-configs"
 
-def get_all_repos():
+def get_dirs():
     url = f"https://api.github.com/repos/{INDEX_REPO}/contents"
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code != 200:
-            return []
-
-        items = r.json()
-
-        repos = []
-
-        for i in items:
-            if i.get("type") == "dir":
-                repos.append(i["name"])
-
-        return repos
-
-    except:
+    r = requests.get(url, timeout=10)
+    if r.status_code != 200:
         return []
+    return [i["name"] for i in r.json() if i["type"] == "dir"]
 
 def get_files(repo):
     url = f"https://api.github.com/repos/{INDEX_REPO}/{repo}/contents"
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code == 200:
-            return r.json()
-    except:
-        pass
-    return []
+    r = requests.get(url, timeout=10)
+    if r.status_code != 200:
+        return []
+    return r.json()
 
 def fetch(url):
     try:
         r = requests.get(url, timeout=10)
         if r.status_code == 200:
-            return r.text
+            return r.text.strip()
     except:
         pass
     return None
 
-def is_valid(text):
+def decode_if_base64(text):
+    try:
+        if len(text) > 50 and "=" in text:
+            return base64.b64decode(text).decode("utf-8", errors="ignore")
+    except:
+        pass
+    return text
+
+def is_config(text):
     if not text:
         return False
-
     t = text.lower()
-
-    if "<html" in t:
-        return False
-
-    keywords = ["vmess", "vless", "trojan", "ss://", "ssr://"]
-
-    return any(k in t for k in keywords)
+    return any(k in t for k in ["vmess", "vless", "trojan", "ss://", "ssr://"])
 
 def main():
-    repos = get_all_repos()
+    repos = get_dirs()
 
     results = []
     seen = set()
@@ -72,8 +58,9 @@ def main():
                 continue
 
             content = fetch(url)
+            content = decode_if_base64(content)
 
-            if is_valid(content):
+            if is_config(content):
                 if content not in seen:
                     seen.add(content)
                     results.append(content)
