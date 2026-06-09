@@ -1,5 +1,5 @@
 import hashlib
-from core.logger import log
+from Core.logger import log
 
 
 def make_hash(config: str) -> str:
