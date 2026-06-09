@@ -1,20 +1,18 @@
-import os
-import json
-from datetime import datetime
-
 from core.downloader import download_sources
 from core.parser import parse_sources
 from core.validator import validate_configs
+from core.normalizer import normalize
 from core.deduplicator import deduplicate_configs
-from core.database import load_db, update_db
+from core.database import load_db, update_db, save_db
 from core.exporter import export_all
 from core.logger import log
 
+import os
+import json
 
-CONFIG_DIR = "config"
+
 SOURCES_FILE = "sources/sources.txt"
 DB_FILE = "database/database.json"
-OUTPUT_DIR = "output"
 STATS_FILE = "stats/stats.json"
 
 
@@ -23,7 +21,7 @@ def load_sources():
         return []
 
     with open(SOURCES_FILE, "r", encoding="utf-8") as f:
-        return [line.strip() for line in f if line.strip()]
+        return [x.strip() for x in f if x.strip()]
 
 
 def save_stats(stats):
@@ -33,38 +31,35 @@ def save_stats(stats):
 
 
 def main():
-    start_time = datetime.utcnow()
-
-    log("=== RUN STARTED ===")
+    log("=== RUN START ===")
 
     sources = load_sources()
-    log(f"Loaded sources: {len(sources)}")
-
     db = load_db(DB_FILE)
 
-    raw_data = download_sources(sources)
-    parsed = parse_sources(raw_data)
+    raw = download_sources(sources)
+    parsed = parse_sources(raw)
     valid = validate_configs(parsed)
+    normalized = normalize(valid)
 
-    deduped, removed_duplicates = deduplicate_configs(valid, db)
+    unique, removed_dup = deduplicate_configs(normalized, db)
 
-    db, new_configs, expired = update_db(db, deduped)
+    db, new_count, expired_count = update_db(db, unique)
 
-    export_all(deduped, OUTPUT_DIR)
+    save_db(DB_FILE, db)
+
+    export_all(unique)
 
     stats = {
-        "run_time": str(start_time),
         "sources_total": len(sources),
         "configs_found": len(valid),
-        "duplicates_removed": removed_duplicates,
-        "new_configs": new_configs,
-        "expired_removed": expired,
+        "duplicates_removed": removed_dup,
+        "new_configs": new_count,
+        "expired_removed": expired_count
     }
 
     save_stats(stats)
 
-    log(f"Done. configs={len(deduped)}")
-    log("=== RUN FINISHED ===")
+    log("=== RUN END ===")
 
 
 if __name__ == "__main__":
