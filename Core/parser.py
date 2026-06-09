@@ -1,7 +1,7 @@
 import base64
 import json
 import re
-from core.logger import log
+from Core.logger import log
 
 
 def parse_sources(raw_sources):
