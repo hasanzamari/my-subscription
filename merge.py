@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # =========================
-# FIX PATH (برای GitHub Actions)
+# FIX PATH (حل کامل Core/core conflict)
 # =========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CORE_DIR = os.path.join(BASE_DIR, "Core")
@@ -12,8 +12,12 @@ CORE_DIR = os.path.join(BASE_DIR, "Core")
 sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, CORE_DIR)
 
+# 🔥 مهم: alias برای حل مشکل core vs Core
+import types
+sys.modules["core"] = sys.modules.get("Core")
+
 # =========================
-# IMPORTS (دقیقاً مطابق Core)
+# IMPORTS (همه یکدست با Core)
 # =========================
 from Core.downloader import download_sources
 from Core.parser import parse_sources
