@@ -1,1 +1,7 @@
-
+{
+  "update_interval_hours": 12,
+  "remove_after_hours": 56,
+  "retry_count": 3,
+  "request_timeout": 20,
+  "deduplicate": true
+}
