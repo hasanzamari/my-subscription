@@ -1,5 +1,5 @@
 import re
-from core.logger import log
+from Core.logger import log
 
 
 def normalize(configs):
