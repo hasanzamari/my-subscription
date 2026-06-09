@@ -1,5 +1,5 @@
 import os
-from core.logger import log
+from Core.logger import log
 
 
 def detect_protocol(config):
