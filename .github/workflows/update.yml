@@ -23,7 +23,8 @@ jobs:
 
       - name: Run builder
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          cd $GITHUB_WORKSPACE
+          export PYTHONPATH=$GITHUB_WORKSPACE
           python merge.py
 
       - name: Commit results
