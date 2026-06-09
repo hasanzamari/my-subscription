@@ -22,10 +22,7 @@ jobs:
         run: pip install requests
 
       - name: Run builder
-        run: |
-          cd $GITHUB_WORKSPACE
-          export PYTHONPATH=$GITHUB_WORKSPACE
-          python merge.py
+        run: python merge.py
 
       - name: Commit results
         run: |
