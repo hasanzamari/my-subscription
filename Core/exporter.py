@@ -52,3 +52,28 @@ def export_all(configs):
     log(
         f"[EXPORT] all={len(configs)} archive={len(archive)}"
     )
+def export_best(configs, name="Best100.txt"):
+
+    os.makedirs(
+        OUTPUT_DIR,
+        exist_ok=True
+    )
+
+    path = os.path.join(
+        OUTPUT_DIR,
+        name
+    )
+
+    with open(
+        path,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        f.write(
+            "\n".join(configs)
+        )
+
+    log(
+        f"[BEST EXPORT] {name} total={len(configs)}"
+    )
