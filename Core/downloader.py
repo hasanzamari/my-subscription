@@ -1,48 +1,45 @@
 import requests
 import time
+from concurrent.futures import ThreadPoolExecutor
 from Core.logger import log
-
 
 DEFAULT_TIMEOUT = 20
 RETRY_COUNT = 3
+MAX_WORKERS = 10
 
 
-def fetch_url(url, retry=RETRY_COUNT, timeout=DEFAULT_TIMEOUT):
-    """
-    دانلود یک URL و برگرداندن متن آن
-    """
-    for attempt in range(1, retry + 1):
+def fetch_url(url):
+    for attempt in range(1, RETRY_COUNT + 1):
         try:
-            log(f"[DOWNLOAD] Attempt {attempt} -> {url}")
-
-            r = requests.get(url, timeout=timeout)
+            r = requests.get(url, timeout=DEFAULT_TIMEOUT)
 
             if r.status_code == 200:
-                return r.text
+                return url, r.text
 
-            log(f"[ERROR] Status {r.status_code} for {url}")
+            log(f"[ERROR] {url} status={r.status_code}")
 
         except Exception as e:
-            log(f"[ERROR] Exception on {url}: {str(e)}")
+            log(f"[ERROR] {url} -> {str(e)}")
 
-        time.sleep(1)
+        time.sleep(attempt * 2)
 
-    log(f"[FAILED] Giving up: {url}")
-    return None
+    return url, None
 
 
 def download_sources(sources):
-    """
-    دانلود همه منابع
-    خروجی: dict {url: content}
-    """
     results = {}
 
-    for url in sources:
-        content = fetch_url(url)
+    if not sources:
+        return results
 
-        if content:
-            results[url] = content
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(fetch_url, url) for url in sources]
+
+        for f in futures:
+            url, content = f.result()
+
+            if content:
+                results[url] = content
 
     log(f"[DOWNLOAD DONE] success={len(results)} total={len(sources)}")
 
