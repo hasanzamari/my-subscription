@@ -1,32 +1,123 @@
-def valid_source(text):
+KEYWORDS = [
 
-    if not text:
+    "raw",
+
+    "raw.githubusercontent",
+
+    "githubusercontent",
+
+    "github.com",
+
+    "blob",
+
+    "refs/heads",
+
+    "raw/main",
+
+    "main",
+
+    "master",
+
+    "sub",
+
+    "subs",
+
+    "subscription",
+
+    "subscriptions",
+
+    "subscribe",
+
+    "config",
+
+    "configs",
+
+    "proxy",
+
+    "proxies",
+
+    "vpn",
+
+    "v2ray",
+
+    "xray",
+
+    "clash",
+
+    "mihomo",
+
+    "sing-box",
+
+    "singbox",
+
+    "base64",
+
+    "node",
+
+    "nodes",
+
+    "share",
+
+    "links",
+
+    "url",
+
+    "urls",
+
+    "list",
+
+    "mix",
+
+    "full",
+
+    "all",
+
+    "free",
+
+    "public",
+
+    "wireguard",
+
+    "wg",
+
+    "trojan",
+
+    "vmess",
+
+    "vless",
+
+    "hy2",
+
+    "hysteria",
+
+    "tuic",
+
+    ".txt",
+
+    ".yaml",
+
+    ".yml",
+
+    ".json"
+
+]
+
+
+def valid_source(url):
+
+    if not url:
         return False
 
-    text = text.strip()
+    url = url.strip().lower()
 
     if not (
-        text.startswith("http://")
+        url.startswith("http://")
         or
-        text.startswith("https://")
+        url.startswith("https://")
     ):
         return False
 
-    keywords = [
-
-        "raw",
-
-        "subscription",
-
-        "sub",
-
-        ".txt",
-
-        ".json"
-
-    ]
-
     return any(
-        k in text.lower()
-        for k in keywords
+        k in url
+        for k in KEYWORDS
     )
