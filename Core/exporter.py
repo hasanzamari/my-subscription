@@ -1,50 +1,54 @@
 import os
 from Core.logger import log
 
-OUTPUT_DIR = "output"
 
-FILES = {
-    "vmess://": "vmess.txt",
-    "vless://": "vless.txt",
-    "trojan://": "trojan.txt",
-    "ss://": "ss.txt",
-    "ssr://": "ssr.txt",
-    "hy2://": "hy2.txt",
-    "hysteria://": "hysteria.txt",
-    "tuic://": "tuic.txt",
-    "wg://": "wg.txt",
-    "wireguard://": "wireguard.txt"
-}
+OUTPUT_DIR = "output"
+ALL_FILE = os.path.join(OUTPUT_DIR, "all.txt")
+ARCHIVE_FILE = os.path.join(OUTPUT_DIR, "archive.txt")
 
 
 def export_all(configs):
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # فایل اصلی
+    # خروجی آخرین اجرا
     with open(
-        os.path.join(OUTPUT_DIR, "all.txt"),
+        ALL_FILE,
         "w",
         encoding="utf-8"
     ) as f:
 
-        for c in configs:
-            f.write(c.strip() + "\n")
+        f.write("\n".join(configs))
 
-    # فایل‌های جداگانه
-    for proto, filename in FILES.items():
+    # آرشیو دائمی
+    archive = set()
+
+    if os.path.exists(ARCHIVE_FILE):
 
         with open(
-            os.path.join(OUTPUT_DIR, filename),
-            "w",
+            ARCHIVE_FILE,
+            "r",
             encoding="utf-8"
         ) as f:
 
-            for c in configs:
+            archive = set(
+                x.strip()
+                for x in f
+                if x.strip()
+            )
 
-                if c.startswith(proto):
-                    f.write(c.strip() + "\n")
+    archive.update(configs)
+
+    archive = sorted(archive)
+
+    with open(
+        ARCHIVE_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        f.write("\n".join(archive))
 
     log(
-        f"[EXPORT] total={len(configs)}"
+        f"[EXPORT] all={len(configs)} archive={len(archive)}"
     )
