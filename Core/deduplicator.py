@@ -4,19 +4,22 @@ from Core.logger import log
 
 def make_hash(config):
     return hashlib.sha256(
-        config.encode("utf-8")
+        config.strip().encode("utf-8")
     ).hexdigest()
 
 
 def deduplicate_configs(configs, db):
 
     seen = set()
-
     unique = []
-
     removed = 0
 
     for c in configs:
+
+        c = c.strip()
+
+        if not c:
+            continue
 
         h = make_hash(c)
 
@@ -25,11 +28,10 @@ def deduplicate_configs(configs, db):
             continue
 
         seen.add(h)
-
         unique.append(c)
 
     log(
-        f"[DEDUP] removed={removed} unique={len(unique)}"
+        f"[DEDUP] unique={len(unique)} removed={removed}"
     )
 
     return unique, removed
