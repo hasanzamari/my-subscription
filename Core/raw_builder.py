@@ -1,16 +1,23 @@
 from Core.github_paths import COMMON_PATHS
 
 
-def build(owner, repo, branch="main"):
+BRANCHES = [
+    "main",
+    "master",
+    "dev"
+]
+
+
+def build(owner, repo):
 
     urls = []
 
-    for path in COMMON_PATHS:
+    for branch in BRANCHES:
 
-        urls.append(
+        for path in COMMON_PATHS:
 
-            f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}"
+            urls.append(
+                f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}"
+            )
 
-        )
-
-    return urls
+    return list(dict.fromkeys(urls))
