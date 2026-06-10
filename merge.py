@@ -68,9 +68,14 @@ def main():
     db = load_db(DB_FILE)
 
     raw = download_sources(sources)
+    print("SOURCES =", len(sources))
+print("RAW =", len(raw))
     parsed = parse_sources(raw)
+print("PARSED =", len(parsed))
     valid = validate_configs(parsed)
+print("VALID =", len(valid))
     normalized = normalize(valid)
+print("NORMALIZED =", len(normalized))
 
     unique, removed_dup = deduplicate_configs(normalized, db)
 
