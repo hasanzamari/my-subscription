@@ -69,13 +69,16 @@ def main():
 
     raw = download_sources(sources)
     print("SOURCES =", len(sources))
-print("RAW =", len(raw))
+    print("RAW =", len(raw))
+
     parsed = parse_sources(raw)
-print("PARSED =", len(parsed))
+    print("PARSED =", len(parsed))
+
     valid = validate_configs(parsed)
-print("VALID =", len(valid))
+    print("VALID =", len(valid))
+
     normalized = normalize(valid)
-print("NORMALIZED =", len(normalized))
+    print("NORMALIZED =", len(normalized))
 
     unique, removed_dup = deduplicate_configs(normalized, db)
 
