@@ -1,23 +1,36 @@
 import re
 from Core.source_validator import valid_source
 
-URL_PATTERN = re.compile(
-    r"https?://[^\s\"'<>]+"
+PATTERN = re.compile(
+    r'https?://[^\s<>"\'\)\]]+'
 )
 
 
 def discover(text):
 
-    found = set()
+    result = set()
 
     if not text:
-        return found
+        return result
 
-    urls = URL_PATTERN.findall(text)
+    for url in PATTERN.findall(text):
 
-    for url in urls:
+        url = url.strip()
+
+        if "github.com" in url and "/blob/" in url:
+
+            url = url.replace(
+                "github.com",
+                "raw.githubusercontent.com"
+            )
+
+            url = url.replace(
+                "/blob/",
+                "/"
+            )
 
         if valid_source(url):
-            found.add(url)
 
-    return found
+            result.add(url)
+
+    return result
