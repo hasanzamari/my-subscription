@@ -1,8 +1,8 @@
 {
-  "run_time": "2026-06-10 05:18:13.637585",
-  "sources_total": 0,
-  "configs_found": 0,
+  "run_time": "2026-06-10 05:47:56.217662",
+  "sources_total": 14,
+  "configs_found": 6513,
   "duplicates_removed": 0,
-  "new_configs": 0,
+  "new_configs": 6513,
   "expired_removed": 0
 }
