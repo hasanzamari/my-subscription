@@ -17,7 +17,7 @@ def discover(text):
 
         url = url.strip()
         if len(url) > 500:
-    continue
+            continue
 
 if "ocsp" in url:
     continue
