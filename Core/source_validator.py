@@ -1,96 +1,34 @@
-KEYWORDS = [
+ALLOW = (
 
-    "raw",
+    "raw.githubusercontent.com",
 
-    "raw.githubusercontent",
+    "githubusercontent.com",
 
-    "githubusercontent",
+    "gist.githubusercontent.com",
 
-    "github.com",
+    "github.com"
 
-    "blob",
+)
 
-    "refs/heads",
-
-    "raw/main",
-
-    "main",
-
-    "master",
+KEYWORDS = (
 
     "sub",
 
-    "subs",
-
     "subscription",
-
-    "subscriptions",
-
-    "subscribe",
 
     "config",
 
     "configs",
 
-    "proxy",
-
-    "proxies",
-
-    "vpn",
-
     "v2ray",
-
-    "xray",
 
     "clash",
 
-    "mihomo",
-
     "sing-box",
 
-    "singbox",
+    "proxy",
 
-    "base64",
-
-    "node",
-
-    "nodes",
-
-    "share",
-
-    "links",
-
-    "url",
-
-    "urls",
-
-    "list",
-
-    "mix",
-
-    "full",
-
-    "all",
-
-    "free",
-
-    "public",
-
-    "wireguard",
-
-    "wg",
-
-    "trojan",
-
-    "vmess",
-
-    "vless",
-
-    "hy2",
-
-    "hysteria",
-
-    "tuic",
+    "vpn",
 
     ".txt",
 
@@ -100,24 +38,28 @@ KEYWORDS = [
 
     ".json"
 
-]
+)
 
 
 def valid_source(url):
 
-    if not url:
-        return False
+    url = url.lower()
 
-    url = url.strip().lower()
-
-    if not (
-        url.startswith("http://")
-        or
-        url.startswith("https://")
+    if not url.startswith(
+        ("http://", "https://")
     ):
         return False
 
-    return any(
-        k in url
-        for k in KEYWORDS
-    )
+    if not any(
+        host in url
+        for host in ALLOW
+    ):
+        return False
+
+    if not any(
+        key in url
+        for key in KEYWORDS
+    ):
+        return False
+
+    return True
