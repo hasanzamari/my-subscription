@@ -1681,3 +1681,24 @@
 [2026-06-11T11:20:30.218266] [NEW] 22742
 [2026-06-11T11:20:30.218291] [EXPIRED] 0
 [2026-06-11T11:20:30.218313] ===== RUN END =====
+[2026-06-11T23:23:02.478717] ===== RUN START =====
+[2026-06-11T23:23:03.525018] [DOWNLOAD DONE] success=14 total=14
+[2026-06-11T23:23:03.535829] [PARSE] BASE64 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt
+[2026-06-11T23:23:03.556106] [PARSE] JSON https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/source/config/urls.json
+[2026-06-11T23:23:03.564021] [PARSE] BASE64 https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/BASE64/BLACK_FULL.txt
+[2026-06-11T23:23:03.569698] [PARSE] BASE64 https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt
+[2026-06-11T23:23:03.576226] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt
+[2026-06-11T23:23:03.576357] [PARSE] BASE64 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html
+[2026-06-11T23:23:03.578443] [PARSE] BASE64 https://raw.githubusercontent.com/yebekhe/vpn-fail/refs/heads/main/sub-link.txt
+[2026-06-11T23:23:03.579181] [PARSE DONE] 6757
+[2026-06-11T23:23:03.585410] [VALIDATE] 6722/6757
+[2026-06-11T23:23:03.613474] [NORMALIZE] 6722 configs cleaned
+[2026-06-11T23:23:03.623210] [DEDUP] unique=6697 removed=0
+[2026-06-11T23:23:03.631684] [SORT] total=6697
+[2026-06-11T23:23:03.743065] [DB] total=81248 new=6561 expired=0
+[2026-06-11T23:23:04.344197] [EXPORT] all=6697 archive=63672
+[2026-06-11T23:23:04.348466] [AUTO SOURCE] 26
+[2026-06-11T23:23:04.348518] [FINAL] 6697
+[2026-06-11T23:23:04.348553] [NEW] 6561
+[2026-06-11T23:23:04.348605] [EXPIRED] 0
+[2026-06-11T23:23:04.348642] ===== RUN END =====
