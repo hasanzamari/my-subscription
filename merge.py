@@ -26,20 +26,41 @@ def main():
 
     log("===== RUN START =====")
 
+    # آماده سازی سورس ها
     clean()
-
     sources = merge()
 
+    # بارگذاری دیتابیس
     db = load_db(DB_FILE)
 
+    # دانلود
     raw = download_sources(sources)
 
+    # کشف سورس های جدید
     added = process(raw)
 
-    result = execute(raw, db)
+    # اجرای Engine
+    result = execute(
+        raw,
+        db
+    )
 
-    final = result["final"]
+    parsed = result.get(
+        "parsed",
+        []
+    )
 
+    valid = result.get(
+        "valid",
+        []
+    )
+
+    final = result.get(
+        "final",
+        []
+    )
+
+    # بروزرسانی دیتابیس
     db, new_count, expired = update_db(
         db,
         final
@@ -50,17 +71,20 @@ def main():
         db
     )
 
+    # خروجی ها
     export_all(
         final
     )
 
+    # آمار
     save(
         len(sources),
-        len(result["parsed"]),
-        len(result["valid"]),
+        len(parsed),
+        len(valid),
         len(final)
     )
 
+    # لاگ
     log(
         f"[AUTO SOURCE] {added}"
     )
