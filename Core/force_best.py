@@ -25,6 +25,6 @@ def main():
         path = f"output/Best{limit}.txt"
         with open(path, "w", encoding="utf-8") as f:
             for cfg in sorted_cfgs[:limit]:
-                f.write(cfg.get("config", "") + "\\n")
+                f.write(cfg.get("config", "") + "\n")
         log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")
 if __name__ == "__main__": main()
