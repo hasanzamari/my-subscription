@@ -79,7 +79,7 @@ jobs:
           '    with open(DB_FILE, "w", encoding="utf-8") as f: json.dump(db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: 3. Create Force Best Generator
+      - name: 3. Create Force Best Generator (Fixed Newline Bug)
         run: |
           printf '%s\n' \
           'import json, os' \
@@ -109,7 +109,7 @@ jobs:
           '        path = f"output/Best{limit}.txt"' \
           '        with open(path, "w", encoding="utf-8") as f:' \
           '            for cfg in sorted_cfgs[:limit]:' \
-          '                f.write(cfg.get("config", "") + "\\n")' \
+          '                f.write(cfg.get("config", "") + "\n")' \
           '        log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")' \
           'if __name__ == "__main__": main()' > Core/force_best.py
 
@@ -119,11 +119,31 @@ jobs:
       - name: 5. Generate Best Files
         run: python -m Core.force_best
 
-      - name: 6. Commit
+      - name: 6. PROOF OF DYNAMIC PING (اثبات عملکرد پینگ)
+        run: |
+          echo "========================================="
+          echo "🔍 بررسی داده‌های واقعی پینگ در دیتابیس:"
+          python3 -c "
+          import json
+          with open('database/database.json', 'r', encoding='utf-8') as f:
+              db = json.load(f)
+          sample = list(db.values())[0]
+          print('📊 آمار یک کانفیگ نمونه:')
+          print('  ✅ موفقیت‌ها (Success):', sample.get('success', 0))
+          print('  ❌ شکست‌ها (Fail):', sample.get('fail', 0))
+          print('  ⏱️ تاریخچه پینگ‌ها (History):', sample.get('history', [])[-5:])
+          print('  🏆 امتیاز نهایی (Score):', sample.get('score', 0))
+          "
+          echo "========================================="
+          echo "📁 بررسی فرمت فایل Best100.txt:"
+          wc -l output/Best100.txt
+          echo "========================================="
+
+      - name: 7. Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Complete Update: $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Complete Update & Fixed Newlines: $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
