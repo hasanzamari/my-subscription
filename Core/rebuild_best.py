@@ -5,8 +5,7 @@ from Core.logger import log
 def main():
     try:
         log("Loading database for best list rebuild...")
-        with open("database/database.json", "r", encoding="utf-8") as f:
-            db = json.load(f)
+        with open("database/database.json", "r", encoding="utf-8") as f: db = json.load(f)
         log("Building best sets...")
         best_sets = build_best(db)
         log("Exporting best sets...")
