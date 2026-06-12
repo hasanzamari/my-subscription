@@ -1,171 +1,171 @@
 {
   "https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 39411
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 42940
   },
   "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 65290
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 71176
   },
   "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/WHITE_FULL.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 25983
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 28296
   },
   "https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 132
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 144
   },
   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 43624
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 47622
   },
   "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 4532
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 4944
   },
   "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 1350
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 1452
   },
   "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/1.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 5423
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 5916
   },
   "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/2.txt": {
-    "success": 11,
+    "success": 12,
     "fail": 0,
-    "last_check": "2026-06-12T22:17:22.129682",
-    "total_valid": 5448
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 5944
   },
   "https://github.com/Argh94/Proxy-List/raw/refs/heads/main/All_Config.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 20401
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 22533
   },
   "https://github.com/MhdiTaheri/V2rayCollector/raw/refs/heads/main/sub/mix": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 19847
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 21998
   },
   "https://github.com/MhdiTaheri/V2rayCollector_Py/raw/refs/heads/main/sub/Mix/mix.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 4095
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 4540
   },
   "https://github.com/Mr-Meshky/vify/raw/refs/heads/main/configs/vless.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 8484
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 9433
   },
   "https://github.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/raw/refs/heads/main/url_work.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 56919
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 64126
   },
   "https://github.com/igareck/vpn-configs-for-russia/raw/refs/heads/main/BLACK_VLESS_RUS.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 2052
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 2140
   },
   "https://github.com/sakha1370/OpenRay/raw/refs/heads/main/output/all_valid_proxies.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 34785
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 38713
   },
   "https://raw.githubusercontent.com/CidVpn/cid-vpn-config/refs/heads/main/general.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 3213
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 3570
   },
   "https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 1755
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 1946
   },
   "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 17937
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 19930
   },
   "https://raw.githubusercontent.com/miladtahanian/Config-Collector/refs/heads/main/mixed_iran.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 2553
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 2880
   },
   "https://raw.githubusercontent.com/miladtahanian/V2RayCFGDumper/refs/heads/main/sub.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 483
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 566
   },
   "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 2746
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 3048
   },
   "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 1350
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 1500
   },
   "https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 1454415
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 1614820
   },
   "https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 21294
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 23660
   },
   "https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 3016
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 3336
   },
   "https://raw.githubusercontent.com/yitong2333/proxy-minging/refs/heads/main/v2ray.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 107801
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 119758
   },
   "https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt": {
-    "success": 9,
+    "success": 10,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 6723
+    "last_check": "2026-06-12T22:37:10.349963",
+    "total_valid": 7478
   },
   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt": {
     "success": 8,
