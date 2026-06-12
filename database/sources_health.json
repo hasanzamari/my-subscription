@@ -1,57 +1,57 @@
 {
   "https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 35882
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 39411
   },
   "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 59220
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 65290
   },
   "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/WHITE_FULL.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 23670
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 25983
   },
   "https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 120
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 132
   },
   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 39626
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 43624
   },
   "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 4120
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 4532
   },
   "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 1248
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 1350
   },
   "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/1.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 4930
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 5423
   },
   "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/2.txt": {
-    "success": 10,
+    "success": 11,
     "fail": 0,
-    "last_check": "2026-06-12T21:46:46.032275",
-    "total_valid": 4952
+    "last_check": "2026-06-12T22:17:22.129682",
+    "total_valid": 5448
   },
   "https://github.com/Argh94/Proxy-List/raw/refs/heads/main/All_Config.txt": {
     "success": 9,
