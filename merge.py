@@ -9,14 +9,14 @@ from Core.best_manager import build_best
 from Core.final_stats import save
 from Core.logger import log
 from Core.health_manager import load as load_health, save as save_health, update as update_health
-from Core import source_guardian # ✅ ایمپورت نگهبان
+from Core import source_guardian
 
 DB_FILE = "database/database.json"
 
 def main():
     log("===== RUN START =====")
     
-    # ✅ ۱. اول از همه، لینک‌های تکراری و آینه‌ای را از sources.txt حذف کن
+    # ✅ ۱. پاکسازی اولیه قبل از دانلود
     source_guardian.clean_active_sources()
     
     clean()
@@ -24,9 +24,14 @@ def main():
     db = load_db(DB_FILE)
     health = load_health()
     
-    # ✅ ۲. حالا دانلود کن (فقط لینک‌های تمیز و یکتا دانلود می‌شوند)
     raw = download_sources(sources)
+    
+    # ⚠️ این بخش لینک‌های جدید را اضافه می‌کند
     added = process(raw)
+    
+    # ✅ ۲. پاکسازی ثانویه (حیاتی): هر لینکی که process اضافه کرد را اگر بی‌کیفیت است دور بریز
+    # و فایل را به حداکثر ۵۰ لینک محدود کن
+    source_guardian.clean_active_sources()
     
     result = execute(raw, db)
     parsed = result.get("parsed", [])
@@ -49,9 +54,10 @@ def main():
         health = update_health(url, ok, count, health)
         
     save_health(health)
-    
-    # ✅ ۳. ارزیابی سلامت سورس‌ها و بن کردن آنهایی که ۳ بار خراب بوده‌اند
     source_guardian.evaluate_sources(source_results)
+    
+    # ✅ ۳. پاکسازی نهایی برای اطمینان ۱۰۰٪
+    source_guardian.clean_active_sources()
     
     save(len(sources), len(parsed), len(valid), len(final))
     log(f"[AUTO SOURCE] {added}")
