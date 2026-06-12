@@ -1,4 +1,4 @@
-name: Update
+name: Complete Update
 
 on:
   schedule:
@@ -11,7 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create Health Checker
+      - name: 1. Run merge.py (Collect new configs)
+        run: python merge.py
+
+      - name: 2. Create Health Checker
         run: |
           mkdir -p Core
           printf '%s\n' \
@@ -76,7 +79,7 @@ jobs:
           '    with open(DB_FILE, "w", encoding="utf-8") as f: json.dump(db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: Create Force Best Generator
+      - name: 3. Create Force Best Generator
         run: |
           printf '%s\n' \
           'import json, os' \
@@ -110,17 +113,17 @@ jobs:
           '        log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")' \
           'if __name__ == "__main__": main()' > Core/force_best.py
 
-      - name: Run Health Check
+      - name: 4. Run Health Check
         run: python -m Core.health_checker
 
-      - name: Generate Best Files
+      - name: 5. Generate Best Files
         run: python -m Core.force_best
 
-      - name: Commit
+      - name: 6. Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Update: $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Complete Update: $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
