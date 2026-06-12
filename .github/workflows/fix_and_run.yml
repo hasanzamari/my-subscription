@@ -3,7 +3,7 @@ name: Fix and Run Dynamic Health Check
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 */8 * * *"
 
 jobs:
   fix-and-run:
@@ -11,11 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create Smart Health Checker
+      - name: Create Smart Health Checker (Fixed Parser)
         run: |
           mkdir -p Core
           printf '%s\n' \
-          'import json, os, time, socket, re, base64' \
+          'import json, os, time, socket, base64' \
+          'from urllib.parse import urlparse' \
           'from concurrent.futures import ThreadPoolExecutor, as_completed' \
           'from datetime import datetime, timedelta' \
           'from Core.logger import log' \
@@ -24,16 +25,19 @@ jobs:
           '    try:' \
           '        cfg = cfg.strip()' \
           '        if cfg.startswith("vmess://"):' \
-          '            data = json.loads(base64.b64decode(cfg[8:]).decode())' \
-          '            return data.get("add"), data.get("port")' \
-          '        for p in ["vless://", "trojan://", "ss://", "hy2://", "hysteria://", "tuic://"]:' \
-          '            if cfg.startswith(p):' \
-          '                m = re.search(rf"{re.escape(p)}[^@]+@([^:]+):(\\d+)", cfg)' \
-          '                if m: return m.group(1), m.group(2)' \
-          '        if cfg.startswith("ssr://"):' \
-          '            dec = base64.b64decode(cfg[6:]).decode()' \
-          '            parts = dec.split(":")' \
-          '            if len(parts) >= 2: return parts[0], parts[1]' \
+          '            b64 = cfg[8:]' \
+          '            b64 += "=" * ((4 - len(b64) % 4) % 4)' \
+          '            data = json.loads(base64.b64decode(b64).decode("utf-8", errors="ignore"))' \
+          '            addr = data.get("add") or data.get("address") or data.get("server")' \
+          '            return str(addr), str(data.get("port"))' \
+          '        if "://" in cfg:' \
+          '            p = urlparse(cfg)' \
+          '            addr = p.hostname' \
+          '            port = p.port' \
+          '            if not addr and "@" in p.netloc:' \
+          '                parts = p.netloc.split("@")[-1].split(":")' \
+          '                if len(parts) == 2: addr, port = parts[0], parts[1]' \
+          '            if addr and port: return str(addr), str(port)' \
           '    except: pass' \
           '    return None, None' \
           'def worker(args):' \
@@ -85,7 +89,7 @@ jobs:
           '    with open(HEALTH_FILE, "w", encoding="utf-8") as f: json.dump(health_db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: Create Rebuild Best Script (FIXED)
+      - name: Create Rebuild Best Script
         run: |
           printf '%s\n' \
           'import json' \
@@ -95,8 +99,7 @@ jobs:
           'def main():' \
           '    try:' \
           '        log("Loading database for best list rebuild...")' \
-          '        with open("database/database.json", "r", encoding="utf-8") as f:' \
-          '            db = json.load(f)' \
+          '        with open("database/database.json", "r", encoding="utf-8") as f: db = json.load(f)' \
           '        log("Building best sets...")' \
           '        best_sets = build_best(db)' \
           '        log("Exporting best sets...")' \
