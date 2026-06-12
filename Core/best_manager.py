@@ -1,25 +1,14 @@
 ALLOWED_PROTOCOLS = (
-
     "vmess://",
-
     "vless://",
-
     "trojan://",
-
     "ss://",
-
     "ssr://",
-
     "hy2://",
-
     "hysteria://",
-
     "tuic://",
-
     "wg://",
-
     "wireguard://"
-
 )
 
 BEST_LEVELS = [
@@ -38,16 +27,14 @@ def build_best(db):
 
     for _, info in db.items():
 
-        if "config" not in info:
+        config = info.get("config")
+
+        if not config:
             continue
 
-config = info["config"]
+        if not config.startswith(ALLOWED_PROTOCOLS):
+            continue
 
-if not config.startswith(
-    ALLOWED_PROTOCOLS
-):
-    continue
-    
         score = info.get(
             "score",
             0
@@ -56,7 +43,7 @@ if not config.startswith(
         items.append(
             (
                 score,
-                info["config"]
+                config
             )
         )
 
@@ -70,11 +57,8 @@ if not config.startswith(
     for n in BEST_LEVELS:
 
         result[n] = [
-
             config
-
             for _, config in items[:n]
-
         ]
 
     return result
