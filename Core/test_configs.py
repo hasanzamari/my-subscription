@@ -16,44 +16,18 @@ from Core import config_health
 from Core.logger import log
 
 
-# مسیر فایل دیتابیس
 DB_FILE = "database/database.json"
-
-# حداکثر تعداد کانفیگ برای تست در هر اجرا (برای جلوگیری از timeout)
 MAX_CONFIGS_PER_RUN = 200
-
-# Timeout برای هر تست (ثانیه)
 PING_TIMEOUT = 5
 
 
 def extract_server_address(config: str) -> Optional[str]:
-    """
-    استخراج آدرس سرور از رشته کانفیگ
-    
-    پشتیبانی از پروتکل‌های:
-    - vmess://
-    - vless://
-    - trojan://
-    - ss://
-    - ssr://
-    - hy2://
-    - hysteria://
-    - tuic://
-    - wg://
-    - wireguard://
-    
-    Args:
-        config: رشته کانفیگ
-        
-    Returns:
-        Optional[str]: آدرس سرور یا None اگر پیدا نشد
-    """    try:
+    """استخراج آدرس سرور از رشته کانفیگ"""
+    try:
         config = config.strip()
         
-        # vmess:// - فرمت Base64
         if config.startswith("vmess://"):
             try:
-                # حذف vmess:// و decode
                 json_str = config[8:]
                 decoded = base64.b64decode(json_str).decode('utf-8')
                 data = json.loads(decoded)
@@ -61,45 +35,37 @@ def extract_server_address(config: str) -> Optional[str]:
             except Exception:
                 pass
         
-        # vless:// - فرمت: vless://uuid@address:port?...
         if config.startswith("vless://"):
             match = re.search(r'vless://[^@]+@([^:]+):', config)
             if match:
                 return match.group(1)
         
-        # trojan:// - فرمت: trojan://password@address:port?...
         if config.startswith("trojan://"):
             match = re.search(r'trojan://[^@]+@([^:]+):', config)
             if match:
                 return match.group(1)
         
-        # ss:// - فرمت: ss://method:password@address:port
         if config.startswith("ss://"):
             match = re.search(r'ss://[^@]+@([^:]+):', config)
-            if match:
-                return match.group(1)
+            if match:                return match.group(1)
         
-        # ssr:// - فرمت Base64
         if config.startswith("ssr://"):
             try:
                 decoded = base64.b64decode(config[6:]).decode('utf-8')
-                # فرمت: address:port:protocol:method:obfs:password_base64/?params
                 parts = decoded.split(':')
                 if len(parts) >= 1:
                     return parts[0]
             except Exception:
                 pass
         
-        # hy2://, hysteria://, tuic:// - فرمت مشابه
         for protocol in ["hy2://", "hysteria://", "tuic://"]:
             if config.startswith(protocol):
                 match = re.search(rf'{re.escape(protocol)}[^@]+@([^:]+):', config)
                 if match:
                     return match.group(1)
-                # wg://, wireguard://
+        
         for protocol in ["wg://", "wireguard://"]:
             if config.startswith(protocol):
-                # معمولاً در query string هست
                 match = re.search(r'endpoint=([^:]+):', config)
                 if match:
                     return match.group(1)
@@ -112,20 +78,10 @@ def extract_server_address(config: str) -> Optional[str]:
 
 
 def ping_server(address: str, timeout: int = PING_TIMEOUT) -> Tuple[bool, Optional[float], Optional[str]]:
-    """
-    تست ping یک سرور
-    
-    Args:
-        address: آدرس سرور
-        timeout: زمان انتظار (ثانیه)
-        
-    Returns:
-        Tuple: (success, latency_ms, error_message)
-    """
+    """تست ping یک سرور"""
     try:
         start_time = time.time()
         
-        # استفاده از ping (Linux/Mac)
         result = subprocess.run(
             ["ping", "-c", "1", "-W", str(timeout), address],
             capture_output=True,
@@ -137,38 +93,26 @@ def ping_server(address: str, timeout: int = PING_TIMEOUT) -> Tuple[bool, Option
         latency_ms = (end_time - start_time) * 1000
         
         if result.returncode == 0:
-            # استخراج زمان ping از output
             match = re.search(r'time[=<](\d+\.?\d*)', result.stdout)
             if match:
                 latency_ms = float(match.group(1))
-            
-            return True, latency_ms, None
+                        return True, latency_ms, None
         else:
             return False, None, f"Ping failed: {result.stderr.strip()}"
-                except subprocess.TimeoutExpired:
+            
+    except subprocess.TimeoutExpired:
         return False, None, "Timeout"
     except Exception as e:
         return False, None, str(e)
 
 
 def test_single_config(config_hash: str, config_str: str) -> Tuple[bool, Optional[float], Optional[str]]:
-    """
-    تست یک کانفیگ خاص
-    
-    Args:
-        config_hash: هش SHA256 کانفیگ
-        config_str: رشته کانفیگ
-        
-    Returns:
-        Tuple: (success, latency_ms, error_message)
-    """
-    # استخراج آدرس سرور
+    """تست یک کانفیگ خاص"""
     address = extract_server_address(config_str)
     
     if not address:
         return False, None, "آدرس سرور پیدا نشد"
     
-    # تست ping
     return ping_server(address)
 
 
@@ -177,24 +121,14 @@ def test_all_configs(
     max_configs: int = MAX_CONFIGS_PER_RUN,
     sync_db: bool = True
 ) -> Dict[str, Any]:
-    """
-    تست تمام کانفیگ‌ها و به‌روزرسانی اطلاعات سلامت
-    
-    Args:
-        db_path: مسیر فایل database.json
-        max_configs: حداکثر تعداد کانفیگ برای تست
-        sync_db: آیا بعد از تست، database.json رو آپدیت کنه؟
-        
-    Returns:
-        Dict: خلاصه نتایج
-    """
+    """تست تمام کانفیگ‌ها و به‌روزرسانی اطلاعات سلامت"""
     try:
-        # بارگذاری database.json
         if not os.path.exists(db_path):
             log(f"❌ فایل دیتابیس پیدا نشد: {db_path}")
             return {"error": "Database not found"}
         
-        with open(db_path, 'r', encoding='utf-8') as f:            db = json.load(f)
+        with open(db_path, 'r', encoding='utf-8') as f:
+            db = json.load(f)
         
         log(f"🧪 شروع تست {min(len(db), max_configs)} کانفیگ...")
         log("=" * 60)
@@ -203,7 +137,6 @@ def test_all_configs(
         failed_count = 0
         total_latency = 0.0
         
-        # تست کانفیگ‌ها
         tested = 0
         for config_hash, info in list(db.items())[:max_configs]:
             config_str = info.get("config", "")
@@ -212,12 +145,9 @@ def test_all_configs(
                 continue
             
             tested += 1
-            log(f"[{tested}/{min(len(db), max_configs)}] تست {config_hash[:16]}...", end=" ", flush=True)
-            
-            # تست کانفیگ
+            log(f"[{tested}/{min(len(db), max_configs)}] تست {config_hash[:16]}...", end=" ", flush=True)            
             success, latency, error = test_single_config(config_hash, config_str)
             
-            # ثبت نتیجه در config_health
             config_health.update_config_health(
                 config_hash=config_hash,
                 success=success,
@@ -234,16 +164,14 @@ def test_all_configs(
                 log(f"✗ ناموفق ({error})")
                 failed_count += 1
         
-        # محاسبه میانگین latency
         avg_latency = total_latency / success_count if success_count > 0 else 0
         
-        # همگام‌سازی با database.json
         if sync_db:
             log("\n📊 همگام‌سازی با database.json...")
             config_health.sync_to_database(db_path)
         
-        # خلاصه نتایج
-        summary = {            "tested": tested,
+        summary = {
+            "tested": tested,
             "success": success_count,
             "failed": failed_count,
             "success_rate": round(success_count / tested * 100, 2) if tested > 0 else 0,
@@ -266,7 +194,6 @@ def test_all_configs(
         traceback.print_exc()
         return {"error": str(e)}
 
-
 if __name__ == "__main__":
     import argparse
     
@@ -284,4 +211,4 @@ if __name__ == "__main__":
     test_all_configs(
         max_configs=args.max,
         sync_db=not args.no_sync
-        )
+    )
