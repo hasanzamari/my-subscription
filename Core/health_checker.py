@@ -36,9 +36,24 @@ def worker(args):
 def main():
     if not os.path.exists(DB_FILE): return log("DB not found")
     with open(DB_FILE, "r", encoding="utf-8") as f: db = json.load(f)
-    cutoff = datetime.now() - timedelta(hours=24)
-    targets = [(h, i) for h, i in db.items() if not i.get("last_test") or datetime.fromisoformat(i.get("last_test")) < cutoff][:CHUNK]
-    log(f"Testing {len(targets)} configs...")
+    now = datetime.now()
+    to_test = []
+    debug_count = 0
+    for h, i in db.items():
+        s, f_cnt = i.get("success", 0), i.get("fail", 0)
+        last = i.get("last_test")
+        # فیلتر هوشمند: اگر کانفیگ زامبی است (فقط شکست خورده)، هفته‌ای یکبار تست شود
+        if s == 0 and f_cnt > 5:
+            if last and (now - datetime.fromisoformat(last)).days < 7: continue
+        # در غیر این صورت، اگر بیش از ۲۴ ساعت تست نشده، به لیست اضافه شود
+        if not last or (now - datetime.fromisoformat(last)).total_seconds() > 86400:
+            to_test.append((h, i))
+            if debug_count < 3:
+                addr, port = extract_addr_port(i.get("config", ""))
+                log(f"[DEBUG] Extracted: {addr}:{port}")
+                debug_count += 1
+    targets = to_test[:CHUNK]
+    log(f"Smart Filter: {len(to_test)} need testing. Running {len(targets)}...")
     ok_cnt, fail_cnt = 0, 0
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
         for f in as_completed({ex.submit(worker, t): t[0] for t in targets}):
