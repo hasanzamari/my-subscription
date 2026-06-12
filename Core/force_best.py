@@ -16,15 +16,13 @@ def main():
     log("Loading DB...")
     with open("database/database.json", "r", encoding="utf-8") as f: db = json.load(f)
     log("Calculating scores...")
-    for h, info in db.items():
-        db[h]["score"] = calc_score(info)
+    for h, info in db.items(): db[h]["score"] = calc_score(info)
     log("Sorting...")
     sorted_cfgs = sorted(db.values(), key=lambda x: x.get("score", 0), reverse=True)
     os.makedirs("output", exist_ok=True)
     for limit in [10, 20, 50, 100, 500, 1000]:
         path = f"output/Best{limit}.txt"
         with open(path, "w", encoding="utf-8") as f:
-            for cfg in sorted_cfgs[:limit]:
-                f.write(cfg.get("config", "") + "\n")
+            for cfg in sorted_cfgs[:limit]: f.write(cfg.get("config", "") + "\\n")
         log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")
 if __name__ == "__main__": main()

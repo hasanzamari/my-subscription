@@ -1,0 +1,86 @@
+{
+  "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 0
+  },
+  "https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 3825
+  },
+  "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 5885
+  },
+  "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/source/config/urls.json": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/BASE64/BLACK_FULL.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/WHITE_FULL.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 2367
+  },
+  "https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 12
+  },
+  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 3956
+  },
+  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 412
+  },
+  "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 140
+  },
+  "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/1.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 493
+  },
+  "https://raw.githubusercontent.com/liMilCo/v2r/main/sub/2.txt": {
+    "success": 1,
+    "fail": 0,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 495
+  },
+  "https://raw.githubusercontent.com/yebekhe/vpn-fail/refs/heads/main/sub-link.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-12T19:11:22.696139",
+    "total_valid": 0
+  }
+}
