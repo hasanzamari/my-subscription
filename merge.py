@@ -9,12 +9,14 @@ from Core.best_manager import build_best
 from Core.final_stats import save
 from Core.logger import log
 from Core.health_manager import load as load_health, save as save_health, update as update_health
+from Core import source_guardian
 
 DB_FILE = "database/database.json"
 
 def main():
     log("===== RUN START =====")
     clean()
+    source_guardian.clean_active_sources()
     sources = merge()
     db = load_db(DB_FILE)
     health = load_health()
@@ -29,11 +31,15 @@ def main():
     export_all(final)
     best_sets = build_best(db)
     export_best_sets(best_sets)
+    source_results = {}
     for url, content in raw.items():
         ok = bool(content)
         count = content.count("\n") + 1 if content else 0
+        valid_estimate = len([c for c in content.split('\n') if c.startswith(('vmess://', 'vless://', 'trojan://', 'ss://'))]) if content else 0
+        source_results[url] = {"success": ok, "valid_count": valid_estimate}
         health = update_health(url, ok, count, health)
     save_health(health)
+    source_guardian.evaluate_sources(source_results)
     save(len(sources), len(parsed), len(valid), len(final))
     log(f"[AUTO SOURCE] {added}")
     log(f"[FINAL] {len(final)}")
