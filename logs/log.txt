@@ -1742,3 +1742,109 @@
 [2026-06-11T23:36:44.745644] [NEW] 11947
 [2026-06-11T23:36:44.745666] [EXPIRED] 0
 [2026-06-11T23:36:44.745690] ===== RUN END =====
+[2026-06-12T03:37:47.989408] ===== RUN START =====
+[2026-06-12T03:37:48.644160] [ERROR] https://github.com/MatinGhanbari/v2ray-configs&quot;,&quot;user_id&quot;:null}} status=404
+[2026-06-12T03:37:48.871259] [ERROR] https://github.com/Argh94/VpnConfigCollector status=404
+[2026-06-12T03:37:49.222489] [ERROR] https://github.com/MatinGhanbari/v2ray-configs/stargazers\ status=404
+[2026-06-12T03:37:50.066344] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE\ status=404
+[2026-06-12T03:37:50.202668] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\ status=404
+[2026-06-12T03:37:50.237043] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:37:50.248617] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\ status=404
+[2026-06-12T03:37:50.346623] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:37:50.501022] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\ status=404
+[2026-06-12T03:37:50.506219] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:37:50.821286] [ERROR] https://github.com/MatinGhanbari/v2ray-configs&quot;,&quot;user_id&quot;:null}} status=404
+[2026-06-12T03:37:51.198582] [ERROR] https://github.com/Argh94/VpnConfigCollector status=404
+[2026-06-12T03:37:51.403189] [ERROR] https://github.com/MatinGhanbari/v2ray-configs/stargazers\ status=404
+[2026-06-12T03:37:52.143329] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE\ status=404
+[2026-06-12T03:37:52.279450] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\ status=404
+[2026-06-12T03:37:52.319137] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:37:52.327056] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\ status=404
+[2026-06-12T03:37:52.421638] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:37:52.585432] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\ status=404
+[2026-06-12T03:37:52.589296] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:37:54.998678] [ERROR] https://github.com/MatinGhanbari/v2ray-configs&quot;,&quot;user_id&quot;:null}} status=404
+[2026-06-12T03:37:55.526219] [ERROR] https://github.com/Argh94/VpnConfigCollector status=404
+[2026-06-12T03:37:55.584034] [ERROR] https://github.com/MatinGhanbari/v2ray-configs/stargazers\ status=404
+[2026-06-12T03:37:56.218992] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE\ status=404
+[2026-06-12T03:37:56.355931] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\ status=404
+[2026-06-12T03:37:56.400983] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:37:56.405071] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\ status=404
+[2026-06-12T03:37:56.496673] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:37:56.668327] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\ status=404
+[2026-06-12T03:37:56.670298] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:01.272392] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\ status=404
+[2026-06-12T03:38:01.656515] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:02.042558] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\ status=404
+[2026-06-12T03:38:02.344464] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:02.542684] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:02.546539] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\ status=404
+[2026-06-12T03:38:02.956149] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\ status=404
+[2026-06-12T03:38:02.967606] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:03.355420] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\ status=404
+[2026-06-12T03:38:03.733086] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:04.122204] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\ status=404
+[2026-06-12T03:38:04.420901] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:04.628184] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:04.638547] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\ status=404
+[2026-06-12T03:38:05.043315] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\ status=404
+[2026-06-12T03:38:05.047829] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:07.431834] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\ status=404
+[2026-06-12T03:38:07.810710] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:08.198640] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\ status=404
+[2026-06-12T03:38:08.499363] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cul status=404
+[2026-06-12T03:38:08.709296] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:08.715472] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt\ status=404
+[2026-06-12T03:38:09.128498] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\ status=404
+[2026-06-12T03:38:09.129880] [ERROR] https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cdiv status=404
+[2026-06-12T03:38:15.132249] [DOWNLOAD DONE] success=56 total=74
+[2026-06-12T03:38:15.185469] [PARSE] BASE64 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt
+[2026-06-12T03:38:15.206258] [PARSE] BASE64 https://github.com/Epodonios/v2ray-configs/raw/main/Splitted-By-Protocol/trojan.txt
+[2026-06-12T03:38:15.208915] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs
+[2026-06-12T03:38:15.211558] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs.git
+[2026-06-12T03:38:15.214968] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs/actions/workflows/static.yml
+[2026-06-12T03:38:15.216938] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs/actions/workflows/static.yml\
+[2026-06-12T03:38:15.220175] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs/actions/workflows/update-configs.yml
+[2026-06-12T03:38:15.222123] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs/actions/workflows/update-configs.yml\
+[2026-06-12T03:38:15.223948] [PARSE] TEXT https://github.com/MatinGhanbari/v2ray-configs/stargazers
+[2026-06-12T03:38:15.229745] [PARSE] BASE64 https://github.com/Mr-Meshky/vify/raw/refs/heads/main/configs/vless.txt
+[2026-06-12T03:38:15.231670] [PARSE] BASE64 https://github.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/raw/refs/heads/main/url_work.txt
+[2026-06-12T03:38:15.239723] [PARSE] JSON https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/refs/heads/main/source/config/urls.json
+[2026-06-12T03:38:15.249039] [PARSE] BASE64 https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/BASE64/BLACK_FULL.txt
+[2026-06-12T03:38:15.254423] [PARSE] BASE64 https://raw.githubusercontent.com/MahsaNetConfigTopic/config/refs/heads/main/xray_final.txt
+[2026-06-12T03:38:15.254486] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE
+[2026-06-12T03:38:15.254735] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt
+[2026-06-12T03:38:15.255875] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt
+[2026-06-12T03:38:15.256419] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt
+[2026-06-12T03:38:15.256528] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+[2026-06-12T03:38:15.259896] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+[2026-06-12T03:38:15.267489] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub3.txt
+[2026-06-12T03:38:15.268625] [PARSE] BASE64 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt
+[2026-06-12T03:38:15.268683] [PARSE] BASE64 https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
+[2026-06-12T03:38:15.269083] [PARSE] BASE64 https://raw.githubusercontent.com/acymz/AutoVPN/refs/heads/main/data/V2.txt
+[2026-06-12T03:38:15.269198] [PARSE] BASE64 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html
+[2026-06-12T03:38:15.269400] [PARSE] BASE64 https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+[2026-06-12T03:38:15.272126] [PARSE] BASE64 https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-12T03:38:15.279319] [PARSE] BASE64 https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/vless
+[2026-06-12T03:38:15.279446] [PARSE] BASE64 https://raw.githubusercontent.com/miladtahanian/Config-Collector/refs/heads/main/mixed_iran.txt
+[2026-06-12T03:38:15.316371] [PARSE] BASE64 https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/protocols/vl.txt
+[2026-06-12T03:38:15.321249] [PARSE] BASE64 https://raw.githubusercontent.com/yebekhe/vpn-fail/refs/heads/main/sub-link.txt
+[2026-06-12T03:38:15.338984] [PARSE] BASE64 https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/mixed_iran.txt
+[2026-06-12T03:38:15.344749] [PARSE DONE] 33503
+[2026-06-12T03:38:15.387020] [VALIDATE] 17101/33503
+[2026-06-12T03:38:15.453979] [NORMALIZE] 17101 configs cleaned
+[2026-06-12T03:38:15.479002] [DEDUP] unique=16856 removed=0
+[2026-06-12T03:38:15.502168] [SORT] total=16856
+[2026-06-12T03:38:15.643607] [DB] total=102427 new=9232 expired=0
+[2026-06-12T03:38:16.442792] [EXPORT] all=16856 archive=84853
+[2026-06-12T03:38:16.491591] [BEST 10] 10
+[2026-06-12T03:38:16.491709] [BEST 20] 20
+[2026-06-12T03:38:16.491868] [BEST 50] 50
+[2026-06-12T03:38:16.492020] [BEST 100] 100
+[2026-06-12T03:38:16.492331] [BEST 500] 500
+[2026-06-12T03:38:16.492744] [BEST 1000] 1000
+[2026-06-12T03:38:16.492907] [AUTO SOURCE] 8
+[2026-06-12T03:38:16.492952] [FINAL] 16856
+[2026-06-12T03:38:16.492978] [NEW] 9232
+[2026-06-12T03:38:16.493002] [EXPIRED] 0
+[2026-06-12T03:38:16.493027] ===== RUN END =====
