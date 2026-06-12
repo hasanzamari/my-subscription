@@ -85,7 +85,7 @@ jobs:
           '    with open(HEALTH_FILE, "w", encoding="utf-8") as f: json.dump(health_db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: Create Rebuild Best Script
+      - name: Create Rebuild Best Script (FIXED)
         run: |
           printf '%s\n' \
           'import json' \
@@ -114,12 +114,11 @@ jobs:
       - name: Rebuild Best Lists & Export
         run: python -m Core.rebuild_best
 
-      - name: Commit Health & Best Files
+      - name: Commit All Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # اضافه کردن فقط پوشه‌های موجود
-          git add database/database.json database/config_health.json output/
+          git add database/database.json database/config_health.json output/ Core/rebuild_best.py
           git status
           git commit -m "🔄 Update health data & rebuild Best lists [auto]" || echo "No changes to commit"
           git push
