@@ -1,0 +1,27 @@
+name: Health Check Ping
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # هر ۶ ساعت یکبار
+  workflow_dispatch:       # امکان اجرای دستی
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      
+      - name: Run Parallel Health Check
+        run: python -m Core.health_checker
+      
+      - name: Commit Results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add database/database.json database/config_health.json
+          git commit -m "🔄 Update dynamic ping results [auto]" || echo "No changes"
+          git push
