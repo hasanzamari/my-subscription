@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create Smart Health Checker (Dynamic TCP Test)
+      - name: Create Smart Health Checker
         run: |
           mkdir -p Core
           printf '%s\n' \
@@ -85,13 +85,41 @@ jobs:
           '    with open(HEALTH_FILE, "w", encoding="utf-8") as f: json.dump(health_db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
+      - name: Create Rebuild Best Script
+        run: |
+          printf '%s\n' \
+          'import json' \
+          'from Core.best_manager import build_best' \
+          'from Core.exporter import export_best_sets' \
+          'from Core.logger import log' \
+          'def main():' \
+          '    try:' \
+          '        log("Loading database for best list rebuild...")' \
+          '        with open("database/database.json", "r", encoding="utf-8") as f:' \
+          '            db = json.load(f)' \
+          '        log("Building best sets...")' \
+          '        best_sets = build_best(db)' \
+          '        log("Exporting best sets...")' \
+          '        export_best_sets(best_sets)' \
+          '        log("✅ Best lists rebuilt and exported successfully.")' \
+          '    except Exception as e:' \
+          '        log(f"❌ CRITICAL ERROR in rebuild: {e}")' \
+          '        import traceback' \
+          '        traceback.print_exc()' \
+          'if __name__ == "__main__": main()' > Core/rebuild_best.py
+
       - name: Run Dynamic Health Check
         run: python -m Core.health_checker
 
-      - name: Commit Results
+      - name: Rebuild Best Lists & Export
+        run: python -m Core.rebuild_best
+
+      - name: Commit Health & Best Files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Core/health_checker.py database/database.json database/config_health.json
-          git commit -m "🔄 Update dynamic health check (TCP + History)" || echo "No changes"
+          # اضافه کردن تمام پوشه‌های احتمالی خروجی
+          git add database/ output/ best/ sub/
+          git status
+          git commit -m "🔄 Update health data & rebuild Best lists [auto]" || echo "No changes to commit"
           git push
