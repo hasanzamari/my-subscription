@@ -8,6 +8,7 @@ import os
 import time
 import subprocess
 import re
+import base64
 from typing import Optional, Tuple, Dict, Any
 from datetime import datetime
 
@@ -46,19 +47,18 @@ def extract_server_address(config: str) -> Optional[str]:
         
     Returns:
         Optional[str]: آدرس سرور یا None اگر پیدا نشد
-    """
-    try:        config = config.strip()
+    """    try:
+        config = config.strip()
         
         # vmess:// - فرمت Base64
         if config.startswith("vmess://"):
-            import base64
             try:
                 # حذف vmess:// و decode
                 json_str = config[8:]
                 decoded = base64.b64decode(json_str).decode('utf-8')
                 data = json.loads(decoded)
                 return data.get("add") or data.get("address")
-            except:
+            except Exception:
                 pass
         
         # vless:// - فرمت: vless://uuid@address:port?...
@@ -81,14 +81,13 @@ def extract_server_address(config: str) -> Optional[str]:
         
         # ssr:// - فرمت Base64
         if config.startswith("ssr://"):
-            import base64
             try:
                 decoded = base64.b64decode(config[6:]).decode('utf-8')
                 # فرمت: address:port:protocol:method:obfs:password_base64/?params
                 parts = decoded.split(':')
                 if len(parts) >= 1:
                     return parts[0]
-            except:
+            except Exception:
                 pass
         
         # hy2://, hysteria://, tuic:// - فرمت مشابه
@@ -96,8 +95,8 @@ def extract_server_address(config: str) -> Optional[str]:
             if config.startswith(protocol):
                 match = re.search(rf'{re.escape(protocol)}[^@]+@([^:]+):', config)
                 if match:
-                    return match.group(1)        
-        # wg://, wireguard://
+                    return match.group(1)
+                # wg://, wireguard://
         for protocol in ["wg://", "wireguard://"]:
             if config.startswith(protocol):
                 # معمولاً در query string هست
@@ -145,8 +144,8 @@ def ping_server(address: str, timeout: int = PING_TIMEOUT) -> Tuple[bool, Option
             
             return True, latency_ms, None
         else:
-            return False, None, f"Ping failed: {result.stderr.strip()}"            
-    except subprocess.TimeoutExpired:
+            return False, None, f"Ping failed: {result.stderr.strip()}"
+                except subprocess.TimeoutExpired:
         return False, None, "Timeout"
     except Exception as e:
         return False, None, str(e)
@@ -194,8 +193,8 @@ def test_all_configs(
         if not os.path.exists(db_path):
             log(f"❌ فایل دیتابیس پیدا نشد: {db_path}")
             return {"error": "Database not found"}
-                with open(db_path, 'r', encoding='utf-8') as f:
-            db = json.load(f)
+        
+        with open(db_path, 'r', encoding='utf-8') as f:            db = json.load(f)
         
         log(f"🧪 شروع تست {min(len(db), max_configs)} کانفیگ...")
         log("=" * 60)
@@ -243,8 +242,8 @@ def test_all_configs(
             log("\n📊 همگام‌سازی با database.json...")
             config_health.sync_to_database(db_path)
         
-        # خلاصه نتایج        summary = {
-            "tested": tested,
+        # خلاصه نتایج
+        summary = {            "tested": tested,
             "success": success_count,
             "failed": failed_count,
             "success_rate": round(success_count / tested * 100, 2) if tested > 0 else 0,
@@ -285,4 +284,4 @@ if __name__ == "__main__":
     test_all_configs(
         max_configs=args.max,
         sync_db=not args.no_sync
-                  )
+        )
