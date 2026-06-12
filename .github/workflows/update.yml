@@ -1,4 +1,4 @@
-name: Complete Update
+name: Smart Complete Update
 
 on:
   schedule:
@@ -11,10 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Run merge.py (Collect new configs)
-        run: python merge.py
-
-      - name: 2. Create Health Checker
+      - name: 1. Create SMART Health Checker (Zombie Filter & Priority)
         run: |
           mkdir -p Core
           printf '%s\n' \
@@ -56,9 +53,24 @@ jobs:
           'def main():' \
           '    if not os.path.exists(DB_FILE): return log("DB not found")' \
           '    with open(DB_FILE, "r", encoding="utf-8") as f: db = json.load(f)' \
-          '    cutoff = datetime.now() - timedelta(hours=24)' \
-          '    targets = [(h, i) for h, i in db.items() if not i.get("last_test") or datetime.fromisoformat(i.get("last_test")) < cutoff][:CHUNK]' \
-          '    log(f"Testing {len(targets)} configs...")' \
+          '    now = datetime.now()' \
+          '    to_test = []' \
+          '    debug_count = 0' \
+          '    for h, i in db.items():' \
+          '        s, f_cnt = i.get("success", 0), i.get("fail", 0)' \
+          '        last = i.get("last_test")' \
+          '        # فیلتر هوشمند: اگر کانفیگ زامبی است (فقط شکست خورده)، هفته‌ای یکبار تست شود' \
+          '        if s == 0 and f_cnt > 5:' \
+          '            if last and (now - datetime.fromisoformat(last)).days < 7: continue' \
+          '        # در غیر این صورت، اگر بیش از ۲۴ ساعت تست نشده، به لیست اضافه شود' \
+          '        if not last or (now - datetime.fromisoformat(last)).total_seconds() > 86400:' \
+          '            to_test.append((h, i))' \
+          '            if debug_count < 3:' \
+          '                addr, port = extract_addr_port(i.get("config", ""))' \
+          '                log(f"[DEBUG] Extracted: {addr}:{port}")' \
+          '                debug_count += 1' \
+          '    targets = to_test[:CHUNK]' \
+          '    log(f"Smart Filter: {len(to_test)} need testing. Running {len(targets)}...")' \
           '    ok_cnt, fail_cnt = 0, 0' \
           '    with ThreadPoolExecutor(max_workers=WORKERS) as ex:' \
           '        for f in as_completed({ex.submit(worker, t): t[0] for t in targets}):' \
@@ -79,7 +91,13 @@ jobs:
           '    with open(DB_FILE, "w", encoding="utf-8") as f: json.dump(db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: 3. Create Force Best Generator (Fixed Newline Bug)
+      - name: 2. Run SMART Health Check FIRST (Before merge adds junk)
+        run: python -m Core.health_checker
+
+      - name: 3. Run merge.py (Collect new configs & deduplicate)
+        run: python merge.py
+
+      - name: 4. Create Force Best Generator
         run: |
           printf '%s\n' \
           'import json, os' \
@@ -113,29 +131,24 @@ jobs:
           '        log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")' \
           'if __name__ == "__main__": main()' > Core/force_best.py
 
-      - name: 4. Run Health Check
-        run: python -m Core.health_checker
-
       - name: 5. Generate Best Files
         run: python -m Core.force_best
 
-      - name: 6. PROOF OF DYNAMIC PING (اثبات عملکرد پینگ)
+      - name: 6. PROOF & STATS
         run: |
           echo "========================================="
-          echo "🔍 بررسی داده‌های واقعی پینگ در دیتابیس:"
+          echo "🔍 بررسی آدرس‌های استخراج شده و آمار:"
           python3 -c "
           import json
           with open('database/database.json', 'r', encoding='utf-8') as f:
               db = json.load(f)
           sample = list(db.values())[0]
-          print('📊 آمار یک کانفیگ نمونه:')
-          print('  ✅ موفقیت‌ها (Success):', sample.get('success', 0))
-          print('  ❌ شکست‌ها (Fail):', sample.get('fail', 0))
-          print('  ⏱️ تاریخچه پینگ‌ها (History):', sample.get('history', [])[-5:])
-          print('  🏆 امتیاز نهایی (Score):', sample.get('score', 0))
+          print('  ✅ Success:', sample.get('success', 0))
+          print('  ❌ Fail:', sample.get('fail', 0))
+          print('  📜 History (last 5):', sample.get('history', [])[-5:])
+          print('  🏆 Score:', sample.get('score', 0))
           "
-          echo "========================================="
-          echo "📁 بررسی فرمت فایل Best100.txt:"
+          echo "📁 Lines in Best100.txt:"
           wc -l output/Best100.txt
           echo "========================================="
 
@@ -144,6 +157,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Complete Update & Fixed Newlines: $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Smart Update (Zombie Filter & Reordered): $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
