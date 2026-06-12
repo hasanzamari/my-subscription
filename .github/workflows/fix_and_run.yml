@@ -1,17 +1,15 @@
-name: Fix and Run Dynamic Health Check
+name: Forensic Health & Best Update
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */8 * * *"
 
 jobs:
-  fix-and-run:
+  forensic-run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create Smart Health Checker (Fixed Parser)
+      - name: 1. Create Health Checker
         run: |
           mkdir -p Core
           printf '%s\n' \
@@ -32,8 +30,7 @@ jobs:
           '            return str(addr), str(data.get("port"))' \
           '        if "://" in cfg:' \
           '            p = urlparse(cfg)' \
-          '            addr = p.hostname' \
-          '            port = p.port' \
+          '            addr, port = p.hostname, p.port' \
           '            if not addr and "@" in p.netloc:' \
           '                parts = p.netloc.split("@")[-1].split(":")' \
           '                if len(parts) == 2: addr, port = parts[0], parts[1]' \
@@ -50,18 +47,14 @@ jobs:
           '        sock.settimeout(TIMEOUT)' \
           '        sock.connect((addr, int(port)))' \
           '        sock.close()' \
-          '        ms = (time.time() - t0) * 1000' \
-          '        return h, True, ms, "open"' \
-          '    except socket.timeout: return h, False, 0, "timeout"' \
-          '    except ConnectionRefusedError: return h, False, 0, "refused"' \
-          '    except Exception as e: return h, False, 0, str(e)' \
+          '        return h, True, (time.time() - t0) * 1000, "open"' \
+          '    except: return h, False, 0, "fail"' \
           'def main():' \
           '    if not os.path.exists(DB_FILE): return log("DB not found")' \
           '    with open(DB_FILE, "r", encoding="utf-8") as f: db = json.load(f)' \
           '    cutoff = datetime.now() - timedelta(hours=24)' \
-          '    untested = [(h, i) for h, i in db.items() if not i.get("last_test") or datetime.fromisoformat(i.get("last_test")) < cutoff]' \
-          '    targets = untested[:CHUNK]' \
-          '    log(f"Testing {len(targets)} configs (Dynamic TCP, parallel={WORKERS})...")' \
+          '    targets = [(h, i) for h, i in db.items() if not i.get("last_test") or datetime.fromisoformat(i.get("last_test")) < cutoff][:CHUNK]' \
+          '    log(f"Testing {len(targets)} configs...")' \
           '    ok_cnt, fail_cnt, avg_ms = 0, 0, 0.0' \
           '    health_db = json.load(open(HEALTH_FILE, "r", encoding="utf-8")) if os.path.exists(HEALTH_FILE) else {}' \
           '    with ThreadPoolExecutor(max_workers=WORKERS) as ex:' \
@@ -72,15 +65,11 @@ jobs:
           '            entry = health_db.get(h, {"success": 0, "fail": 0, "history": [], "last_test": None})' \
           '            entry["last_test"] = now' \
           '            if ok:' \
-          '                ok_cnt += 1' \
-          '                avg_ms += ms' \
-          '                entry["success"] += 1' \
+          '                ok_cnt += 1; avg_ms += ms; entry["success"] += 1' \
           '                entry["history"].append(ms)' \
           '                if len(entry["history"]) > 30: entry["history"] = entry["history"][-30:]' \
           '            else:' \
-          '                fail_cnt += 1' \
-          '                entry["fail"] += 1' \
-          '                entry["history"].append(9999)' \
+          '                fail_cnt += 1; entry["fail"] += 1; entry["history"].append(9999)' \
           '                if len(entry["history"]) > 30: entry["history"] = entry["history"][-30:]' \
           '            health_db[h] = entry' \
           '    if ok_cnt: avg_ms /= ok_cnt' \
@@ -89,7 +78,7 @@ jobs:
           '    with open(HEALTH_FILE, "w", encoding="utf-8") as f: json.dump(health_db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: Create Rebuild Best Script
+      - name: 2. Create Rebuild Script
         run: |
           printf '%s\n' \
           'import json' \
@@ -98,30 +87,37 @@ jobs:
           'from Core.logger import log' \
           'def main():' \
           '    try:' \
-          '        log("Loading database for best list rebuild...")' \
           '        with open("database/database.json", "r", encoding="utf-8") as f: db = json.load(f)' \
-          '        log("Building best sets...")' \
           '        best_sets = build_best(db)' \
-          '        log("Exporting best sets...")' \
           '        export_best_sets(best_sets)' \
-          '        log("✅ Best lists rebuilt and exported successfully.")' \
+          '        log("✅ Rebuild SUCCESS")' \
           '    except Exception as e:' \
-          '        log(f"❌ CRITICAL ERROR in rebuild: {e}")' \
-          '        import traceback' \
-          '        traceback.print_exc()' \
+          '        log(f"❌ Rebuild ERROR: {e}")' \
           'if __name__ == "__main__": main()' > Core/rebuild_best.py
 
-      - name: Run Dynamic Health Check
+      - name: 3. Run Health Check
         run: python -m Core.health_checker
 
-      - name: Rebuild Best Lists & Export
+      - name: 4. Run Rebuild
         run: python -m Core.rebuild_best
 
-      - name: Commit All Changes
+      - name: 5. FORENSIC CHECK: Prove file changed
+        run: |
+          echo "========================================="
+          echo "🔍 CHECKING DATABASE FOR NEW DATA:"
+          python -c "import json; db=json.load(open('database/database.json')); print('Sample success count:', list(db.values())[0].get('success', 'NO KEY'))"
+          echo "========================================="
+          echo "🔍 FIRST 3 LINES OF output/Best100.txt (PROOF OF UPDATE):"
+          head -n 3 output/Best100.txt || echo "File not found!"
+          echo "========================================="
+          echo "🔍 GIT STATUS:"
+          git status
+
+      - name: 6. Force Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add database/database.json database/config_health.json output/ Core/rebuild_best.py
-          git status
-          git commit -m "🔄 Update health data & rebuild Best lists [auto]" || echo "No changes to commit"
+          git add -A
+          # استفاده از تاریخ دقیق در پیام کامیت برای اجبار گیت به ثبت تغییر
+          git commit -m "🔄 Forensic Update: $(date +%Y-%m-%d_%H-%M-%S)" || echo "Git says no changes"
           git push
