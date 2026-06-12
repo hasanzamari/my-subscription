@@ -11,13 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Run merge.py (Collect configs & generate Best files)
+      - name: 1. Run merge.py (Collect configs & build initial Best)
         run: python merge.py
 
       - name: 2. Run Health Checker (Test configs with TCP ping)
         run: python -m Core.health_checker
 
-      - name: 3. Run Smart Best Generator (Rebuild Best files with ping data)
+      - name: 3. Run Smart Best Generator (Rebuild Best with ping data)
         run: python -m Core.smart_best
 
       - name: 4. PROOF & STATS
