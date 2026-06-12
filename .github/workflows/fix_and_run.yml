@@ -118,8 +118,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # اضافه کردن تمام پوشه‌های احتمالی خروجی
-          git add database/ output/ best/ sub/
+          # اضافه کردن فقط پوشه‌های موجود
+          git add database/database.json database/config_health.json output/
           git status
           git commit -m "🔄 Update health data & rebuild Best lists [auto]" || echo "No changes to commit"
           git push
