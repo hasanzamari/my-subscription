@@ -11,7 +11,71 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Create SMART Health Checker (Zombie Filter & Priority)
+      - name: 1. Create Source Guardian
+        run: |
+          mkdir -p Core database
+          printf '%s\n' \
+          'import json, os' \
+          'from datetime import datetime' \
+          'from Core.logger import log' \
+          'HEALTH_FILE = "database/sources_health.json"' \
+          'BLACKLIST_FILE = "database/source_blacklist.txt"' \
+          'ACTIVE_SOURCES_FILE = "Sources/sources.txt"' \
+          'def load_health():' \
+          '    if not os.path.exists(HEALTH_FILE): return {}' \
+          '    try:' \
+          '        with open(HEALTH_FILE, "r", encoding="utf-8") as f: return json.load(f)' \
+          '    except: return {}' \
+          'def save_health(data):' \
+          '    os.makedirs("database", exist_ok=True)' \
+          '    with open(HEALTH_FILE, "w", encoding="utf-8") as f: json.dump(data, f, indent=2, ensure_ascii=False)' \
+          'def load_blacklist():' \
+          '    if not os.path.exists(BLACKLIST_FILE): return set()' \
+          '    with open(BLACKLIST_FILE, "r", encoding="utf-8") as f: return set(line.strip() for line in f if line.strip())' \
+          'def save_blacklist(blacklist):' \
+          '    os.makedirs("database", exist_ok=True)' \
+          '    with open(BLACKLIST_FILE, "w", encoding="utf-8") as f:' \
+          '        for url in sorted(list(blacklist)): f.write(url + "\\n")' \
+          'def normalize_url(url): return url.strip().rstrip("/")' \
+          'def evaluate_sources(sources_results):' \
+          '    health = load_health()' \
+          '    blacklist = load_blacklist()' \
+          '    now = datetime.now().isoformat()' \
+          '    banned_count = 0' \
+          '    for url, result in sources_results.items():' \
+          '        norm_url = normalize_url(url)' \
+          '        if norm_url in blacklist: continue' \
+          '        if norm_url not in health: health[norm_url] = {"success": 0, "fail": 0, "last_check": None, "total_valid": 0}' \
+          '        entry = health[norm_url]' \
+          '        entry["last_check"] = now' \
+          '        if result.get("success") and result.get("valid_count", 0) >= 5:' \
+          '            entry["success"] += 1; entry["fail"] = 0; entry["total_valid"] += result.get("valid_count", 0)' \
+          '        else:' \
+          '            entry["fail"] += 1; entry["success"] = 0' \
+          '        if entry["fail"] >= 3:' \
+          '            blacklist.add(norm_url)' \
+          '            del health[norm_url]' \
+          '            banned_count += 1' \
+          '            log(f"🚫 Blacklisted source (3 fails): {norm_url}")' \
+          '    save_health(health); save_blacklist(blacklist)' \
+          '    log(f"✅ Source Guardian: {banned_count} sources moved to blacklist.")' \
+          'def clean_active_sources():' \
+          '    if not os.path.exists(ACTIVE_SOURCES_FILE): return' \
+          '    with open(ACTIVE_SOURCES_FILE, "r", encoding="utf-8") as f: lines = f.readlines()' \
+          '    blacklist = load_blacklist()' \
+          '    clean_urls = set()' \
+          '    for line in lines:' \
+          '        norm_url = normalize_url(line)' \
+          '        if norm_url and norm_url not in blacklist: clean_urls.add(norm_url)' \
+          '    with open(ACTIVE_SOURCES_FILE, "w", encoding="utf-8") as f:' \
+          '        for url in sorted(list(clean_urls)): f.write(url + "\\n")' \
+          '    log(f"🧹 Cleaned active sources: {len(lines)} -> {len(clean_urls)}")' \
+          'if __name__ == "__main__": pass' > Core/source_guardian.py
+
+      - name: 2. Run merge.py (Includes Source Guardian)
+        run: python merge.py
+
+      - name: 3. Create Health Checker (Configs)
         run: |
           mkdir -p Core
           printf '%s\n' \
@@ -55,20 +119,13 @@ jobs:
           '    with open(DB_FILE, "r", encoding="utf-8") as f: db = json.load(f)' \
           '    now = datetime.now()' \
           '    to_test = []' \
-          '    debug_count = 0' \
           '    for h, i in db.items():' \
           '        s, f_cnt = i.get("success", 0), i.get("fail", 0)' \
           '        last = i.get("last_test")' \
-          '        # فیلتر هوشمند: اگر کانفیگ زامبی است (فقط شکست خورده)، هفته‌ای یکبار تست شود' \
           '        if s == 0 and f_cnt > 5:' \
           '            if last and (now - datetime.fromisoformat(last)).days < 7: continue' \
-          '        # در غیر این صورت، اگر بیش از ۲۴ ساعت تست نشده، به لیست اضافه شود' \
           '        if not last or (now - datetime.fromisoformat(last)).total_seconds() > 86400:' \
           '            to_test.append((h, i))' \
-          '            if debug_count < 3:' \
-          '                addr, port = extract_addr_port(i.get("config", ""))' \
-          '                log(f"[DEBUG] Extracted: {addr}:{port}")' \
-          '                debug_count += 1' \
           '    targets = to_test[:CHUNK]' \
           '    log(f"Smart Filter: {len(to_test)} need testing. Running {len(targets)}...")' \
           '    ok_cnt, fail_cnt = 0, 0' \
@@ -78,26 +135,19 @@ jobs:
           '            db[h]["last_test"] = datetime.now().isoformat()' \
           '            hist = db[h].get("history", [])' \
           '            if ok:' \
-          '                ok_cnt += 1' \
-          '                db[h]["success"] = db[h].get("success", 0) + 1' \
-          '                hist.append(ms)' \
+          '                ok_cnt += 1; db[h]["success"] = db[h].get("success", 0) + 1; hist.append(ms)' \
           '            else:' \
-          '                fail_cnt += 1' \
-          '                db[h]["fail"] = db[h].get("fail", 0) + 1' \
-          '                hist.append(9999)' \
+          '                fail_cnt += 1; db[h]["fail"] = db[h].get("fail", 0) + 1; hist.append(9999)' \
           '            if len(hist) > 30: hist = hist[-30:]' \
           '            db[h]["history"] = hist' \
           '    log(f"Done: {ok_cnt} OK, {fail_cnt} FAIL")' \
           '    with open(DB_FILE, "w", encoding="utf-8") as f: json.dump(db, f, indent=2, ensure_ascii=False)' \
           'if __name__ == "__main__": main()' > Core/health_checker.py
 
-      - name: 2. Run SMART Health Check FIRST (Before merge adds junk)
+      - name: 4. Run Config Health Check
         run: python -m Core.health_checker
 
-      - name: 3. Run merge.py (Collect new configs & deduplicate)
-        run: python merge.py
-
-      - name: 4. Create Force Best Generator
+      - name: 5. Create Force Best Generator
         run: |
           printf '%s\n' \
           'import json, os' \
@@ -118,45 +168,42 @@ jobs:
           '    log("Loading DB...")' \
           '    with open("database/database.json", "r", encoding="utf-8") as f: db = json.load(f)' \
           '    log("Calculating scores...")' \
-          '    for h, info in db.items():' \
-          '        db[h]["score"] = calc_score(info)' \
+          '    for h, info in db.items(): db[h]["score"] = calc_score(info)' \
           '    log("Sorting...")' \
           '    sorted_cfgs = sorted(db.values(), key=lambda x: x.get("score", 0), reverse=True)' \
           '    os.makedirs("output", exist_ok=True)' \
           '    for limit in [10, 20, 50, 100, 500, 1000]:' \
           '        path = f"output/Best{limit}.txt"' \
           '        with open(path, "w", encoding="utf-8") as f:' \
-          '            for cfg in sorted_cfgs[:limit]:' \
-          '                f.write(cfg.get("config", "") + "\n")' \
+          '            for cfg in sorted_cfgs[:limit]: f.write(cfg.get("config", "") + "\\n")' \
           '        log(f"✅ Wrote {path} ({min(limit, len(sorted_cfgs))} configs)")' \
           'if __name__ == "__main__": main()' > Core/force_best.py
 
-      - name: 5. Generate Best Files
+      - name: 6. Generate Best Files
         run: python -m Core.force_best
 
-      - name: 6. PROOF & STATS
+      - name: 7. PROOF & STATS
         run: |
           echo "========================================="
-          echo "🔍 بررسی آدرس‌های استخراج شده و آمار:"
+          echo "🛡️ Source Guardian Stats:"
+          cat database/source_blacklist.txt | wc -l | xargs -I {} echo "  Blacklisted Sources: {}"
+          echo "🔍 Config Health Sample:"
           python3 -c "
           import json
-          with open('database/database.json', 'r', encoding='utf-8') as f:
-              db = json.load(f)
+          with open('database/database.json', 'r', encoding='utf-8') as f: db = json.load(f)
           sample = list(db.values())[0]
-          print('  ✅ Success:', sample.get('success', 0))
-          print('  ❌ Fail:', sample.get('fail', 0))
+          print('  ✅ Success:', sample.get('success', 0), '| ❌ Fail:', sample.get('fail', 0))
           print('  📜 History (last 5):', sample.get('history', [])[-5:])
-          print('  🏆 Score:', sample.get('score', 0))
           "
           echo "📁 Lines in Best100.txt:"
           wc -l output/Best100.txt
           echo "========================================="
 
-      - name: 7. Commit
+      - name: 8. Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Smart Update (Zombie Filter & Reordered): $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Smart Update + Source Guardian (Blacklist & Dedup): $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
