@@ -7,33 +7,24 @@ def calc_score(info):
     hist = info.get("history", [])
     total = s + f
     
-    # ۱. سخت‌گیری مطلق: کانفیگ تست نشده، پایین‌ترین امتیاز ممکن
     if total == 0:
         return -1000.0
         
-    # ۲. سخت‌گیری داینامیک: اگر آخرین تست قطع بوده، امتیاز به شدت سرکوب می‌شود
-    # (اما -1000 نمی‌شود تا اگر مجبور به پر کردن فایل شدیم، این‌ها آخرین گزینه‌ها باشند)
     if hist and hist[-1] == 9999:
         return 15.0 
         
-    # ۳. محاسبه امتیاز پایه بر اساس نرخ موفقیت (حداکثر ۵۰۰)
     base_score = (s / total) * 500
     
-    # ۴. قانون سخت‌گیرانه جدید: اگر تعداد شکست‌ها بیشتر از موفقیت‌ها باشد، امتیاز نصف می‌شود!
     if f > s:
         base_score *= 0.5
         
-    # ۵. جایزه پینگ (فقط ۵ پینگ موفق اخیر - حداکثر ۲۵۰ امتیاز)
     valid_hist = [x for x in hist if x < 9000]
     if valid_hist:
         recent_pings = valid_hist[-5:]
         avg_recent = sum(recent_pings) / len(recent_pings)
-        # اگر پینگ متوسط بالای ۲۵۰ باشد، هیچ امتیازی نمی‌گیرد (سخت‌گیری روی سرعت)
         base_score += max(0, 250 - avg_recent)
         
-    # ۶. جایزه پایداری (حداکثر ۱۰۰ امتیاز)
     base_score += min(total, 20) * 5
-    
     return round(base_score, 2)
 
 def main():
@@ -46,30 +37,37 @@ def main():
         db[h]["score"] = calc_score(info)
     
     log("Sorting ALL configs by score (descending)...")
-    # مرتب‌سازی کل دیتابیس: بالاترین امتیازها مطلقاً در بالای لیست قرار می‌گیرند
     sorted_cfgs = sorted(db.values(), key=lambda x: x.get("score", -1000), reverse=True)
     
     os.makedirs("output", exist_ok=True)
     
-    limits = [10, 20, 50, 100, 500, 1000]
+    # افزایش سقف برای پوشش تمام ۲۴۰۰ کانفیگ سالم شما
+    limits = [10, 20, 50, 100, 500, 1000, 2500, 5000]
     
     for limit in limits:
         path = f"output/Best{limit}.txt"
         
-        # تضمین پر شدن فایل: دقیقاً 'limit' تعداد از بالای لیست مرتب‌شده برمی‌داریم
-        # چون دیتابیس ۱۶۰ هزار تایی است، همیشه به اندازه کافی کانفیگ برای پر کردن وجود دارد
-        selected = sorted_cfgs[:limit]
-        
-        # نظارت بر کیفیت: کمترین امتیاز در این دسته را ثبت می‌کنیم تا از سخت‌گیری مطمئن شویم
-        min_score_in_batch = selected[-1].get("score", -1000) if selected else -1000
+        seen_configs = set() # ✅ جلوگیری قطعی از تکراری بودن متن کانفیگ
+        count = 0
         
         with open(path, "w", encoding="utf-8") as f:
-            for cfg in selected:
-                f.write(cfg.get("config", "") + "\n")
+            for cfg in sorted_cfgs:
+                config_str = cfg.get("config", "").strip()
+                
+                # فقط اگر کانفیگ خالی نباشد و قبلاً نوشته نشده باشد
+                if config_str and config_str not in seen_configs:
+                    seen_configs.add(config_str)
+                    f.write(config_str + "\n")
+                    count += 1
+                    
+                # به محض رسیدن به سقف مورد نظر، توقف کن
+                if count >= limit:
+                    break
         
-        log(f"✅ Wrote {path} ({len(selected)} configs filled. Min score in this batch: {min_score_in_batch})")
+        min_score = sorted_cfgs[count-1].get("score", -1000) if count > 0 else -1000
+        log(f"✅ Wrote {path} ({count} UNIQUE configs filled. Min score: {min_score})")
     
-    log("✅ All Best files generated: STRICT quality, GUARANTEED fullness!")
+    log("✅ All Best files generated: STRICT quality, ZERO duplicates, GUARANTEED fullness!")
 
 if __name__ == "__main__":
     main()
