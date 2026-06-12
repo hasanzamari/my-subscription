@@ -62,27 +62,24 @@ def save_db(path, db):
 def update_db(db, configs):
 
     now = datetime.utcnow()
-
     now_str = now.isoformat()
-
-    current_hashes = set()
 
     new_count = 0
     expired_count = 0
 
-    # ثبت یا بروزرسانی کانفیگ‌های فعلی
     for config in configs:
 
         h = hashlib_sha(config)
-
-        current_hashes.add(h)
 
         if h not in db:
 
             db[h] = {
                 "config": config,
                 "first_seen": now_str,
-                "last_seen": now_str
+                "last_seen": now_str,
+                "score": 0,
+                "success": 0,
+                "fail": 0
             }
 
             new_count += 1
@@ -92,10 +89,24 @@ def update_db(db, configs):
             db[h]["config"] = config
             db[h]["last_seen"] = now_str
 
+            db[h]["score"] = db[h].get(
+                "score",
+                0
+            )
+
+            db[h]["success"] = db[h].get(
+                "success",
+                0
+            )
+
+            db[h]["fail"] = db[h].get(
+                "fail",
+                0
+            )
+
             if "first_seen" not in db[h]:
                 db[h]["first_seen"] = now_str
 
-    # حذف کانفیگ‌هایی که بیش از 56 ساعت دیده نشده‌اند
     remove_list = []
 
     for h, item in list(db.items()):
@@ -111,7 +122,9 @@ def update_db(db, configs):
             remove_list.append(h)
             continue
 
-        if now - last > timedelta(hours=EXPIRE_HOURS):
+        if now - last > timedelta(
+            hours=EXPIRE_HOURS
+        ):
             remove_list.append(h)
 
     for h in remove_list:
