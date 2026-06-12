@@ -11,19 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Run merge.py (Collect configs & build initial Best)
+      - name: 1. Run merge.py
         run: python merge.py
 
-      - name: 2. Run Health Checker (Test configs with TCP ping)
+      - name: 2. Run Health Checker
         run: python -m Core.health_checker
 
-      - name: 3. Run Smart Best Generator (Rebuild Best with ping data)
+      - name: 3. Run Smart Best Generator
         run: python -m Core.smart_best
 
-      - name: 4. PROOF & STATS
+      - name: 4. PROOF
         run: |
-          echo "========================================="
-          echo "🔍 Config Health Sample:"
+          echo "=== Health Check Results ==="
           python3 -c "
           import json
           with open('database/database.json', 'r', encoding='utf-8') as f:
@@ -31,22 +30,18 @@ jobs:
           tested = [v for v in db.values() if v.get('last_test')]
           if tested:
               sample = tested[0]
-              print('  ✅ Success:', sample.get('success', 0))
-              print('  ❌ Fail:', sample.get('fail', 0))
-              print('  🏆 Score:', sample.get('score', 0))
-              print('  📜 History (last 5):', sample.get('history', [])[-5:])
-          else:
-              print('  No tested configs yet')
+              print('✅ Success:', sample.get('success', 0))
+              print('❌ Fail:', sample.get('fail', 0))
+              print('📜 History:', sample.get('history', [])[-5:])
           "
-          echo "📁 Lines in Best10.txt:"
+          echo "=== Best10.txt Lines ==="
           wc -l output/Best10.txt
-          echo "========================================="
 
       - name: 5. Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Complete Smart Update: $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Smart Update: $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
