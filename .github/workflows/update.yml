@@ -20,22 +20,40 @@ jobs:
       - name: 3. Run Smart Best Generator
         run: python -m Core.smart_best
 
-      - name: 4. PROOF
+      - name: 4. PROOF (Smart Stats)
         run: |
-          echo "=== Health Check Results ==="
-          python3 -c "
+          echo "========================================="
+          echo "📊 آمار کلی سلامت کانفیگ‌ها:"
+          python3 << 'EOF'
           import json
+          
           with open('database/database.json', 'r', encoding='utf-8') as f:
               db = json.load(f)
+          
           tested = [v for v in db.values() if v.get('last_test')]
-          if tested:
-              sample = tested[0]
-              print('✅ Success:', sample.get('success', 0))
-              print('❌ Fail:', sample.get('fail', 0))
-              print('📜 History:', sample.get('history', [])[-5:])
-          "
-          echo "=== Best10.txt Lines ==="
-          wc -l output/Best10.txt
+          total_success = sum(v.get('success', 0) for v in tested)
+          total_fail = sum(v.get('fail', 0) for v in tested)
+          
+          print(f"🔍 تعداد کانفیگ‌های تست شده: {len(tested)}")
+          print(f"✅ مجموع موفقیت‌ها: {total_success}")
+          print(f"❌ مجموع شکست‌ها: {total_fail}")
+          
+          if total_success > 0:
+              print(f"📈 نرخ موفقیت: {total_success/(total_success+total_fail)*100:.1f}%")
+              
+              # نمایش ۳ کانفیگ موفق
+              successful = [v for v in tested if v.get('success', 0) > 0]
+              print(f"\n🏆 نمونه‌های موفق (Top 3):")
+              for i, cfg in enumerate(successful[:3]):
+                  print(f"  [{i+1}] Success: {cfg.get('success', 0)} | Fail: {cfg.get('fail', 0)} | History: {cfg.get('history', [])[-3:]}")
+          else:
+              print("⚠️ هنوز هیچ کانفیگ موفقی تست نشده")
+          EOF
+          
+          echo "========================================="
+          echo "📁 وضعیت فایل‌های Best:"
+          wc -l output/Best*.txt
+          echo "========================================="
 
       - name: 5. Commit
         run: |
