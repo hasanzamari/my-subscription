@@ -964,3 +964,4 @@
 [2026-06-13T14:48:21.231794] ❌ Failed to send file output/singbox.json: 401
 [2026-06-13T14:48:21.703412] ❌ Failed to send file output/clash_meta.yaml: 401
 [2026-06-13T14:48:21.704690] 📎 Sent 0 files to Telegram
+[2026-06-13T14:51:34.653768] ✅ Rotation successful: Extracted 500 configs (Index 500 to 999) to output/rotation_500.txt
