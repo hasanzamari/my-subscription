@@ -1,0 +1,37 @@
+name: Clean Git History (Remove Large Files)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Remove Large Files from History
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # حذف فایل‌های بزرگ از تاریخچه
+          git filter-branch --force --index-filter \
+            "git rm --cached --ignore-unmatch database/database.json output/subscription_base64.txt output/all.txt database/source_cache.json" \
+            --prune-empty --tag-name-filter cat -- --all
+          
+          # پاکسازی کامل
+          rm -rf .git/refs/original/
+          git reflog expire --expire=now --all
+          git gc --prune=now --aggressive
+          
+          # push اجباری
+          git push origin --force --all
+          git push origin --force --tags
+
+      - name: Verify Cleanup
+        run: |
+          echo "✅ History cleaned. Large files removed."
+          ls -lh database/ || echo "No database folder"
+          ls -lh output/ || echo "No output folder"
