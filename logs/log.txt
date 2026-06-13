@@ -182,3 +182,34 @@
 [2026-06-13T10:12:26.943104] ✅ Generated subscription_base64.txt
 [2026-06-13T10:12:27.121472] ✅ Generated stats.md
 [2026-06-13T10:12:27.121525] ✅ ALL advanced features generated successfully!
+[2026-06-13T10:29:48.713919] ===== RUN START =====
+[2026-06-13T10:29:48.715346] 🧹 Sources cleaned: 3 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:29:48.715411] Downloading sources (with Smart Cache)...
+[2026-06-13T10:29:49.037018] ✅ Downloaded (New/Updated): https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T10:29:49.285743] ✅ Downloaded (New/Updated): https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T10:29:49.367526] ✅ Downloaded (New/Updated): https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-13T10:29:49.369386] 🧹 Sources cleaned: 3 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:29:49.369470] Parsing configs...
+[2026-06-13T10:29:49.372833]   https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt: 3854 configs
+[2026-06-13T10:29:49.378661]   https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt: 5855 configs
+[2026-06-13T10:29:49.380182]   https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt: 1983 configs
+[2026-06-13T10:29:49.380225] [PARSE DONE] 11692
+[2026-06-13T10:29:49.391015] [DEDUP] 11662 unique configs (Fingerprint verified)
+[2026-06-13T10:29:49.391069] Updating database...
+[2026-06-13T10:29:51.709749] [DB] total=196706 new=0
+[2026-06-13T10:29:51.719798] [EXPORT] 11662 configs
+[2026-06-13T10:29:51.732356] ✅ Source Guardian: 0 sources blacklisted.
+[2026-06-13T10:29:51.733018] 🧹 Sources cleaned: 3 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:29:51.733083] [FINAL] 11662
+[2026-06-13T10:29:51.733117] ===== RUN END =====
+[2026-06-13T10:29:51.840375] Loading DB...
+[2026-06-13T10:29:52.538814] Calculating Country-Boosted scores...
+[2026-06-13T10:29:53.803778] Total unique configs (Fingerprint verified): 194614
+[2026-06-13T10:29:54.604601] ✅ Wrote 96722 VLESS configs
+[2026-06-13T10:29:54.613721] ✅ Wrote 11770 VMESS configs
+[2026-06-13T10:29:54.618482] ✅ Wrote 10850 TROJAN configs
+[2026-06-13T10:29:54.643855] ✅ Wrote 53966 REALITY configs
+[2026-06-13T10:29:54.651356] ✅ Wrote 21281 SHADOWSOCKS configs
+[2026-06-13T10:29:54.663141] ✅ Wrote 25506 CLOUDFLARE optimized configs
+[2026-06-13T10:29:54.836009] ✅ Generated subscription_base64.txt
+[2026-06-13T10:29:54.836097] ✅ ALL advanced features generated successfully!
