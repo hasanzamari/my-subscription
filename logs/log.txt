@@ -1,0 +1,29 @@
+[2026-06-13T09:50:52.890823] ===== RUN START =====
+[2026-06-13T09:50:52.890918] Downloading sources...
+[2026-06-13T09:50:52.960380] ❌ sources.txt not found
+[2026-06-13T09:50:52.961233] 🧹 Sources cleaned: 0 -> 0 (Removed 0 invalid, limit: 50)
+[2026-06-13T09:50:52.961291] Parsing configs...
+[2026-06-13T09:50:52.961322] [PARSE DONE] 0
+[2026-06-13T09:50:52.961349] [DEDUP] 0 unique configs
+[2026-06-13T09:50:52.961374] Updating database...
+[2026-06-13T09:50:55.035424] [DB] total=185044 new=0
+[2026-06-13T09:50:55.035505] Exporting configs...
+[2026-06-13T09:50:55.128668] [EXPORT] 185044 configs
+[2026-06-13T09:50:55.132672] ✅ Source Guardian: 0 sources blacklisted.
+[2026-06-13T09:50:55.133206] 🧹 Sources cleaned: 0 -> 0 (Removed 0 invalid, limit: 50)
+[2026-06-13T09:50:55.133258] [FINAL] 0
+[2026-06-13T09:50:55.133286] [NEW] 0
+[2026-06-13T09:50:55.133311] ===== RUN END =====
+[2026-06-13T09:50:55.230855] Loading DB...
+[2026-06-13T09:50:55.843464] Calculating scores based on COUNTRY ONLY (no GitHub ping)...
+[2026-06-13T09:50:56.940101] Total unique configs: 185044
+[2026-06-13T09:50:56.940359] ✅ Wrote output/Best10.txt (10 configs, Rank 1 to 10)
+[2026-06-13T09:50:56.940539] ✅ Wrote output/Best20.txt (20 configs, Rank 11 to 30)
+[2026-06-13T09:50:56.940730] ✅ Wrote output/Best50.txt (50 configs, Rank 31 to 80)
+[2026-06-13T09:50:56.940953] ✅ Wrote output/Best100.txt (100 configs, Rank 81 to 180)
+[2026-06-13T09:50:56.941440] ✅ Wrote output/Best500.txt (500 configs, Rank 181 to 680)
+[2026-06-13T09:50:56.942117] ✅ Wrote output/Best1000.txt (1000 configs, Rank 681 to 1680)
+[2026-06-13T09:50:56.943685] ✅ Wrote output/Best2500.txt (2500 configs, Rank 1681 to 4180)
+[2026-06-13T09:50:56.946778] ✅ Wrote output/Best5000.txt (5000 configs, Rank 4181 to 9180)
+[2026-06-13T09:50:56.946960] 👑 Wrote 100 country-optimized configs to output/best_i.txt
+[2026-06-13T09:50:56.946993] ✅ ALL files generated: Country-Boosted, NO GitHub Ping, ZERO duplicates!
