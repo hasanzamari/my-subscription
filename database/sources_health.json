@@ -1,15 +1,15 @@
 {
   "https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt": {
-    "success": 22,
+    "success": 23,
     "fail": 0,
-    "last_check": "2026-06-13T09:35:38.105053",
-    "total_valid": 80407
+    "last_check": "2026-06-13T09:57:28.126222",
+    "total_valid": 84261
   },
   "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt": {
-    "success": 22,
+    "success": 23,
     "fail": 0,
-    "last_check": "2026-06-13T09:35:38.105053",
-    "total_valid": 129676
+    "last_check": "2026-06-13T09:57:28.126222",
+    "total_valid": 135531
   },
   "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/WHITE_FULL.txt": {
     "success": 22,
@@ -1659,6 +1659,24 @@
     "success": 0,
     "fail": 1,
     "last_check": "2026-06-12T20:39:00.514814",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/list/00.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T09:57:28.126222",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/sashalsk/V2Ray/main/V2Config_64base.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T09:57:28.126222",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/ircfspace/warpsub/main/export/warp": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T09:57:28.126222",
     "total_valid": 0
   }
 }
