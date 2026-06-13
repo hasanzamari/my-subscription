@@ -53,13 +53,12 @@ def main():
     log("Sorting ALL configs by score (descending)...")
     sorted_cfgs = sorted(db.values(), key=lambda x: x.get("score", -1000), reverse=True)
     
-    # ✅ مرحله ۱: حذف جهانی تکراری‌ها (فقط یک بار انجام می‌شود)
+    # حذف تکراری‌ها
     unique_sorted_cfgs = []
     seen_configs = set()
     
     for cfg in sorted_cfgs:
         config_str = cfg.get("config", "").strip()
-        # فقط کانفیگ‌هایی که امتیاز مثبت دارند و تکراری نیستند
         if config_str and config_str not in seen_configs and cfg.get("score", -1000) > 0:
             seen_configs.add(config_str)
             unique_sorted_cfgs.append(cfg)
@@ -69,25 +68,33 @@ def main():
     
     os.makedirs("output", exist_ok=True)
     
-    # ✅ مرحله ۲: برش تجمعی (Cumulative Slicing)
-    # فایل Best50 دقیقاً ۵۰ تای اول را می‌گیرد، Best100 دقیقاً ۱۰۰ تای اول را، و الی آخر
+    # ✅ تقسیم‌بندی مجزا: هر فایل دقیقاً به اندازه نامش کانفیگ دارد و هیچ همپوشانی ندارد
+    # Best10: رتبه 1-10
+    # Best20: رتبه 11-30 (20 کانفیگ جدید)
+    # Best50: رتبه 31-80 (50 کانفیگ جدید)
+    # Best100: رتبه 81-180 (100 کانفیگ جدید)
+    # و الی آخر...
+    
     limits = [10, 20, 50, 100, 500, 1000, 2500, 5000]
+    current_position = 0
     
     for limit in limits:
         path = f"output/Best{limit}.txt"
         
-        # برش از اول لیست تا 'limit'
-        # اگر تعداد کانفیگ‌های سالم کمتر از limit باشد، تا همان تعداد پر می‌شود (خطا نمی‌دهد)
-        selected = unique_sorted_cfgs[:limit]
+        # برش از current_position تا current_position + limit
+        selected = unique_sorted_cfgs[current_position:current_position + limit]
         
         with open(path, "w", encoding="utf-8") as f:
             for cfg in selected:
                 f.write(cfg.get("config", "") + "\n")
         
+        # به‌روزرسانی موقعیت برای فایل بعدی
+        current_position += limit
+        
         min_score = selected[-1].get("score", 0) if selected else 0
-        log(f"✅ Wrote {path} ({len(selected)} configs filled. Min score: {min_score})")
+        log(f"✅ Wrote {path} ({len(selected)} UNIQUE configs, Rank {current_position - limit + 1} to {current_position}. Min score: {min_score})")
     
-    log("✅ ALL Best files generated: Cumulative, Fully Populated, ZERO duplicates!")
+    log("✅ ALL Best files generated: PARTITIONED (no overlap), Fully Populated, ZERO duplicates!")
 
 if __name__ == "__main__":
     main()
