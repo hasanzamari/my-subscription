@@ -102,5 +102,8 @@ https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
 https://raw.githubusercontent.com/acymz/AutoVPN/refs/heads/main/data/V2.txt
 https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html
 https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+https://raw.githubusercontent.com/ircfspace/warpsub/main/export/warp
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/list/00.txt
 https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/vless
+https://raw.githubusercontent.com/sashalsk/V2Ray/main/V2Config_64base.txt
 https://raw.githubusercontent.com/yebekhe/vpn-fail/refs/heads/main/sub-link.txt

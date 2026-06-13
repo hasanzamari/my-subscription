@@ -67,3 +67,48 @@
 [2026-06-13T09:57:30.110897] ✅ Wrote output/Best5000.txt (5000 configs, Rank 4181 to 9180)
 [2026-06-13T09:57:30.111066] 👑 Wrote 100 country-optimized configs to output/best_i.txt
 [2026-06-13T09:57:30.111106] ✅ ALL files generated: Country-Boosted, NO GitHub Ping, ZERO duplicates!
+[2026-06-13T09:58:34.744585] ===== RUN START =====
+[2026-06-13T09:58:34.746107] 🧹 Sources cleaned: 6 -> 6 (Removed 0 invalid, limit: 50)
+[2026-06-13T09:58:34.746176] Downloading sources...
+[2026-06-13T09:58:35.522062] ✅ Downloaded: https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T09:58:36.001442] ✅ Downloaded: https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T09:58:36.164844] ✅ Downloaded: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-13T09:58:36.243834] ✅ Downloaded: https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/list/00.txt
+[2026-06-13T09:58:36.364520] ❌ Failed (404): https://raw.githubusercontent.com/sashalsk/V2Ray/main/V2Config_64base.txt
+[2026-06-13T09:58:36.498091] ✅ Downloaded: https://raw.githubusercontent.com/ircfspace/warpsub/main/export/warp
+[2026-06-13T09:58:36.501758] [AUTO SOURCE] Added 2 new sources
+[2026-06-13T09:58:36.502714] 🧹 Sources cleaned: 8 -> 6 (Removed 2 invalid, limit: 50)
+[2026-06-13T09:58:36.502783] Parsing configs...
+[2026-06-13T09:58:36.506133]   https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt: 3854 configs
+[2026-06-13T09:58:36.511899]   https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt: 5855 configs
+[2026-06-13T09:58:36.513387]   https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt: 1983 configs
+[2026-06-13T09:58:36.513546]   https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/list/00.txt: 0 configs
+[2026-06-13T09:58:36.513577]   https://raw.githubusercontent.com/sashalsk/V2Ray/main/V2Config_64base.txt: 0 configs
+[2026-06-13T09:58:36.513613]   https://raw.githubusercontent.com/ircfspace/warpsub/main/export/warp: 0 configs
+[2026-06-13T09:58:36.513639] [PARSE DONE] 11692
+[2026-06-13T09:58:36.515931] [DEDUP] 11662 unique configs
+[2026-06-13T09:58:36.515976] Updating database...
+[2026-06-13T09:58:38.805413] [DB] total=196706 new=1953
+[2026-06-13T09:58:38.805508] Exporting configs...
+[2026-06-13T09:58:38.913222] [EXPORT] 196706 configs
+[2026-06-13T09:58:38.926105] 🚫 Failed source blacklisted (2 fails): https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/list/00.txt
+[2026-06-13T09:58:38.926172] 🚫 Failed source blacklisted (2 fails): https://raw.githubusercontent.com/sashalsk/V2Ray/main/V2Config_64base.txt
+[2026-06-13T09:58:38.926216] 🚫 Failed source blacklisted (2 fails): https://raw.githubusercontent.com/ircfspace/warpsub/main/export/warp
+[2026-06-13T09:58:38.928156] ✅ Source Guardian: 3 sources blacklisted.
+[2026-06-13T09:58:38.928808] 🧹 Sources cleaned: 6 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T09:58:38.928864] [FINAL] 11662
+[2026-06-13T09:58:38.928891] [NEW] 1953
+[2026-06-13T09:58:38.928916] ===== RUN END =====
+[2026-06-13T09:58:39.039532] Loading DB...
+[2026-06-13T09:58:39.706928] Calculating scores based on COUNTRY ONLY (no GitHub ping)...
+[2026-06-13T09:58:40.922391] Total unique configs: 194614
+[2026-06-13T09:58:40.922694] ✅ Wrote output/Best10.txt (10 configs, Rank 1 to 10)
+[2026-06-13T09:58:40.922822] ✅ Wrote output/Best20.txt (20 configs, Rank 11 to 30)
+[2026-06-13T09:58:40.922976] ✅ Wrote output/Best50.txt (50 configs, Rank 31 to 80)
+[2026-06-13T09:58:40.923164] ✅ Wrote output/Best100.txt (100 configs, Rank 81 to 180)
+[2026-06-13T09:58:40.923610] ✅ Wrote output/Best500.txt (500 configs, Rank 181 to 680)
+[2026-06-13T09:58:40.924325] ✅ Wrote output/Best1000.txt (1000 configs, Rank 681 to 1680)
+[2026-06-13T09:58:40.925917] ✅ Wrote output/Best2500.txt (2500 configs, Rank 1681 to 4180)
+[2026-06-13T09:58:40.929029] ✅ Wrote output/Best5000.txt (5000 configs, Rank 4181 to 9180)
+[2026-06-13T09:58:40.929191] 👑 Wrote 100 country-optimized configs to output/best_i.txt
+[2026-06-13T09:58:40.929223] ✅ ALL files generated: Country-Boosted, NO GitHub Ping, ZERO duplicates!
