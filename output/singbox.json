@@ -1,6 +1,1038 @@
 {
   "outbounds": [
     {
+      "tag": "[OpenRay] 🇨🇦 CA-19006",
+      "type": "vless",
+      "server": "209.209.9.219",
+      "server_port": 3443,
+      "uuid": "c4e81f7d-3750-486e-ab67-2ae0f43969c6",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AdSCtMttNJ-KQuURl1ynBdy8DtAbCUFG6G2qB-GbTXU",
+          "short_id": "bc755b173467c322"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19012",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "0e37a246-c177-4116-876b-d17ef73ea11c",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "dmx.ferrarikingfr.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/amin",
+        "headers": {
+          "Host": "dmx.ferrarikingfr.ir"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19014",
+      "type": "vless",
+      "server": "172.67.134.102",
+      "server_port": 8880,
+      "uuid": "abd3678b-f654-404c-adc7-1355865197e1",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ",
+        "headers": {
+          "Host": "vless.a-amr79.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19015",
+      "type": "vless",
+      "server": "104.21.25.168",
+      "server_port": 8880,
+      "uuid": "abd3678b-f654-404c-adc7-1355865197e1",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ",
+        "headers": {
+          "Host": "vless.a-amr79.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17722",
+      "type": "trojan",
+      "server": "188.114.97.3",
+      "server_port": 443,
+      "uuid": "25ae6230-7834-41dc-94a4-586e1a79ea89",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "shy-brook-df1e.amirkhan69.workers.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "headers": {
+          "Host": "shy-brook-df1e.amirkhan69.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18002",
+      "type": "vless",
+      "server": "ov-canada1.09vpn.com",
+      "server_port": 8443,
+      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "ov-canada1.09vpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-canada1.09vpn.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17290",
+      "type": "trojan",
+      "server": "104.20.6.134",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12158",
+      "type": "trojan",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17753",
+      "type": "trojan",
+      "server": "104.16.63.25",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12035",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17289",
+      "type": "trojan",
+      "server": "104.20.6.134",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18429",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18526",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18321",
+      "type": "trojan",
+      "server": "104.16.174.44",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18089",
+      "type": "trojan",
+      "server": "v3.dabache.top",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.multiplydose.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment# @shadowproxy66",
+        "headers": {
+          "Host": "www.multiplydose.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17730",
+      "type": "trojan",
+      "server": "104.16.80.73",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18286",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17645",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-14839",
+      "type": "trojan",
+      "server": "104.17.131.88",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18831",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "mitivpn",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/https://chatgpt.com",
+        "headers": {
+          "Host": "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17307",
+      "type": "trojan",
+      "server": "104.20.6.134",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18414",
+      "type": "trojan",
+      "server": "104.18.115.61",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12157",
+      "type": "trojan",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "188.114.96.3"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17732",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18718",
+      "type": "vless",
+      "server": "188.114.96.115",
+      "server_port": 443,
+      "uuid": "a9d3f77943aeee7d4dc3fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18719",
+      "type": "vless",
+      "server": "188.114.96.143",
+      "server_port": 443,
+      "uuid": "a9d3f77943aeee7d4dc3fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18720",
+      "type": "vless",
+      "server": "188.114.96.165",
+      "server_port": 443,
+      "uuid": "a9d3f77943aeee7d4dc3fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18827",
+      "type": "vless",
+      "server": "188.114.96.143",
+      "server_port": 443,
+      "uuid": "a9d3f779-43ae-ee7d-4dc3-fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18828",
+      "type": "vless",
+      "server": "188.114.96.115",
+      "server_port": 443,
+      "uuid": "a9d3f779-43ae-ee7d-4dc3-fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18859",
+      "type": "vless",
+      "server": "188.114.96.165",
+      "server_port": 443,
+      "uuid": "a9d3f779-43ae-ee7d-4dc3-fa073c1797d8",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "crm.lotussec.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/",
+        "headers": {
+          "Host": "crm.lotussec.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18881",
+      "type": "vless",
+      "server": "104.16.6.70",
+      "server_port": 443,
+      "uuid": "30693e15-1014-443b-88dd-1232b55a06b6",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.rfiksma.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "mos.rfiksma.top"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18882",
+      "type": "vless",
+      "server": "104.16.6.70",
+      "server_port": 443,
+      "uuid": "627c3a7a-29a7-41d1-9d9e-9f809b690988",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.rfiksma.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "mos.rfiksma.top"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18928",
+      "type": "vless",
+      "server": "172.67.212.210",
+      "server_port": 80,
+      "uuid": "752a3a41-8430-4dd3-99cc-36b14d3800d6",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/eyJqdW5rIjoiYm0zWkp6N1UiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0=?ed=2560",
+        "headers": {
+          "Host": "empty-water-4dd1.qara-atayi-3.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17808",
+      "type": "vless",
+      "server": "ov-canada1.09vpn.com",
+      "server_port": 8443,
+      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "ov-canada1.09vpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-canada1.09vpn.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17995",
+      "type": "vless",
+      "server": "ov-canada1.09vpn.com",
+      "server_port": 8443,
+      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "ov-canada1.09vpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-canada1.09vpn.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17936",
+      "type": "vless",
+      "server": "148.113.196.75",
+      "server_port": 8443,
+      "uuid": "08f96221-9b7b-4e6f-8ffe-aee8b9c9b504",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "ov-canada1.09vpn.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "148.113.196.75"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17754",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18329",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "188.114.97.6"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18676",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17727",
+      "type": "trojan",
+      "server": "104.18.185.26",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17930",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17058",
+      "type": "trojan",
+      "server": "104.16.147.104",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17756",
+      "type": "trojan",
+      "server": "104.18.139.67",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "104.18.139.67"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12160",
+      "type": "trojan",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.multiplydose.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.multiplydose.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18699",
+      "type": "trojan",
+      "server": "ip.myip2.qzz.io",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17078",
+      "type": "trojan",
+      "server": "104.17.150.76",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
       "tag": "[OpenRay] 🇨🇦 CA-17160",
       "type": "trojan",
       "server": "104.19.229.21",
@@ -208,545 +1240,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-18725",
-      "type": "vless",
-      "server": "104.253.43.47",
-      "server_port": 5775,
-      "uuid": "a2e5ac45-fd88-4f77-8e23-a7751f6a69e6",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ny33x7ljQJAzFN1sDxaTb90zlGIPABs3SskxeuXE4kI",
-          "short_id": "6443cb87ea"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18559",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "25b83e2f-f5d2-4d08-ae77-74485e2c4758",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "api24-normal.tiktokv.com.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/au-do",
-        "headers": {
-          "Host": "api24-normal.tiktokv.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18528",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "c148c68d-aba0-44b8-8f93-ded816246e2c",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "zaintest.vuclip.com.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/us-gllc",
-        "headers": {
-          "Host": "zaintest.vuclip.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18535",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "dda82c5a-9ae8-4d89-af81-ebf28568d710",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "unnes.ac.id.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/us-gllc",
-        "headers": {
-          "Host": "unnes.ac.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18476",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "9aecf22f-2cb9-41c8-b533-04534a5b150b",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "space.byu.id.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sg-amz",
-        "headers": {
-          "Host": "space.byu.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18518",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "31b793bd-e20c-414f-96a6-e3afded9a8a9",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "df.infra.test.shopee.co.id.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/sg-orcl",
-        "headers": {
-          "Host": "df.infra.test.shopee.co.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18594",
-      "type": "vless",
-      "server": "104.17.3.81",
-      "server_port": 80,
-      "uuid": "878352ed-8eef-4dd6-a44e-21e66164a67d",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/id-pusat",
-        "headers": {
-          "Host": "r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18661",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "a92ab0af-1968-4107-86de-cceea0a60f53",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.opensignal.com.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/us-gllc",
-        "headers": {
-          "Host": "cdn.opensignal.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18701",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "3e3c810a-5107-48da-bad3-01b37dd45aee",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.genflix.co.id.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/us-gllc",
-        "headers": {
-          "Host": "www.genflix.co.id.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18702",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 80,
-      "uuid": "44098455-565c-4c45-9f9a-7aaeb350990c",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/in-do",
-        "headers": {
-          "Host": "zaintest.vuclip.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16376",
-      "type": "vless",
-      "server": "104.24.45.247",
-      "server_port": 80,
-      "uuid": "2e71d8fc-d2e8-44fc-89bd-c8a449a193aa",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "odd-bread-435d.ahmadrezasteamacc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-13493",
-      "type": "vless",
-      "server": "104.19.173.68",
-      "server_port": 443,
-      "uuid": "7e346122-2ee0-406e-b964-a8ee665f1814",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "paRMis-1Tk63J.PArMiS.WoRkeRs.DeV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "paRMis-1Tk63J.PArMiS.WoRkeRs.DeV"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-14273",
-      "type": "vless",
-      "server": "104.19.174.68",
-      "server_port": 443,
-      "uuid": "7e346122-2ee0-406e-b964-a8ee665f1814",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "paRMis-1Tk63J.PArMiS.WoRkeRs.DeV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "paRMis-1Tk63J.PArMiS.WoRkeRs.DeV"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17271",
-      "type": "vless",
-      "server": "104.18.189.112",
-      "server_port": 80,
-      "uuid": "f929cc78-e2a1-4ce3-8051-3e9538405144",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/@WireXnet?ed=2048",
-        "headers": {
-          "Host": "us.xydcqd.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17585",
-      "type": "vless",
-      "server": "104.17.15.87",
-      "server_port": 80,
-      "uuid": "f929cc78-e2a1-4ce3-8051-3e9538405144",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/@WireXnet",
-        "headers": {
-          "Host": "germany.xydcqd.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17591",
-      "type": "vless",
-      "server": "104.17.254.236",
-      "server_port": 80,
-      "uuid": "f929cc78-e2a1-4ce3-8051-3e9538405144",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "netherlands.xydcqd.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18181",
-      "type": "vless",
-      "server": "104.19.173.68",
-      "server_port": 443,
-      "uuid": "7e346122-2ee0-406e-b964-a8ee665f1814",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "parmis-1tk63j.parmis.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "parmis-1tk63j.parmis.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18560",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "302929e6-37ae-4d63-9e84-b0e781ceb72a",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "cache.netflix.com.r3xxe.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/us-gllc",
-        "headers": {
-          "Host": "cache.netflix.com.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18721",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "1043634e-8d9d-4736-83fa-f14ddc9d464c",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "dfsuporte.garena.com.ex33r.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/id-amz",
-        "headers": {
-          "Host": "dfsuporte.garena.com.ex33r.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18697",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 80,
-      "uuid": "6faeb6a0-5055-4e4b-8fb1-ffd77e57aefa",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/au-do",
-        "headers": {
-          "Host": "somersby.pt.r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18754",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "1c94a079-e41d-48d3-b5b6-d8f7f761a00d",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "SILENt-kiNG-5030.AipRoINteR.WorkErS.DEv",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiZ3RXWk45UVhpRVB3R3VPIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed=2560",
-        "headers": {
-          "Host": "silent-king-5030.aiprointer.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18758",
-      "type": "vless",
-      "server": "162.159.19.202",
-      "server_port": 80,
-      "uuid": "e284098e-7ffd-4fce-a9d3-ea6bc98ce629",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "empty-sea-3392.amir-1385-poo.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18760",
-      "type": "vless",
-      "server": "104.17.3.81",
-      "server_port": 80,
-      "uuid": "00000000-0000-0000-0000-000000000000",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/id-pusat",
-        "headers": {
-          "Host": "r3xxe.eu.cc"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18801",
-      "type": "vless",
-      "server": "104.17.28.42",
-      "server_port": 8443,
-      "uuid": "7b102311-43fd-4e8f-877e-8090623c101d",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "round-art-52ee.eadfgv.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "round-art-52ee.eadfgv.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18802",
-      "type": "vless",
-      "server": "104.17.103.53",
-      "server_port": 8443,
-      "uuid": "7b102311-43fd-4e8f-877e-8090623c101d",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "round-art-52ee.eadfgv.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "round-art-52ee.eadfgv.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18804",
-      "type": "vless",
-      "server": "104.21.204.182",
-      "server_port": 8880,
-      "uuid": "a0a262a4-1ac7-428e-9acc-3d8187ad292c",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/chAKKalXDoesKnow?ed=8080",
-        "headers": {
-          "Host": "ghtp.kharabetam.de."
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18808",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "ed88c6b2-4881-4919-b9b0-b2189ec3bda7",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "amin.ferrarikingfr.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/amin",
-        "headers": {
-          "Host": "amin.ferrarikingfr.ir"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18757",
       "type": "vless",
       "server": "104.16.7.70",
@@ -766,29 +1259,6 @@
         "path": "/api/v2/sync/data-stream",
         "headers": {
           "Host": "104.16.7.70"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-15202",
-      "type": "vless",
-      "server": "104.17.147.22",
-      "server_port": 443,
-      "uuid": "8a36be1d-7c78-4885-8a1f-bedf5ba7db1c",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "luCky-LAB-AC6D.CAveyi8071.WoRkeRS.DEV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/rN50nmm9L1DeY73C?ed=2560",
-        "headers": {
-          "Host": "lucky-lab-ac6d.caveyi8071.workers.dev"
         }
       }
     },
@@ -839,120 +1309,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-16250",
-      "type": "trojan",
-      "server": "104.18.155.119",
-      "server_port": 443,
-      "uuid": "988sR-269PKCKlb%263pMrFTEr",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560",
-        "headers": {
-          "Host": "letiranbreath-7rrkevfu2hjbis5uhcxwztz24t5vp6trf1oka8dkrw0n.he3fmq6z0mfszsk3xy2e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16251",
-      "type": "trojan",
-      "server": "104.18.156.119",
-      "server_port": 443,
-      "uuid": "988sR-269PKCKlb%263pMrFTEr",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "LetiRanbrEaTh-7RrkEvFu2HJBIs5UHCXWztz24T5Vp6trF1oka8Dkrw0n.HE3fmQ6z0mfSZSK3Xy2E.wOrkers.deV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoicGpncHl4eVZoSnZQcFRTIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560",
-        "headers": {
-          "Host": "letiranbreath-7rrkevfu2hjbis5uhcxwztz24t5vp6trf1oka8dkrw0n.he3fmq6z0mfszsk3xy2e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18606",
-      "type": "vless",
-      "server": "188.114.97.7",
-      "server_port": 2083,
-      "uuid": "8525fe74-67e6-4a55-8a26-95f227bd1384",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "shy-fog-af06.alvlirm333.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/proxyip=104.223.62.204,99.254.66.219,45.133.17.106,40.233.87.120,40.233.110.251,40.233.68.138,68.233.122.42,144.217.76.62",
-        "headers": {
-          "Host": "shy-fog-af06.alvlirm333.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-11586",
-      "type": "vless",
-      "server": "104.26.3.125",
-      "server_port": 2052,
-      "uuid": "e8d06b09-acd9-448c-9874-3c36151d36ee",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/🔒 [By EbraSha]",
-        "headers": {
-          "Host": "icy-wildflower-2590.lihuifeng595.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-11689",
-      "type": "vless",
-      "server": "104.18.4.46",
-      "server_port": 8880,
-      "uuid": "5b002005-7fb1-413e-8cbd-08e50c87c2ea",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "wetfleagidc-8tsbi8xd-v3.wet-flea-gidc.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-11834",
-      "type": "vless",
-      "server": "104.18.5.46",
-      "server_port": 8880,
-      "uuid": "5b002005-7fb1-413e-8cbd-08e50c87c2ea",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560Join---V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz---@V2rayBaaz",
-        "headers": {
-          "Host": "wetfleagidc-8tsbi8xd-v3.wet-flea-gidc.workers.dev"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-17679",
       "type": "vless",
       "server": "104.16.158.162",
@@ -998,128 +1354,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-12446",
-      "type": "vless",
-      "server": "188.114.97.7",
-      "server_port": 443,
-      "uuid": "ba49d874-fe02-465d-82d3-ed981dc7694f",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "o94Yv7LIF0-aNXISd9eFehvvS7mxn6bH.Z-ULe-iKa-d-e-ne-K-e.wORkeRs.Dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/7J5lLqtBnJg9WjVT?ed=2560",
-        "headers": {
-          "Host": "o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-12448",
-      "type": "vless",
-      "server": "188.114.96.7",
-      "server_port": 443,
-      "uuid": "ba49d874-fe02-465d-82d3-ed981dc7694f",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/dbJqwUHWfrXV0Z3Q?ed=2560",
-        "headers": {
-          "Host": "o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-12450",
-      "type": "vless",
-      "server": "188.114.98.134",
-      "server_port": 443,
-      "uuid": "ba49d874-fe02-465d-82d3-ed981dc7694f",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "o94yv7LiF0-AnxIsd9EFehVvs7mXn6bh.z-UlE-ikA-d-e-nE-k-E.WorkeRs.dEv",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/yraL4HRbwB8cMc0F?ed=2560",
-        "headers": {
-          "Host": "o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18170",
-      "type": "vless",
-      "server": "172.67.171.247",
-      "server_port": 80,
-      "uuid": "0c54bdcb-945b-423c-9d86-c6df16ef40ad",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed",
-        "headers": {
-          "Host": "v2configlab.v2configlab15.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18185",
-      "type": "vless",
-      "server": "188.114.97.7",
-      "server_port": 443,
-      "uuid": "ba49d874-fe02-465d-82d3-ed981dc7694f",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18811",
-      "type": "vless",
-      "server": "104.21.88.19",
-      "server_port": 80,
-      "uuid": "0c54bdcb-945b-423c-9d86-c6df16ef40ad",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "v2configlab.v2configlab15.workers.dev"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18812",
       "type": "vless",
       "server": "188.114.97.6",
@@ -1131,29 +1365,6 @@
         "path": "/eyJqdW5rIjoiMENyWGlPUjVmIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiODcuMTIwLjE2Ni4xNCJdfQ==?ed=2560",
         "headers": {
           "Host": "snowy-fire-7369.mmdiborobav.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17638",
-      "type": "vless",
-      "server": "188.114.96.1",
-      "server_port": 443,
-      "uuid": "b03db3b9-6edb-4aef-8485-41c66e502487",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "24VvD-4imRvfaQv7hQxYbU9WzJv378Qi.v2Raygulf.WorkeRS.DeV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoicGtPV3BFY3BySDMwSUYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560",
-        "headers": {
-          "Host": "188.114.96.1"
         }
       }
     },
@@ -1489,225 +1700,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-18800",
-      "type": "vless",
-      "server": "104.17.111.27",
-      "server_port": 8443,
-      "uuid": "7b102311-43fd-4e8f-877e-8090623c101d",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "round-art-52ee.eadfgv.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "round-art-52ee.eadfgv.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16780",
-      "type": "vless",
-      "server": "104.17.148.22",
-      "server_port": 443,
-      "uuid": "0836463b-214f-4af6-aa85-85a56a62388e",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "d2127A49-flAT-wooD-C4B5.mILia-AkbARpOor.WorkERs.dEV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/8eaZJhRwB5zzDy81?ed=2560",
-        "headers": {
-          "Host": "d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16070",
-      "type": "vless",
-      "server": "104.19.151.106",
-      "server_port": 80,
-      "uuid": "73d17f62-d0c0-4c90-903c-a2b3f3806cca",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2048",
-        "headers": {
-          "Host": "fragrant-tooth-a5b7.cajeba6448.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16219",
-      "type": "vless",
-      "server": "104.17.25.132",
-      "server_port": 80,
-      "uuid": "73d17f62-d0c0-4c90-903c-a2b3f3806cca",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2048",
-        "headers": {
-          "Host": "fragrant-tooth-a5b7.cajeba6448.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16542",
-      "type": "vless",
-      "server": "104.18.14.19",
-      "server_port": 80,
-      "uuid": "a2af6e7c-a792-4e51-9460-fff4bd74fbfc",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "vahidqaz-ft33vt-1.vahidqaz.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16639",
-      "type": "vless",
-      "server": "104.18.15.19",
-      "server_port": 80,
-      "uuid": "a2af6e7c-a792-4e51-9460-fff4bd74fbfc",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560",
-        "headers": {
-          "Host": "vahidqaz-ft33vt-1.vahidqaz.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17165",
-      "type": "vless",
-      "server": "104.17.72.206",
-      "server_port": 80,
-      "uuid": "1de37726-744b-46e1-9101-c926b3402e82",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "v2.v2configlab.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18522",
-      "type": "vless",
-      "server": "188.114.96.3",
-      "server_port": 2086,
-      "uuid": "bba14c1d-f08c-4c9a-ac87-cf85d38d8aff",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiSjZsY01ZdmlLM1ciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=?ed=2560",
-        "headers": {
-          "Host": "tight-thunder-ce8e.hamid-r-aliakbari1379-0f0.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18523",
-      "type": "vless",
-      "server": "188.114.97.3",
-      "server_port": 2086,
-      "uuid": "bba14c1d-f08c-4c9a-ac87-cf85d38d8aff",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiSzhjREpaaGVoVXpCN2NvNiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ==?ed=2560",
-        "headers": {
-          "Host": "tight-thunder-ce8e.hamid-r-aliakbari1379-0f0.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18182",
-      "type": "vless",
-      "server": "104.21.8.189",
-      "server_port": 80,
-      "uuid": "8850643f-605c-498a-8b0a-674448eee39a",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed",
-        "headers": {
-          "Host": "v2configlab.v2configlab18.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18183",
-      "type": "vless",
-      "server": "172.67.130.152",
-      "server_port": 80,
-      "uuid": "8850643f-605c-498a-8b0a-674448eee39a",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/?ed",
-        "headers": {
-          "Host": "v2configlab.v2configlab18.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-16778",
-      "type": "vless",
-      "server": "104.17.147.22",
-      "server_port": 443,
-      "uuid": "0836463b-214f-4af6-aa85-85a56a62388e",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "d2127A49-flAT-wooD-C4B5.mILia-AkbARpOor.WorkERs.dEV",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/8eaZJhRwB5zzDy81?ed=2560",
-        "headers": {
-          "Host": "d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18818",
-      "type": "vless",
-      "server": "188.114.97.3",
-      "server_port": 2086,
-      "uuid": "bba14c1d-f08c-4c9a-ac87-cf85d38d8aff",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiSzhjREpaaGVoVXpCN2NvNiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ",
-        "headers": {
-          "Host": "tight-thunder-ce8e.hamid-r-aliakbari1379-0f0.workers.dev"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18778",
       "type": "trojan",
       "server": "104.16.79.73",
@@ -1823,29 +1815,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-18874",
-      "type": "vless",
-      "server": "188.114.97.116",
-      "server_port": 443,
-      "uuid": "20d3fe0d-bbe1-4a74-9a85-9b9ba548f7f0",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "long-sky-3151.sue100.workers.dev",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "long-sky-3151.sue100.workers.dev"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18877",
       "type": "vless",
       "server": "188.114.97.6",
@@ -1865,36 +1834,6 @@
         "path": "/",
         "headers": {
           "Host": "illbefine.kakoolnewsgg.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18878",
-      "type": "vless",
-      "server": "104.26.5.139",
-      "server_port": 2095,
-      "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/fp=randomized",
-        "headers": {
-          "Host": "cnmfangbinxing.cnmfangbinxing-k.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18493",
-      "type": "vless",
-      "server": "104.21.11.152",
-      "server_port": 8080,
-      "uuid": "d7a8ae86-9904-4f71-8fe4-d754ded610d7",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiOHNqQ3Bqc2dTZlppTEl1IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560",
-        "headers": {
-          "Host": "server6.diwir81236.workers.dev"
         }
       }
     },
@@ -1943,29 +1882,6 @@
         "path": "/assignment",
         "headers": {
           "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18065",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
         }
       }
     },
@@ -2019,6 +1935,284 @@
       "tag": "[OpenRay] 🇨🇦 CA-18073",
       "type": "trojan",
       "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17845",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17718",
+      "type": "trojan",
+      "server": "104.17.72.206",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12045",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17647",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.multiplydose.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.multiplydose.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17080",
+      "type": "trojan",
+      "server": "104.17.150.76",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17636",
+      "type": "vless",
+      "server": "104.17.144.235",
+      "server_port": 443,
+      "uuid": "e5cc16a6-ea42-46b2-82ae-ad2157e1641b",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "hhlfy.twiladaphne.ndjp.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "hhlfy.twiladaphne.ndjp.net"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-11997",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18266",
+      "type": "trojan",
+      "server": "104.18.152.233",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12179",
+      "type": "trojan",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18872",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "mitivpn",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "https://chatgpt.com",
+        "headers": {
+          "Host": "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-14192",
+      "type": "vmess",
+      "server": "104.17.77.77",
+      "server_port": 8443,
+      "uuid": "60441548-b68e-43b2-8191-e3b884be4b3c",
+      "udp": true,
+      "security": "auto",
+      "alter_id": 0,
+      "tls": {
+        "enabled": true,
+        "server_name": "v2ray1.dozapp.xyz",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lMnsZUN4/",
+        "headers": {
+          "Host": "v2ray1.dozapp.xyz"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18316",
+      "type": "trojan",
+      "server": "188.114.97.57",
       "server_port": 443,
       "uuid": "humanity",
       "udp": true,

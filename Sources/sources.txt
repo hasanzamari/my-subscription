@@ -16,12 +16,5 @@ https://raw.githubusercontent.com/shabane/kamaji/master/hub/merged.txt
 https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/main/output/base64/mix-uri
 https://github.com/igareck/vpn-configs-for-russia/raw/refs/heads/main/BLACK_VLESS_RUS.txt
 https://raw.githubusercontent.com/V2RayRoot/V2RayConfig/refs/heads/main/Config/vless.txt
+https://raw.githubusercontent.com/amir-reza-bijandi/v2ray-configs/main/configs.txt
 https://github.com/Mr-Meshky/vify/raw/heads/main/configs/vless.txt
-https://raw.githubusercontent.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
-https://raw.githubusercontent.com/yebekhe/V2Hub/main/merged/base64
-https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/vmess
-https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/vless
-https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/trojan
-https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/ss
-https://raw.githubusercontent.com/itsyebekhe/HiN-VPN/main/subscription/normal
-https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
