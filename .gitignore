@@ -1,0 +1,20 @@
+# فایل‌های بزرگ و محلی
+database/database.json
+database/source_cache.json
+database/sources_health.json
+output/all.txt
+output/subscription_base64.txt
+
+# فایل‌های موقت
+__pycache__/
+*.pyc
+*.pyo
+cleanup_report.txt
+
+# فایل‌های سیستمی
+.DS_Store
+Thumbs.db
+
+# فایل‌های زیپ
+*.zip
+*.rar
