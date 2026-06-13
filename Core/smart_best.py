@@ -9,6 +9,10 @@ def calc_hybrid_score(info):
     
     if total == 0:
         return -1000.0
+    
+    # ✅ فیلتر سخت‌گیرانه: اگر آخرین تست قطع بوده، امتیاز بسیار پایین
+    if hist and hist[-1] == 9999:
+        return 5.0  # امتیاز خیلی پایین، تقریباً حذف می‌شود
         
     base_score = (s / total) * 500
     
@@ -53,48 +57,39 @@ def main():
     log("Sorting ALL configs by score (descending)...")
     sorted_cfgs = sorted(db.values(), key=lambda x: x.get("score", -1000), reverse=True)
     
-    # حذف تکراری‌ها
+    # حذف تکراری‌ها + فیلتر سخت‌گیرانه
     unique_sorted_cfgs = []
     seen_configs = set()
     
     for cfg in sorted_cfgs:
         config_str = cfg.get("config", "").strip()
-        if config_str and config_str not in seen_configs and cfg.get("score", -1000) > 0:
+        # ✅ فقط کانفیگ‌هایی که امتیاز > 10 دارند (یعنی آخرین تست موفق بوده)
+        if config_str and config_str not in seen_configs and cfg.get("score", -1000) > 10:
             seen_configs.add(config_str)
             unique_sorted_cfgs.append(cfg)
             
     total_unique = len(unique_sorted_cfgs)
-    log(f"Total UNIQUE valid configs available: {total_unique}")
+    log(f"Total UNIQUE configs with LAST TEST SUCCESS: {total_unique}")
     
     os.makedirs("output", exist_ok=True)
     
-    # ✅ تقسیم‌بندی مجزا: هر فایل دقیقاً به اندازه نامش کانفیگ دارد و هیچ همپوشانی ندارد
-    # Best10: رتبه 1-10
-    # Best20: رتبه 11-30 (20 کانفیگ جدید)
-    # Best50: رتبه 31-80 (50 کانفیگ جدید)
-    # Best100: رتبه 81-180 (100 کانفیگ جدید)
-    # و الی آخر...
-    
+    # تقسیم‌بندی مجزا
     limits = [10, 20, 50, 100, 500, 1000, 2500, 5000]
     current_position = 0
     
     for limit in limits:
         path = f"output/Best{limit}.txt"
-        
-        # برش از current_position تا current_position + limit
         selected = unique_sorted_cfgs[current_position:current_position + limit]
         
         with open(path, "w", encoding="utf-8") as f:
             for cfg in selected:
                 f.write(cfg.get("config", "") + "\n")
         
-        # به‌روزرسانی موقعیت برای فایل بعدی
         current_position += limit
-        
         min_score = selected[-1].get("score", 0) if selected else 0
-        log(f"✅ Wrote {path} ({len(selected)} UNIQUE configs, Rank {current_position - limit + 1} to {current_position}. Min score: {min_score})")
+        log(f"✅ Wrote {path} ({len(selected)} configs, Rank {current_position - limit + 1} to {current_position}. Min score: {min_score})")
     
-    log("✅ ALL Best files generated: PARTITIONED (no overlap), Fully Populated, ZERO duplicates!")
+    log("✅ ALL Best files: ONLY configs with LAST TEST SUCCESS, ZERO duplicates!")
 
 if __name__ == "__main__":
     main()
