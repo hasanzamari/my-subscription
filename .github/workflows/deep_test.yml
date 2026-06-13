@@ -1,8 +1,8 @@
-name: Deep Nightly API Test
+name: Deep Multi-Region Test (All Configs)
 
 on:
   schedule:
-    - cron: "0 3 * * *" # هر روز ساعت 3 بامداد UTC
+    - cron: "0 3 * * *"  # هر روز ساعت 3 بامداد UTC
   workflow_dispatch:
 
 jobs:
@@ -14,15 +14,15 @@ jobs:
       - name: Install Requests
         run: pip install requests
 
-      - name: Run Deep Multi-Region Test on Top 100
+      - name: Run Deep Multi-Region Test on Top 500
         run: |
           python3 << 'EOF'
-          import json, os, time, requests, socket, base64
+          import json, os, time, requests, socket, base64, hashlib
           from urllib.parse import urlparse
           from datetime import datetime
 
           DB_FILE = "database/database.json"
-          BEST_I_FILE = "output/best_i.txt"
+          BEST_FILE = "output/Best500.txt"  # تست 500 کانفیگ برتر
 
           def extract_addr_port(cfg):
               try:
@@ -70,19 +70,17 @@ jobs:
                   except:
                       return False, 0
 
-          if not os.path.exists(DB_FILE) or not os.path.exists(BEST_I_FILE):
-              print("DB or best_i.txt not found. Skipping.")
+          if not os.path.exists(DB_FILE) or not os.path.exists(BEST_FILE):
+              print("DB or Best500.txt not found. Skipping.")
               exit(0)
 
           with open(DB_FILE, "r", encoding="utf-8") as f: db = json.load(f)
-          with open(BEST_I_FILE, "r", encoding="utf-8") as f: best_i_configs = [line.strip() for line in f if line.strip()]
+          with open(BEST_FILE, "r", encoding="utf-8") as f: configs = [line.strip() for line in f if line.strip()]
 
-          print(f"🌍 Starting Deep Multi-Region Test on {len(best_i_configs)} configs...")
+          print(f"🌍 Starting Deep Multi-Region Test on {len(configs)} configs...")
           
           ok_cnt = 0
-          for cfg in best_i_configs:
-              # پیدا کردن هش کانفیگ در دیتابیس
-              import hashlib
+          for i, cfg in enumerate(configs):
               cfg_hash = hashlib.md5(cfg.encode()).hexdigest()
               if cfg_hash not in db: continue
               
@@ -103,11 +101,14 @@ jobs:
               if len(hist) > 30: hist = hist[-30:]
               db[cfg_hash]["history"] = hist
               db[cfg_hash]["last_test"] = datetime.now().isoformat()
+              
+              if (i + 1) % 50 == 0:
+                  print(f"  Progress: {i+1}/{len(configs)}")
 
           with open(DB_FILE, "w", encoding="utf-8") as f:
               json.dump(db, f, indent=2, ensure_ascii=False)
               
-          print(f"✅ Deep Test Done: {ok_cnt} OK, {len(best_i_configs) - ok_cnt} FAIL. DB Updated.")
+          print(f"✅ Deep Test Done: {ok_cnt} OK, {len(configs) - ok_cnt} FAIL. DB Updated.")
           EOF
 
       - name: Commit and Push Updated Scores
@@ -115,6 +116,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🌙 Nightly Deep Test: Updated API scores for best_i.txt" || echo "No changes"
+          git commit -m "🌙 Nightly Deep Test: Updated API scores for top 500 configs" || echo "No changes"
           git pull --rebase origin main
           git push
