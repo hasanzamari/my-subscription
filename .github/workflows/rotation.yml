@@ -2,7 +2,7 @@ name: Config Rotation (Every 3 Hours)
 
 on:
   schedule:
-    - cron: "30 */3 * * *"  # هر 3 ساعت، نیم ساعت
+    - cron: "30 */3 * * *"  # هر ۳ ساعت، در دقیقه ۳۰
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/rotation_500.txt database/rotation_index.txt
-          git commit -m "🔄 Rotation: New 500 configs at $(date +%H:%M)" || echo "No changes"
-          git pull --rebase origin main
-          git push
+          
+          # ۱. اضافه کردن همه تغییرات (جلوگیری از خطای unstaged changes)
+          git add -A
+          
+          # ۲. کامیت کردن (اگر تغییری نبود، ارور ندهد)
+          git commit -m "🔄 Rotation: New 500 configs at $(date +%H:%M)" || echo "No changes to commit"
+          
+          # ۳. دریافت تغییرات جدید با مدیریت خودکار استش (autostash) برای جلوگیری از تداخل
+          git pull --rebase --autostash origin main || echo "Pull skipped or minor conflict resolved"
+          
+          # ۴. پوش کردن نهایی
+          git push origin main
