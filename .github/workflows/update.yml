@@ -1,4 +1,4 @@
-name: Complete Smart Update
+name: Hybrid Smart Update
 
 on:
   schedule:
@@ -11,53 +11,36 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Run merge.py
+      - name: Install Requests (Required for Multi-Region API)
+        run: pip install requests
+
+      - name: 1. Run merge.py (Gather & Dedup)
         run: python merge.py
 
-      - name: 2. Run Health Checker
+      - name: 2. Run Fast Health Checker (TCP for the masses)
         run: python -m Core.health_checker
 
-      - name: 3. Run Smart Best Generator
+      - name: 3. Run Smart Best Generator (Standard files: 10 to 5000)
         run: python -m Core.smart_best
 
-      - name: 4. PROOF (No Duplicates Check)
+      - name: 4. Run Premium Health Checker (Multi-Region for best_i.txt)
+        run: python -m Core.premium_checker
+
+      - name: 5. PROOF & STATS
         run: |
           echo "========================================="
-          echo "🔍 بررسی تکراری بودن:"
-          python3 << 'EOF'
-          import os
-          
-          files = ['output/Best10.txt', 'output/Best20.txt', 'output/Best50.txt', 
-                   'output/Best100.txt', 'output/Best500.txt', 'output/Best1000.txt']
-          
-          all_configs = set()
-          total = 0
-          
-          for f in files:
-              if os.path.exists(f):
-                  with open(f, 'r', encoding='utf-8') as file:
-                      configs = [line.strip() for line in file if line.strip()]
-                      total += len(configs)
-                      all_configs.update(configs)
-          
-          print(f"📊 مجموع کانفیگ‌ها در همه فایل‌ها: {total}")
-          print(f"🔍 تعداد کانفیگ‌های یکتا: {len(all_configs)}")
-          
-          if total == len(all_configs):
-              print("✅ هیچ تکراری وجود ندارد!")
-          else:
-              print(f"⚠️ {total - len(all_configs)} کانفیگ تکراری وجود دارد")
-          EOF
-          
-          echo "========================================="
-          echo "📁 خطوط فایل‌ها:"
+          echo "📊 Standard Files:"
           wc -l output/Best*.txt
           echo "========================================="
-      - name: 5. Commit
+          echo "👑 Premium File (best_i.txt):"
+          wc -l output/best_i.txt
+          echo "========================================="
+
+      - name: 6. Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Smart Update: $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Hybrid Update: Fast TCP + Premium Multi-Region (best_i): $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
