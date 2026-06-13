@@ -3,7 +3,41 @@ from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from Core.logger import log
 
-PREFERRED_COUNTRIES = ['de', 'tr', 'ae', 'nl', 'fi', 'fr', 'gb', 'ch', '🇩🇪', '🇹🇷', '🇦🇪', '🇳🇱', '🇫🇮', '🇫🇷', '🇬🇧', '🇨🇭', 'germany', 'turkey', 'uae', 'dubai']
+def get_country_boost(info):
+    """سیستم امتیازدهی پلکانی بر اساس کیفیت روتینگ به ایران"""
+    cfg = info.get("config", "").lower()
+    search_text = cfg
+    
+    # تلاش برای خواندن نام کانفیگ (PS) در صورت vmess بودن
+    if cfg.startswith("vmess://"):
+        try:
+            b64 = cfg[8:] + "=" * ((4 - len(cfg[8:]) % 4) % 4)
+            data = json.loads(base64.b64decode(b64).decode("utf-8", errors="ignore"))
+            search_text += " " + str(data.get("ps", "")).lower()
+        except: pass
+
+    # سطح ۱: بهترین روتینگ به ایران (+300 امتیاز)
+    tier_1 = ['ae', 'tr', 'fi', 'de', '🇦🇪', '🇹🇷', '🇫🇮', '🇩🇪', 
+              'dubai', 'abu dhabi', 'istanbul', 'frankfurt', 'helsinki',
+              'امارات', 'ترکیه', 'فنلاند', 'آلمان']
+    for c in tier_1:
+        if c in search_text: return 300
+
+    # سطح ۲: روتینگ بسیار خوب (+200 امتیاز)
+    tier_2 = ['nl', 'fr', 'gb', 'ch', '🇳🇱', '🇫🇷', '🇬🇧', '🇨🇭',
+              'amsterdam', 'paris', 'london', 'zurich',
+              'هلند', 'فرانسه', 'انگلیس', 'سوئیس']
+    for c in tier_2:
+        if c in search_text: return 200
+
+    # سطح ۳: روتینگ خوب اما با تاخیر بیشتر (+100 امتیاز)
+    tier_3 = ['us', 'ca', 'jp', 'sg', '🇺🇸', '🇨🇦', '🇯🇵', '🇸🇬',
+              'new york', 'tokyo', 'singapore',
+              'آمریکا', 'کانادا', 'ژاپن', 'سنگاپور']
+    for c in tier_3:
+        if c in search_text: return 100
+
+    return 0
 
 def extract_addr_port(cfg):
     try:
@@ -21,20 +55,6 @@ def extract_addr_port(cfg):
             if addr and port: return str(addr), str(port)
     except: pass
     return None, None
-
-def get_country_boost(info):
-    cfg = info.get("config", "").lower()
-    search_text = cfg
-    if cfg.startswith("vmess://"):
-        try:
-            b64 = cfg[8:] + "=" * ((4 - len(cfg[8:]) % 4) % 4)
-            data = json.loads(base64.b64decode(b64).decode("utf-8", errors="ignore"))
-            search_text += " " + str(data.get("ps", "")).lower()
-        except: pass
-    for country in PREFERRED_COUNTRIES:
-        if country in search_text:
-            return 250
-    return 0
 
 def calc_github_score(info):
     s, f = info.get("success", 0), info.get("fail", 0)
@@ -59,6 +79,7 @@ def calc_github_score(info):
         elif avg < 300: base += 100
         elif avg < 500: base += 50
         
+    # اضافه کردن امتیاز پلکانی کشور
     return round(max(0, base + get_country_boost(info)), 2)
 
 def check_api_ping(addr, port):
@@ -96,7 +117,7 @@ def main():
     with open("database/database.json", "r", encoding="utf-8") as f:
         db = json.load(f)
     
-    log("Stage 1: Calculating GitHub + Country scores for ALL configs...")
+    log("Stage 1: Calculating GitHub Ping + Tiered Country scores...")
     for h, info in db.items():
         info["github_score"] = calc_github_score(info)
         
@@ -135,7 +156,7 @@ def main():
         addr, port = extract_addr_port(info.get("config", ""))
         if not addr or not port: return info, 0
         ok, ms = check_api_ping(addr, port)
-        # امتیاز نهایی پریمیوم: اگر API اوکی بود ۵۰۰ + امتیاز کشور، وگرنه فقط امتیاز کشور
+        # امتیاز نهایی: ۵۰۰ (در صورت موفقیت API) + امتیاز پلکانی کشور
         final_score = (500 if ok else 0) + get_country_boost(info)
         return info, final_score
 
@@ -146,7 +167,7 @@ def main():
             info["premium_score"] = score
             premium_results.append(info)
             
-    # مرتب‌سازی نهایی ۳۰۰ تای تست شده بر اساس امتیاز پریمیوم
+    # مرتب‌سازی نهایی بر اساس امتیاز پریمیوم
     premium_results.sort(key=lambda x: x.get("premium_score", 0), reverse=True)
     
     # برداشتن دقیقاً ۱۰۰ تای برتر
