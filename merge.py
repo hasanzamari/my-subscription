@@ -78,7 +78,10 @@ def main():
             pass 
 
     source_guardian.clean_active_sources()
-    
+
+    # ✅ کشف خودکار منابع جدید از گیت‌هاب
+    from Core import github_discovery
+    github_discovery.discover_new_sources()
     log("Parsing configs...")
     all_configs = []
     for url, content in raw.items():
