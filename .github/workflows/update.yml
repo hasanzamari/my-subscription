@@ -8,8 +8,14 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    
+    # ✅ این دو خط را دقیقاً اینجا اضافه کنید:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
     steps:
       - uses: actions/checkout@v3
+      # ... بقیه کد دست‌نخورده باقی بماند ...
 
       - name: 1. Run Core Engine (Smart Cache + Fingerprint Dedup)
         run: python merge.py
