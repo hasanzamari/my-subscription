@@ -63,7 +63,7 @@ jobs:
                   try:
                       t0 = time.time()
                       sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                      sock.settimeout(3)
+                      sock.settimeout(5) # ✅ عدد 3 را به 5 تغییر دادیم
                       sock.connect((addr, int(port)))
                       sock.close()
                       return True, (time.time() - t0) * 1000
