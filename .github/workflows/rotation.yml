@@ -1,0 +1,24 @@
+name: Config Rotation (Every 3 Hours)
+
+on:
+  schedule:
+    - cron: "30 */3 * * *"  # هر ۳ ساعت در دقیقه ۳۰ (مثلاً ۳:۳۰، ۶:۳۰، ۹:۳۰)
+  workflow_dispatch:
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Rotation Manager
+        run: python -m Core.rotation_manager
+
+      - name: Commit and Push Rotated File
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/rotation_500.txt database/rotation_index.txt
+          git commit -m "🔄 Rotation: New 500 configs at $(date +%H:%M)" || echo "No changes"
+          git pull --rebase origin main
+          git push
