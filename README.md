@@ -6,7 +6,7 @@
 
 | File | Best For | Link |
 |------|----------|------|
-| **🔄 Rotation 500** | Rotating 500 best configs every 6h | [Click Here](https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/rotation_500.txt) |
+| **🔄 Rotation 500** | Rotating 500 best configs every 3h | [Click Here](https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/rotation_500.txt) |
 | **Best Iran** | Maximum Stability in Iran | [Click Here](https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/best_iran.txt) |
 | **Best I (Premium)** | Top 100 Tested Configs | [Click Here](https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/best_i.txt) |
 | **Best 1000** | Large Pool of Top Configs | [Click Here](https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/Best1000.txt) |
