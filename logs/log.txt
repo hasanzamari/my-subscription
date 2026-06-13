@@ -246,3 +246,44 @@
 [2026-06-13T10:40:37.022054] ✅ Generated output/clash_meta.yaml
 [2026-06-13T10:40:37.023555] ✅ Generated output/singbox.json
 [2026-06-13T10:40:37.023599] ✅ Modern Format Conversion completed successfully!
+[2026-06-13T10:49:51.783722] ===== RUN START =====
+[2026-06-13T10:49:51.785210] 🧹 Sources cleaned: 11 -> 8 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:49:51.785328] Downloading sources (with Smart Cache)...
+[2026-06-13T10:49:51.990428] ❌ Failed (404): https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/sub/base64
+[2026-06-13T10:49:52.116664] ❌ Failed (404): https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub.txt
+[2026-06-13T10:49:52.238299] ❌ Failed (404): https://raw.githubusercontent.com/MiSaturo/V2ray-Configs/main/Sub.txt
+[2026-06-13T10:49:52.367311] ❌ Failed (404): https://raw.githubusercontent.com/peyman3073/V2ray/main/v2ray.txt
+[2026-06-13T10:49:52.482197] ❌ Failed (404): https://raw.githubusercontent.com/azadi_az_inja_migzare/azadi_az_inja_migzare/main/Sub.txt
+[2026-06-13T10:49:52.973813] ⏭️ Skipped (Unchanged): https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T10:49:53.749123] ⏭️ Skipped (Unchanged): https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T10:49:53.912765] ⏭️ Skipped (Unchanged): https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-13T10:49:53.914847] 🧹 Sources cleaned: 8 -> 8 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:49:53.914940] Parsing configs...
+[2026-06-13T10:49:53.914978] [PARSE DONE] 0
+[2026-06-13T10:49:53.915006] [DEDUP] 0 unique configs (Fingerprint verified)
+[2026-06-13T10:49:53.915031] Updating database...
+[2026-06-13T10:49:56.118968] [DB] total=196706 new=0
+[2026-06-13T10:49:56.119099] [EXPORT] 0 configs
+[2026-06-13T10:49:56.119823] 🚫 Failed source blacklisted (2 fails): https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T10:49:56.119902] 🚫 Failed source blacklisted (2 fails): https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T10:49:56.119957] 🚫 Failed source blacklisted (2 fails): https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-13T10:49:56.121983] ✅ Source Guardian: 3 sources blacklisted.
+[2026-06-13T10:49:56.122723] 🧹 Sources cleaned: 8 -> 5 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:49:56.122783] [FINAL] 0
+[2026-06-13T10:49:56.122810] ===== RUN END =====
+[2026-06-13T10:49:56.227773] Loading DB...
+[2026-06-13T10:49:56.871517] Calculating Country-Boosted scores...
+[2026-06-13T10:49:58.126877] Total unique configs (Fingerprint verified): 194614
+[2026-06-13T10:49:58.940650] ✅ Wrote 96722 VLESS configs
+[2026-06-13T10:49:58.950268] ✅ Wrote 11770 VMESS configs
+[2026-06-13T10:49:58.955356] ✅ Wrote 10850 TROJAN configs
+[2026-06-13T10:49:58.981395] ✅ Wrote 53966 REALITY configs
+[2026-06-13T10:49:58.989481] ✅ Wrote 21281 SHADOWSOCKS configs
+[2026-06-13T10:49:59.002876] ✅ Wrote 25506 CLOUDFLARE optimized configs
+[2026-06-13T10:49:59.171686] ✅ Generated subscription_base64.txt
+[2026-06-13T10:49:59.171774] ✅ ALL advanced features generated successfully!
+[2026-06-13T10:49:59.302415] Starting Modern Format Conversion...
+[2026-06-13T10:49:59.305023] ✅ Successfully parsed 100 configs for modern formats.
+[2026-06-13T10:49:59.305475] ✅ Generated output/clash_meta.yaml
+[2026-06-13T10:49:59.306973] ✅ Generated output/singbox.json
+[2026-06-13T10:49:59.307015] ✅ Modern Format Conversion completed successfully!

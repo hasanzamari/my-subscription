@@ -1,16 +1,4 @@
 {
-  "https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt": {
-    "success": 0,
-    "fail": 1,
-    "last_check": "2026-06-13T10:40:33.790888",
-    "total_valid": 99677
-  },
-  "https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt": {
-    "success": 0,
-    "fail": 1,
-    "last_check": "2026-06-13T10:40:33.790888",
-    "total_valid": 158951
-  },
   "https://raw.githubusercontent.com/FLAT447/v2ray-lists/refs/heads/main/WHITE_FULL.txt": {
     "success": 22,
     "fail": 0,
@@ -106,12 +94,6 @@
     "fail": 0,
     "last_check": "2026-06-13T09:35:38.105053",
     "total_valid": 3776
-  },
-  "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt": {
-    "success": 0,
-    "fail": 1,
-    "last_check": "2026-06-13T10:40:33.790888",
-    "total_valid": 47712
   },
   "https://raw.githubusercontent.com/miladtahanian/Config-Collector/refs/heads/main/mixed_iran.txt": {
     "success": 20,
@@ -1659,6 +1641,36 @@
     "success": 0,
     "fail": 1,
     "last_check": "2026-06-12T20:39:00.514814",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/sub/base64": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T10:49:56.119697",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T10:49:56.119697",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/MiSaturo/V2ray-Configs/main/Sub.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T10:49:56.119697",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/peyman3073/V2ray/main/v2ray.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T10:49:56.119697",
+    "total_valid": 0
+  },
+  "https://raw.githubusercontent.com/azadi_az_inja_migzare/azadi_az_inja_migzare/main/Sub.txt": {
+    "success": 0,
+    "fail": 1,
+    "last_check": "2026-06-13T10:49:56.119697",
     "total_valid": 0
   }
 }
