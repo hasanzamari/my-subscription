@@ -47,7 +47,8 @@ def check_multi_region_ping(addr, port):
             
         measurement_id = response.json()["id"]
         
-        for _ in range(10):            time.sleep(1)
+        for _ in range(10):
+            time.sleep(1)
             res = requests.get(f"https://api.globalping.io/v1/measurements/{measurement_id}", timeout=5)
             data = res.json()
             
@@ -96,7 +97,8 @@ def main():
             continue
             
         ok, ms = check_multi_region_ping(addr, port)
-        now = datetime.now().isoformat()        hist = info.get("history", [])
+        now = datetime.now().isoformat()
+        hist = info.get("history", [])
         
         if ok:
             ok_cnt += 1
