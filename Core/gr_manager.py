@@ -5,7 +5,7 @@ from Core.logger import log
 SOURCE_FILE = "output/best_iran.txt"
 OUTPUT_FILE = "output/best_GR.txt"
 STATE_FILE = "database/gr_rotation_index.txt"
-CHUNK_SIZE = 300  # تعداد کانفیگ آلمان در هر بار استخراج (قابل تغییر)
+CHUNK_SIZE = 500  # تعداد کانفیگ آلمان در هر بار استخراج (قابل تغییر)
 
 def is_germany(cfg):
     """بررسی اینکه آیا کانفیگ مربوط به آلمان است یا خیر"""
