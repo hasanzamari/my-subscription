@@ -16,7 +16,7 @@ DB_FILE = "database/database.json"
 def main():
     log("===== RUN START =====")
     
-    # ✅ ۱. پاکسازی اولیه قبل از دانلود
+    # ۱. پاکسازی منابع
     source_guardian.clean_active_sources()
     
     clean()
@@ -24,27 +24,29 @@ def main():
     db = load_db(DB_FILE)
     health = load_health()
     
+    # ۲. دانلود منابع
     raw = download_sources(sources)
-    
-    # ⚠️ این بخش لینک‌های جدید را اضافه می‌کند
     added = process(raw)
     
-    # ✅ ۲. پاکسازی ثانویه (حیاتی): هر لینکی که process اضافه کرد را اگر بی‌کیفیت است دور بریز
-    # و فایل را به حداکثر ۵۰ لینک محدود کن
+    # ۳. پاکسازی ثانویه
     source_guardian.clean_active_sources()
     
+    # ۴. پردازش کانفیگ‌ها
     result = execute(raw, db)
     parsed = result.get("parsed", [])
     valid = result.get("valid", [])
     final = result.get("final", [])
     
+    # ۵. به‌روزرسانی دیتابیس
     db, new_count, expired = update_db(db, final)
     save_db(DB_FILE, db)
     
+    # ۶. خروجی‌ها
     export_all(final)
     best_sets = build_best(db)
     export_best_sets(best_sets)
     
+    # ۷. ارزیابی سلامت منابع
     source_results = {}
     for url, content in raw.items():
         ok = bool(content)
@@ -56,7 +58,7 @@ def main():
     save_health(health)
     source_guardian.evaluate_sources(source_results)
     
-    # ✅ ۳. پاکسازی نهایی برای اطمینان ۱۰۰٪
+    # ۸. پاکسازی نهایی
     source_guardian.clean_active_sources()
     
     save(len(sources), len(parsed), len(valid), len(final))
