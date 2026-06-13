@@ -11,27 +11,30 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 1. Run Core Engine
+      - name: 1. Run Core Engine (Smart Cache + Fingerprint Dedup)
         run: python merge.py
 
       - name: 2. Run Advanced Smart Best Generator
         run: python -m Core.smart_best
 
-      - name: 3. PROOF & STATS
+      - name: 3. Convert to Modern Formats (Clash Meta / Sing-Box)
+        run: python -m Core.format_converter
+
+      - name: 4. PROOF & STATS
         run: |
           echo "========================================="
-          echo "📊 Generated Files:"
-          wc -l output/Best*.txt output/best_*.txt output/best_i.txt output/subscription_base64.txt || echo "No files found"
+          echo "📊 Generated Text Files:"
+          wc -l output/Best*.txt output/best_*.txt output/best_i.txt output/subscription_base64.txt || echo "No txt files"
           echo "========================================="
-          echo "📈 Live Stats:"
-          cat stats.md
+          echo "📱 Generated Modern Formats:"
+          ls -lh output/clash_meta.yaml output/singbox.json || echo "No modern formats"
           echo "========================================="
 
-      - name: 4. Commit and Push
+      - name: 5. Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "🔄 Advanced Update: Protocol Split + Base64 + Auto Stats $(date +%H:%M:%S)" || echo "No changes"
+          git commit -m "🔄 Update: Added Clash Meta & Sing-Box Formats $(date +%H:%M:%S)" || echo "No changes"
           git pull --rebase origin main
           git push
