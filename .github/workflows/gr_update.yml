@@ -1,0 +1,24 @@
+name: Germany Config Extraction (Every 12 Hours)
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # هر ۱۲ ساعت (مثلاً ۱۲:۰۰ و ۲۴:۰۰ به وقت UTC)
+  workflow_dispatch:
+
+jobs:
+  extract_gr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Germany Config Manager
+        run: python -m Core.gr_manager
+
+      - name: Commit and Push GR File
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/best_GR.txt database/gr_rotation_index.txt
+          git commit -m "🇩🇪 GR Update: New Germany configs at $(date +%H:%M)" || echo "No changes"
+          git pull --rebase --autostash origin main || echo "Pull skipped"
+          git push origin main
