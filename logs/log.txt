@@ -1061,3 +1061,4 @@
 [2026-06-13T15:04:41.413788] 📤 File sent: singbox.json
 [2026-06-13T15:04:41.948861] 📤 File sent: clash_meta.yaml
 [2026-06-13T15:04:41.950204] 📎 Sent 6 files to Telegram
+[2026-06-13T16:56:58.989743] ✅ Rotation successful: Extracted 500 configs (Index 1000 to 1499) to output/rotation_500.txt
