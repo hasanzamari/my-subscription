@@ -1,17 +1,17 @@
 ⚠️ Smart Subscription Update
-🕐 2026-06-13 14:48 UTC
+🕐 2026-06-13 15:04 UTC
 
 📊 Stats:
-├ Total: `187057`
+├ Total: `187038`
 ├ Active: `0`
 ├ Health: `0.0%`
 ├ Sources: `19`
-└ New: `187057`
+└ New: `187038`
 
 📥 Quick Links:
 🔄 500 Rotating Configs (500
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/rotation500.txt
-🇮🇷 Iran Optimized (133752
+🇮🇷 Iran Optimized (133730
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/bestiran.txt
 👑 Premium Top 100 (100
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/besti.txt
@@ -21,11 +21,11 @@
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/singbox.json
 ⚔️ Clash Meta (File
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/clashmeta.yaml
-🔹 VLESS Protocol (121716
+🔹 VLESS Protocol (121694
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/bestvless.txt
-🔻 Trojan Protocol (2380
+🔻 Trojan Protocol (2379
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/besttrojan.txt
-🛡️ Reality Protocol (57505
+🛡️ Reality Protocol (57501
 └ https://raw.githubusercontent.com/hasan7z/my-subscription/main/output/bestreality.txt
 
 🚨 Alerts:
