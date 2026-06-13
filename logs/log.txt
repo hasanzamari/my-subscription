@@ -148,3 +148,37 @@
 [2026-06-13T10:08:26.858619] ✅ Wrote output/Best5000.txt (5000 configs)
 [2026-06-13T10:08:26.858791] 👑 Wrote 100 country-optimized configs to output/best_i.txt
 [2026-06-13T10:08:26.858824] ✅ ALL files generated successfully!
+[2026-06-13T10:12:21.473767] ===== RUN START =====
+[2026-06-13T10:12:21.475265] 🧹 Sources cleaned: 3 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:12:21.475334] Downloading sources...
+[2026-06-13T10:12:21.845616] ✅ Downloaded: https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T10:12:22.158784] ✅ Downloaded: https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T10:12:22.252955] ✅ Downloaded: https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt
+[2026-06-13T10:12:22.256273] [AUTO SOURCE] Added 2 new sources
+[2026-06-13T10:12:22.257159] 🧹 Sources cleaned: 5 -> 3 (Removed 2 invalid, limit: 50)
+[2026-06-13T10:12:22.257229] Parsing configs...
+[2026-06-13T10:12:22.260689]   https://github.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt: 3854 configs
+[2026-06-13T10:12:22.266504]   https://github.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt: 5855 configs
+[2026-06-13T10:12:22.268075]   https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/sub/splitted/vmess.txt: 1983 configs
+[2026-06-13T10:12:22.268121] [PARSE DONE] 11692
+[2026-06-13T10:12:22.270119] [DEDUP] 11662 unique configs
+[2026-06-13T10:12:22.270155] Updating database...
+[2026-06-13T10:12:24.564098] [DB] total=196706 new=0
+[2026-06-13T10:12:24.564178] Exporting configs...
+[2026-06-13T10:12:24.663827] [EXPORT] 196706 configs
+[2026-06-13T10:12:24.678155] ✅ Source Guardian: 0 sources blacklisted.
+[2026-06-13T10:12:24.678810] 🧹 Sources cleaned: 3 -> 3 (Removed 0 invalid, limit: 50)
+[2026-06-13T10:12:24.678869] [FINAL] 11662
+[2026-06-13T10:12:24.678919] [NEW] 0
+[2026-06-13T10:12:24.678951] ===== RUN END =====
+[2026-06-13T10:12:24.776865] Loading DB...
+[2026-06-13T10:12:25.460181] Calculating Country-Boosted scores...
+[2026-06-13T10:12:26.563978] Total unique configs: 194614
+[2026-06-13T10:12:26.747907] ✅ Wrote 96722 VLESS configs to output/best_vless.txt
+[2026-06-13T10:12:26.755266] ✅ Wrote 11770 VMESS configs to output/best_vmess.txt
+[2026-06-13T10:12:26.759434] ✅ Wrote 10850 TROJAN configs to output/best_trojan.txt
+[2026-06-13T10:12:26.780787] ✅ Wrote 53966 REALITY configs to output/best_reality.txt
+[2026-06-13T10:12:26.787360] ✅ Wrote 21281 SHADOWSOCKS configs to output/best_shadowsocks.txt
+[2026-06-13T10:12:26.943104] ✅ Generated subscription_base64.txt
+[2026-06-13T10:12:27.121472] ✅ Generated stats.md
+[2026-06-13T10:12:27.121525] ✅ ALL advanced features generated successfully!
