@@ -323,3 +323,52 @@
 [2026-06-13T10:58:47.366783] ✅ Generated output/clash_meta.yaml
 [2026-06-13T10:58:47.368285] ✅ Generated output/singbox.json
 [2026-06-13T10:58:47.368327] ✅ Modern Format Conversion completed successfully!
+[2026-06-13T11:13:46.619953] ===== RUN START =====
+[2026-06-13T11:13:46.621523] 🧹 Sources cleaned: 21 -> 13 (Removed 0 invalid, limit: 50)
+[2026-06-13T11:13:46.621604] Downloading sources (with Smart Cache)...
+[2026-06-13T11:13:46.755894] ❌ Failed (404): https://raw.githubusercontent.com/Epodonios/v2ray-configs/raw/main/All_Configs_Sub.txt
+[2026-06-13T11:13:46.798460] ❌ Failed (404): https://raw.githubusercontent.com/yebekhe/V2Hub/main/merged/base64
+[2026-06-13T11:13:46.839034] ❌ Failed (404): https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/vmess
+[2026-06-13T11:13:46.880813] ❌ Failed (404): https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/vless
+[2026-06-13T11:13:46.929338] ❌ Failed (404): https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/trojan
+[2026-06-13T11:13:46.970888] ❌ Failed (404): https://raw.githubusercontent.com/MhdiTahworworker/v2ray/main/sub/ss
+[2026-06-13T11:13:47.019502] ❌ Failed (404): https://raw.githubusercontent.com/itsyebekhe/HiN-VPN/main/subscription/normal
+[2026-06-13T11:13:47.092122] ❌ Failed (404): https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/raw/refs/heads/main/githubmirror/1.txt
+[2026-06-13T11:13:47.142249] ❌ Failed (404): https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/sub/base64
+[2026-06-13T11:13:47.183168] ❌ Failed (404): https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub.txt
+[2026-06-13T11:13:47.222474] ❌ Failed (404): https://raw.githubusercontent.com/MiSaturo/V2ray-Configs/main/Sub.txt
+[2026-06-13T11:13:47.264799] ❌ Failed (404): https://raw.githubusercontent.com/peyman3073/V2ray/main/v2ray.txt
+[2026-06-13T11:13:47.305407] ❌ Failed (404): https://raw.githubusercontent.com/azadi_az_inja_migzare/azadi_az_inja_migzare/main/Sub.txt
+[2026-06-13T11:13:47.307541] 🧹 Sources cleaned: 13 -> 13 (Removed 0 invalid, limit: 50)
+[2026-06-13T11:13:47.308713] 🔍 Searching GitHub for new v2ray repositories...
+[2026-06-13T11:13:56.268318] Parsing configs...
+[2026-06-13T11:13:56.268647] [PARSE DONE] 0
+[2026-06-13T11:13:56.268713] [DEDUP] 0 unique configs (Fingerprint verified)
+[2026-06-13T11:13:56.268743] Updating database...
+[2026-06-13T11:13:58.505196] [DB] total=196706 new=0
+[2026-06-13T11:13:58.505333] [EXPORT] 0 configs
+[2026-06-13T11:13:58.506186] 🚫 Failed source blacklisted (3 fails): https://raw.githubusercontent.com/youfoundamin/V2rayCollector/main/sub/base64
+[2026-06-13T11:13:58.506250] 🚫 Failed source blacklisted (3 fails): https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/Sub.txt
+[2026-06-13T11:13:58.506302] 🚫 Failed source blacklisted (3 fails): https://raw.githubusercontent.com/MiSaturo/V2ray-Configs/main/Sub.txt
+[2026-06-13T11:13:58.506347] 🚫 Failed source blacklisted (3 fails): https://raw.githubusercontent.com/peyman3073/V2ray/main/v2ray.txt
+[2026-06-13T11:13:58.506391] 🚫 Failed source blacklisted (3 fails): https://raw.githubusercontent.com/azadi_az_inja_migzare/azadi_az_inja_migzare/main/Sub.txt
+[2026-06-13T11:13:58.508341] ✅ Source Guardian: 5 sources blacklisted.
+[2026-06-13T11:13:58.509071] 🧹 Sources cleaned: 13 -> 8 (Removed 0 invalid, limit: 50)
+[2026-06-13T11:13:58.509132] [FINAL] 0
+[2026-06-13T11:13:58.509160] ===== RUN END =====
+[2026-06-13T11:13:58.613976] Loading DB...
+[2026-06-13T11:13:59.251649] Calculating Country-Boosted scores...
+[2026-06-13T11:14:00.493292] Total unique configs (Fingerprint verified): 194614
+[2026-06-13T11:14:01.315173] ✅ Wrote 96722 VLESS configs
+[2026-06-13T11:14:01.324345] ✅ Wrote 11770 VMESS configs
+[2026-06-13T11:14:01.329272] ✅ Wrote 10850 TROJAN configs
+[2026-06-13T11:14:01.355654] ✅ Wrote 53966 REALITY configs
+[2026-06-13T11:14:01.363312] ✅ Wrote 21281 SHADOWSOCKS configs
+[2026-06-13T11:14:01.376855] ✅ Wrote 25506 CLOUDFLARE optimized configs
+[2026-06-13T11:14:01.549994] ✅ Generated subscription_base64.txt
+[2026-06-13T11:14:01.550080] ✅ ALL advanced features generated successfully!
+[2026-06-13T11:14:01.685390] Starting Modern Format Conversion...
+[2026-06-13T11:14:01.688027] ✅ Successfully parsed 100 configs for modern formats.
+[2026-06-13T11:14:01.688450] ✅ Generated output/clash_meta.yaml
+[2026-06-13T11:14:01.689912] ✅ Generated output/singbox.json
+[2026-06-13T11:14:01.689953] ✅ Modern Format Conversion completed successfully!
