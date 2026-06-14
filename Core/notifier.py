@@ -78,8 +78,15 @@ def check_health(db, sources_count, new_configs_count):
     os.makedirs(os.path.dirname(REPORT_FILE), exist_ok=True)
     
     total = len(db)
-    active = sum(1 for i in db.values() if i.get("success", 0) > i.get("fail", 0))
-    rate = (active / total * 100) if total > 0 else 0
+    # فقط کانفیگ‌هایی که حداقل یک بار تست شده‌اند را در محاسبه سلامت در نظر بگیر
+    tested_configs = [i for i in db.values() if (i.get("success", 0) + i.get("fail", 0)) > 0]
+    
+    if len(tested_configs) > 0:
+        active = sum(1 for i in tested_configs if i.get("success", 0) > i.get("fail", 0))
+        rate = (active / len(tested_configs) * 100)
+        health_str = f"{rate:.1f}%"
+    else:
+        health_str = "Untested (Pending Nightly Test)"
     
     # لیست فایل‌های خروجی برای ارسال
     output_files = {
