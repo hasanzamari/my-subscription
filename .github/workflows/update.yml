@@ -24,7 +24,9 @@ jobs:
         run: python -m Core.smart_best
       - name: 3. Convert to Modern Formats
         run: python -m Core.format_converter
-      - name: 4. Send Telegram Notification
+      - name: 4. Generate Emergency Warp File
+        run: python -m Core.warp_manager
+      - name: 5. Send Telegram Notification
         run: |
           python3 << 'EOF'
           import json, os
@@ -35,7 +37,7 @@ jobs:
           sources_count = len([l for l in open(SOURCES_FILE, "r", encoding="utf-8") if l.strip() and not l.startswith('#')]) if os.path.exists(SOURCES_FILE) else 0
           notifier.check_health(db, sources_count, len(db))
           EOF
-      - name: 5. Commit and Push
+      - name: 6. Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
