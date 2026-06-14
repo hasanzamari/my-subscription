@@ -1,80 +1,6 @@
 {
   "outbounds": [
     {
-      "tag": "[OpenRay] 🇨🇦 CA-19006",
-      "type": "vless",
-      "server": "209.209.9.219",
-      "server_port": 3443,
-      "uuid": "c4e81f7d-3750-486e-ab67-2ae0f43969c6",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "AdSCtMttNJ-KQuURl1ynBdy8DtAbCUFG6G2qB-GbTXU",
-          "short_id": "bc755b173467c322"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-19012",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "0e37a246-c177-4116-876b-d17ef73ea11c",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "dmx.ferrarikingfr.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/amin",
-        "headers": {
-          "Host": "dmx.ferrarikingfr.ir"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-19014",
-      "type": "vless",
-      "server": "172.67.134.102",
-      "server_port": 8880,
-      "uuid": "abd3678b-f654-404c-adc7-1355865197e1",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ",
-        "headers": {
-          "Host": "vless.a-amr79.workers.dev"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-19015",
-      "type": "vless",
-      "server": "104.21.25.168",
-      "server_port": 8880,
-      "uuid": "abd3678b-f654-404c-adc7-1355865197e1",
-      "udp": true,
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ",
-        "headers": {
-          "Host": "vless.a-amr79.workers.dev"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-17722",
       "type": "trojan",
       "server": "188.114.97.3",
@@ -94,6 +20,963 @@
         "path": "/?ed=2048",
         "headers": {
           "Host": "shy-brook-df1e.amirkhan69.workers.dev"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18429",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18526",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17730",
+      "type": "trojan",
+      "server": "104.16.80.73",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18286",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17645",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-14839",
+      "type": "trojan",
+      "server": "104.17.131.88",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17307",
+      "type": "trojan",
+      "server": "104.20.6.134",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18414",
+      "type": "trojan",
+      "server": "104.18.115.61",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-12157",
+      "type": "trojan",
+      "server": "188.114.96.3",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "188.114.96.3"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17732",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18881",
+      "type": "vless",
+      "server": "104.16.6.70",
+      "server_port": 443,
+      "uuid": "30693e15-1014-443b-88dd-1232b55a06b6",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.rfiksma.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "mos.rfiksma.top"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18882",
+      "type": "vless",
+      "server": "104.16.6.70",
+      "server_port": 443,
+      "uuid": "627c3a7a-29a7-41d1-9d9e-9f809b690988",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.rfiksma.top",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "mos.rfiksma.top"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17754",
+      "type": "trojan",
+      "server": "104.16.7.70",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18329",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "188.114.97.6"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18676",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17727",
+      "type": "trojan",
+      "server": "104.18.185.26",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.gossipglove.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17756",
+      "type": "trojan",
+      "server": "104.18.139.67",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "104.18.139.67"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18699",
+      "type": "trojan",
+      "server": "ip.myip2.qzz.io",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17078",
+      "type": "trojan",
+      "server": "104.17.150.76",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17935",
+      "type": "trojan",
+      "server": "104.18.139.67",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-11962",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.gossipglove.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "188.114.98.0"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17900",
+      "type": "trojan",
+      "server": "104.20.26.246",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17080",
+      "type": "trojan",
+      "server": "104.17.150.76",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-11997",
+      "type": "trojan",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18266",
+      "type": "trojan",
+      "server": "104.18.152.233",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18332",
+      "type": "trojan",
+      "server": "104.16.174.109",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17646",
+      "type": "trojan",
+      "server": "104.19.229.21",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17771",
+      "type": "trojan",
+      "server": "104.16.117.43",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17720",
+      "type": "trojan",
+      "server": "104.17.72.206",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmloud.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18909",
+      "type": "vless",
+      "server": "45.198.105.248",
+      "server_port": 8443,
+      "uuid": "977f2eea-9f37-417b-bdc3-5abfba1e54df",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "short_id": "d3ee47fc2f553c44"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18923",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "eba407c9-7c1f-477e-977c-ba5ed81a763a",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "t1.tzteam.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "headers": {
+          "Host": "t1.tzteam.online"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18932",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 80,
+      "uuid": "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/http",
+        "headers": {
+          "Host": "de.vpnbase.net"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18935",
+      "type": "vless",
+      "server": "45.198.105.132",
+      "server_port": 8443,
+      "uuid": "977f2eea-9f37-417b-bdc3-5abfba1e54df",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "short_id": "d3ee47fc2f553c44"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19018",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "07177475-a8cd-41e5-8983-b07fd5c6afd6",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "cheetoz.pofilaserkenamaki.shop",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/safesearchprobabblynot",
+        "headers": {
+          "Host": "cheetoz.pofilaserkenamaki.shop"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19021",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "0b2f19d7-451d-454b-a09f-032a1cfc2394",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "watson.ferrarikingfr.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/watson",
+        "headers": {
+          "Host": "watson.ferrarikingfr.ir"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19026",
+      "type": "vless",
+      "server": "45.198.105.231",
+      "server_port": 8443,
+      "uuid": "977f2eea-9f37-417b-bdc3-5abfba1e54df",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "short_id": "d3ee47fc2f553c44"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19035",
+      "type": "vless",
+      "server": "104.16.0.0",
+      "server_port": 8080,
+      "uuid": "b6b230c0-3d96-4697-a8f5-4f49db3063da",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "tr-cd.sublink-vip2.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19036",
+      "type": "vless",
+      "server": "151.101.0.1",
+      "server_port": 80,
+      "uuid": "b6b230c0-3d96-4697-a8f5-4f49db3063da",
+      "udp": true,
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "max-gb1.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-19041",
+      "type": "vless",
+      "server": "188.114.97.6",
+      "server_port": 8443,
+      "uuid": "4675bc9a-950a-4ee3-b7b0-8b7c6232e971",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "bking1400cb1300.bicycleandmotorsg2.shop",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v3",
+        "headers": {
+          "Host": "188.114.97.6"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-17635",
+      "type": "vless",
+      "server": "104.16.158.249",
+      "server_port": 443,
+      "uuid": "e5cc16a6-ea42-46b2-82ae-ad2157e1641b",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "hhlfy.twiladaphne.ndjp.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "hhlfy.twiladaphne.ndjp.net"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18065",
+      "type": "trojan",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.creationlong.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.creationlong.org"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18320",
+      "type": "trojan",
+      "server": "104.18.152.97",
+      "server_port": 443,
+      "uuid": "humanity",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        }
+      }
+    },
+    {
+      "tag": "[OpenRay] 🇨🇦 CA-18894",
+      "type": "vless",
+      "server": "45.198.105.191",
+      "server_port": 8443,
+      "uuid": "f4779677-98b1-4bea-bc54-5ecfe4813732",
+      "udp": true,
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "short_id": "d3ee47fc2f553c44"
         }
       }
     },
@@ -236,52 +1119,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-18429",
-      "type": "trojan",
-      "server": "104.19.229.21",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18526",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18321",
       "type": "trojan",
       "server": "104.16.174.44",
@@ -328,98 +1165,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-17730",
-      "type": "trojan",
-      "server": "104.16.80.73",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18286",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17645",
-      "type": "trojan",
-      "server": "104.19.229.21",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-14839",
-      "type": "trojan",
-      "server": "104.17.131.88",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18831",
       "type": "trojan",
       "server": "188.114.97.6",
@@ -439,98 +1184,6 @@
         "path": "/https://chatgpt.com",
         "headers": {
           "Host": "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17307",
-      "type": "trojan",
-      "server": "104.20.6.134",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18414",
-      "type": "trojan",
-      "server": "104.18.115.61",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-12157",
-      "type": "trojan",
-      "server": "188.114.96.3",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "188.114.96.3"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17732",
-      "type": "trojan",
-      "server": "104.16.7.70",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
         }
       }
     },
@@ -673,52 +1326,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-18881",
-      "type": "vless",
-      "server": "104.16.6.70",
-      "server_port": 443,
-      "uuid": "30693e15-1014-443b-88dd-1232b55a06b6",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "sub.rfiksma.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "mos.rfiksma.top"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18882",
-      "type": "vless",
-      "server": "104.16.6.70",
-      "server_port": 443,
-      "uuid": "627c3a7a-29a7-41d1-9d9e-9f809b690988",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "sub.rfiksma.top",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "mos.rfiksma.top"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18928",
       "type": "vless",
       "server": "172.67.212.210",
@@ -803,98 +1410,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-17754",
-      "type": "trojan",
-      "server": "104.16.7.70",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18329",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "188.114.97.6"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18676",
-      "type": "trojan",
-      "server": "188.114.98.0",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17727",
-      "type": "trojan",
-      "server": "104.18.185.26",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.gossipglove.com"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-17930",
       "type": "trojan",
       "server": "104.16.7.70",
@@ -941,29 +1456,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-17756",
-      "type": "trojan",
-      "server": "104.18.139.67",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "104.18.139.67"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-12160",
       "type": "trojan",
       "server": "188.114.96.3",
@@ -983,52 +1475,6 @@
         "path": "/assignment",
         "headers": {
           "Host": "www.multiplydose.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18699",
-      "type": "trojan",
-      "server": "ip.myip2.qzz.io",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ignitelimit.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.ignitelimit.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17078",
-      "type": "trojan",
-      "server": "104.17.150.76",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
         }
       }
     },
@@ -1079,29 +1525,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-17935",
-      "type": "trojan",
-      "server": "104.18.139.67",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-18261",
       "type": "trojan",
       "server": "104.19.229.21",
@@ -1121,29 +1544,6 @@
         "path": "/assignment",
         "headers": {
           "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-11962",
-      "type": "trojan",
-      "server": "188.114.98.0",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.gossipglove.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "188.114.98.0"
         }
       }
     },
@@ -1236,52 +1636,6 @@
         "path": "/assignment",
         "headers": {
           "Host": "www.ignitelimit.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18757",
-      "type": "vless",
-      "server": "104.16.7.70",
-      "server_port": 443,
-      "uuid": "bbd67e54-1b4b-488b-a5df-708ef896ecaa",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "wf1.cerosmakom.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/api/v2/sync/data-stream",
-        "headers": {
-          "Host": "104.16.7.70"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18750",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "KaQKzYh6dd",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "dd.aananas.ir.",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2048",
-        "headers": {
-          "Host": "188.114.97.6"
         }
       }
     },
@@ -1516,29 +1870,6 @@
       }
     },
     {
-      "tag": "[OpenRay] 🇨🇦 CA-17900",
-      "type": "trojan",
-      "server": "104.20.26.246",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
       "tag": "[OpenRay] 🇨🇦 CA-12178",
       "type": "trojan",
       "server": "188.114.96.3",
@@ -1696,75 +2027,6 @@
         "path": "/?ed=2048",
         "headers": {
           "Host": "dd.aananas.ir."
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18778",
-      "type": "trojan",
-      "server": "104.16.79.73",
-      "server_port": 443,
-      "uuid": "09548571-364e-4876-8e92-98f423e73913",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "aaa.r-o-o-t2.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/I1P2U8JP51av1yhmNbaBgIw8",
-        "headers": {
-          "Host": "aaa.r-o-o-t2.ir"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18779",
-      "type": "trojan",
-      "server": "104.16.80.73",
-      "server_port": 443,
-      "uuid": "09548571-364e-4876-8e92-98f423e73913",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "aaa.r-o-o-t2.ir",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/I1P2U8JP51av1yhmNbaBgIw8",
-        "headers": {
-          "Host": "aaa.r-o-o-t2.ir"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18258",
-      "type": "vless",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "ed748c87-4201-4210-872e-f77265c27fde",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "SoftNetConnectcdn.sep-vpn.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "SoftNetConnectcdn.sep-vpn.site"
         }
       }
     },
@@ -1935,284 +2197,6 @@
       "tag": "[OpenRay] 🇨🇦 CA-18073",
       "type": "trojan",
       "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmloud.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17845",
-      "type": "trojan",
-      "server": "104.16.7.70",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmloud.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17718",
-      "type": "trojan",
-      "server": "104.17.72.206",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmloud.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-12045",
-      "type": "trojan",
-      "server": "188.114.98.0",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17647",
-      "type": "trojan",
-      "server": "104.19.229.21",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.multiplydose.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.multiplydose.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17080",
-      "type": "trojan",
-      "server": "104.17.150.76",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmloud.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-17636",
-      "type": "vless",
-      "server": "104.17.144.235",
-      "server_port": 443,
-      "uuid": "e5cc16a6-ea42-46b2-82ae-ad2157e1641b",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "hhlfy.twiladaphne.ndjp.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "hhlfy.twiladaphne.ndjp.net"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-11997",
-      "type": "trojan",
-      "server": "188.114.98.0",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18266",
-      "type": "trojan",
-      "server": "104.18.152.233",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmloud.com"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-12179",
-      "type": "trojan",
-      "server": "188.114.96.3",
-      "server_port": 443,
-      "uuid": "humanity",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "www.creationlong.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.creationlong.org"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18872",
-      "type": "trojan",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "mitivpn",
-      "udp": true,
-      "tls": {
-        "enabled": true,
-        "server_name": "2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "https://chatgpt.com",
-        "headers": {
-          "Host": "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-14192",
-      "type": "vmess",
-      "server": "104.17.77.77",
-      "server_port": 8443,
-      "uuid": "60441548-b68e-43b2-8191-e3b884be4b3c",
-      "udp": true,
-      "security": "auto",
-      "alter_id": 0,
-      "tls": {
-        "enabled": true,
-        "server_name": "v2ray1.dozapp.xyz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lMnsZUN4/",
-        "headers": {
-          "Host": "v2ray1.dozapp.xyz"
-        }
-      }
-    },
-    {
-      "tag": "[OpenRay] 🇨🇦 CA-18316",
-      "type": "trojan",
-      "server": "188.114.97.57",
       "server_port": 443,
       "uuid": "humanity",
       "udp": true,

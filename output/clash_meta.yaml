@@ -1,54 +1,5 @@
 # Clash Meta / Mihomo Configuration
 proxies:
-  - name: "[OpenRay] 🇨🇦 CA-19006"
-    type: vless
-    server: "209.209.9.219"
-    port: 3443
-    uuid: "c4e81f7d-3750-486e-ab67-2ae0f43969c6"
-    network: tcp
-    udp: true
-    tls: true
-    servername: "www.microsoft.com"
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: "AdSCtMttNJ-KQuURl1ynBdy8DtAbCUFG6G2qB-GbTXU"
-      short-id: "bc755b173467c322"
-  - name: "[OpenRay] 🇨🇦 CA-19012"
-    type: vless
-    server: "188.114.97.6"
-    port: 443
-    uuid: "0e37a246-c177-4116-876b-d17ef73ea11c"
-    network: ws
-    udp: true
-    tls: true
-    servername: "dmx.ferrarikingfr.ir"
-    client-fingerprint: firefox
-    ws-opts:
-      path: "/amin"
-      headers:
-        Host: "dmx.ferrarikingfr.ir"
-  - name: "[OpenRay] 🇨🇦 CA-19014"
-    type: vless
-    server: "172.67.134.102"
-    port: 8880
-    uuid: "abd3678b-f654-404c-adc7-1355865197e1"
-    network: ws
-    udp: true
-    ws-opts:
-      path: "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ"
-      headers:
-        Host: "vless.a-amr79.workers.dev"
-  - name: "[OpenRay] 🇨🇦 CA-19015"
-    type: vless
-    server: "104.21.25.168"
-    port: 8880
-    uuid: "abd3678b-f654-404c-adc7-1355865197e1"
-    network: ws
-    udp: true
-    ws-opts:
-      path: "/eyJqdW5rIjoiNUZVWmdPNWNpTW5LOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzI2MDI6ZmM1OTpiMDo2NDo6XSJdfQ"
-      headers:
-        Host: "vless.a-amr79.workers.dev"
   - name: "[OpenRay] 🇨🇦 CA-17722"
     type: trojan
     server: "188.114.97.3"
@@ -63,6 +14,595 @@ proxies:
       path: "/?ed=2048"
       headers:
         Host: "shy-brook-df1e.amirkhan69.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18429"
+    type: trojan
+    server: "104.19.229.21"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-18526"
+    type: trojan
+    server: "188.114.97.6"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-17730"
+    type: trojan
+    server: "104.16.80.73"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-18286"
+    type: trojan
+    server: "188.114.97.6"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-17645"
+    type: trojan
+    server: "104.19.229.21"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-14839"
+    type: trojan
+    server: "104.17.131.88"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-17307"
+    type: trojan
+    server: "104.20.6.134"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-18414"
+    type: trojan
+    server: "104.18.115.61"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-12157"
+    type: trojan
+    server: "188.114.96.3"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "188.114.96.3"
+  - name: "[OpenRay] 🇨🇦 CA-17732"
+    type: trojan
+    server: "104.16.7.70"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-18881"
+    type: vless
+    server: "104.16.6.70"
+    port: 443
+    uuid: "30693e15-1014-443b-88dd-1232b55a06b6"
+    network: ws
+    udp: true
+    tls: true
+    servername: "sub.rfiksma.top"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mos.rfiksma.top"
+  - name: "[OpenRay] 🇨🇦 CA-18882"
+    type: vless
+    server: "104.16.6.70"
+    port: 443
+    uuid: "627c3a7a-29a7-41d1-9d9e-9f809b690988"
+    network: ws
+    udp: true
+    tls: true
+    servername: "sub.rfiksma.top"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "mos.rfiksma.top"
+  - name: "[OpenRay] 🇨🇦 CA-17754"
+    type: trojan
+    server: "104.16.7.70"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-18329"
+    type: trojan
+    server: "188.114.97.6"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "188.114.97.6"
+  - name: "[OpenRay] 🇨🇦 CA-18676"
+    type: trojan
+    server: "188.114.98.0"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-17727"
+    type: trojan
+    server: "104.18.185.26"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.gossipglove.com"
+  - name: "[OpenRay] 🇨🇦 CA-17756"
+    type: trojan
+    server: "104.18.139.67"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "104.18.139.67"
+  - name: "[OpenRay] 🇨🇦 CA-18699"
+    type: trojan
+    server: "ip.myip2.qzz.io"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.ignitelimit.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "[OpenRay] 🇨🇦 CA-17078"
+    type: trojan
+    server: "104.17.150.76"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-17935"
+    type: trojan
+    server: "104.18.139.67"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-11962"
+    type: trojan
+    server: "188.114.98.0"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.gossipglove.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "188.114.98.0"
+  - name: "[OpenRay] 🇨🇦 CA-17900"
+    type: trojan
+    server: "104.20.26.246"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-17080"
+    type: trojan
+    server: "104.17.150.76"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.calmloud.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "[OpenRay] 🇨🇦 CA-11997"
+    type: trojan
+    server: "188.114.98.0"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-18266"
+    type: trojan
+    server: "104.18.152.233"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.calmloud.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "[OpenRay] 🇨🇦 CA-18332"
+    type: trojan
+    server: "104.16.174.109"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.calmloud.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "[OpenRay] 🇨🇦 CA-17646"
+    type: trojan
+    server: "104.19.229.21"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.ignitelimit.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "[OpenRay] 🇨🇦 CA-17771"
+    type: trojan
+    server: "104.16.117.43"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-17720"
+    type: trojan
+    server: "104.17.72.206"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.calmloud.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.calmloud.com"
+  - name: "[OpenRay] 🇨🇦 CA-18909"
+    type: vless
+    server: "45.198.105.248"
+    port: 8443
+    uuid: "977f2eea-9f37-417b-bdc3-5abfba1e54df"
+    network: tcp
+    udp: true
+    tls: true
+    servername: "storage.yandex.net"
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8"
+      short-id: "d3ee47fc2f553c44"
+  - name: "[OpenRay] 🇨🇦 CA-18923"
+    type: vless
+    server: "188.114.97.6"
+    port: 443
+    uuid: "eba407c9-7c1f-477e-977c-ba5ed81a763a"
+    network: ws
+    udp: true
+    tls: true
+    servername: "t1.tzteam.online"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/?ed=2048"
+      headers:
+        Host: "t1.tzteam.online"
+  - name: "[OpenRay] 🇨🇦 CA-18932"
+    type: vless
+    server: "188.114.97.6"
+    port: 80
+    uuid: "dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/http"
+      headers:
+        Host: "de.vpnbase.net"
+  - name: "[OpenRay] 🇨🇦 CA-18935"
+    type: vless
+    server: "45.198.105.132"
+    port: 8443
+    uuid: "977f2eea-9f37-417b-bdc3-5abfba1e54df"
+    network: tcp
+    udp: true
+    tls: true
+    servername: "storage.yandex.net"
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8"
+      short-id: "d3ee47fc2f553c44"
+  - name: "[OpenRay] 🇨🇦 CA-19018"
+    type: vless
+    server: "188.114.97.6"
+    port: 443
+    uuid: "07177475-a8cd-41e5-8983-b07fd5c6afd6"
+    network: ws
+    udp: true
+    tls: true
+    servername: "cheetoz.pofilaserkenamaki.shop"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/safesearchprobabblynot"
+      headers:
+        Host: "cheetoz.pofilaserkenamaki.shop"
+  - name: "[OpenRay] 🇨🇦 CA-19021"
+    type: vless
+    server: "188.114.97.6"
+    port: 443
+    uuid: "0b2f19d7-451d-454b-a09f-032a1cfc2394"
+    network: ws
+    udp: true
+    tls: true
+    servername: "watson.ferrarikingfr.ir"
+    client-fingerprint: firefox
+    ws-opts:
+      path: "/watson"
+      headers:
+        Host: "watson.ferrarikingfr.ir"
+  - name: "[OpenRay] 🇨🇦 CA-19026"
+    type: vless
+    server: "45.198.105.231"
+    port: 8443
+    uuid: "977f2eea-9f37-417b-bdc3-5abfba1e54df"
+    network: tcp
+    udp: true
+    tls: true
+    servername: "storage.yandex.net"
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8"
+      short-id: "d3ee47fc2f553c44"
+  - name: "[OpenRay] 🇨🇦 CA-19035"
+    type: vless
+    server: "104.16.0.0"
+    port: 8080
+    uuid: "b6b230c0-3d96-4697-a8f5-4f49db3063da"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "tr-cd.sublink-vip2.com"
+  - name: "[OpenRay] 🇨🇦 CA-19036"
+    type: vless
+    server: "151.101.0.1"
+    port: 80
+    uuid: "b6b230c0-3d96-4697-a8f5-4f49db3063da"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "max-gb1.global.ssl.fastly.net"
+  - name: "[OpenRay] 🇨🇦 CA-19041"
+    type: vless
+    server: "188.114.97.6"
+    port: 8443
+    uuid: "4675bc9a-950a-4ee3-b7b0-8b7c6232e971"
+    network: ws
+    udp: true
+    tls: true
+    servername: "bking1400cb1300.bicycleandmotorsg2.shop"
+    client-fingerprint: firefox
+    ws-opts:
+      path: "/api/v3"
+      headers:
+        Host: "188.114.97.6"
+  - name: "[OpenRay] 🇨🇦 CA-17635"
+    type: vless
+    server: "104.16.158.249"
+    port: 443
+    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+    network: ws
+    udp: true
+    tls: true
+    servername: "hhlfy.twiladaphne.ndjp.net"
+    client-fingerprint: random
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "hhlfy.twiladaphne.ndjp.net"
+  - name: "[OpenRay] 🇨🇦 CA-18065"
+    type: trojan
+    server: "188.114.97.6"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.creationlong.org"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.creationlong.org"
+  - name: "[OpenRay] 🇨🇦 CA-18320"
+    type: trojan
+    server: "104.18.152.97"
+    port: 443
+    uuid: "humanity"
+    network: ws
+    udp: true
+    tls: true
+    servername: "www.ignitelimit.com"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/assignment"
+      headers:
+        Host: "www.ignitelimit.com"
+  - name: "[OpenRay] 🇨🇦 CA-18894"
+    type: vless
+    server: "45.198.105.191"
+    port: 8443
+    uuid: "f4779677-98b1-4bea-bc54-5ecfe4813732"
+    network: tcp
+    udp: true
+    tls: true
+    servername: "storage.yandex.net"
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8"
+      short-id: "d3ee47fc2f553c44"
   - name: "[OpenRay] 🇨🇦 CA-18002"
     type: vless
     server: "ov-canada1.09vpn.com"
@@ -147,34 +687,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.ignitelimit.com"
-  - name: "[OpenRay] 🇨🇦 CA-18429"
-    type: trojan
-    server: "104.19.229.21"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-18526"
-    type: trojan
-    server: "188.114.97.6"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
   - name: "[OpenRay] 🇨🇦 CA-18321"
     type: trojan
     server: "104.16.174.44"
@@ -203,62 +715,6 @@ proxies:
       path: "/assignment# @shadowproxy66"
       headers:
         Host: "www.multiplydose.com"
-  - name: "[OpenRay] 🇨🇦 CA-17730"
-    type: trojan
-    server: "104.16.80.73"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-18286"
-    type: trojan
-    server: "188.114.97.6"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-17645"
-    type: trojan
-    server: "104.19.229.21"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-14839"
-    type: trojan
-    server: "104.17.131.88"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
   - name: "[OpenRay] 🇨🇦 CA-18831"
     type: trojan
     server: "188.114.97.6"
@@ -273,62 +729,6 @@ proxies:
       path: "/https://chatgpt.com"
       headers:
         Host: "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
-  - name: "[OpenRay] 🇨🇦 CA-17307"
-    type: trojan
-    server: "104.20.6.134"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-18414"
-    type: trojan
-    server: "104.18.115.61"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
-  - name: "[OpenRay] 🇨🇦 CA-12157"
-    type: trojan
-    server: "188.114.96.3"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "188.114.96.3"
-  - name: "[OpenRay] 🇨🇦 CA-17732"
-    type: trojan
-    server: "104.16.7.70"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
   - name: "[OpenRay] 🇨🇦 CA-18718"
     type: vless
     server: "188.114.96.115"
@@ -413,34 +813,6 @@ proxies:
       path: "/@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/"
       headers:
         Host: "crm.lotussec.com"
-  - name: "[OpenRay] 🇨🇦 CA-18881"
-    type: vless
-    server: "104.16.6.70"
-    port: 443
-    uuid: "30693e15-1014-443b-88dd-1232b55a06b6"
-    network: ws
-    udp: true
-    tls: true
-    servername: "sub.rfiksma.top"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "mos.rfiksma.top"
-  - name: "[OpenRay] 🇨🇦 CA-18882"
-    type: vless
-    server: "104.16.6.70"
-    port: 443
-    uuid: "627c3a7a-29a7-41d1-9d9e-9f809b690988"
-    network: ws
-    udp: true
-    tls: true
-    servername: "sub.rfiksma.top"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "mos.rfiksma.top"
   - name: "[OpenRay] 🇨🇦 CA-18928"
     type: vless
     server: "172.67.212.210"
@@ -494,62 +866,6 @@ proxies:
       path: "/vless/"
       headers:
         Host: "148.113.196.75"
-  - name: "[OpenRay] 🇨🇦 CA-17754"
-    type: trojan
-    server: "104.16.7.70"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
-  - name: "[OpenRay] 🇨🇦 CA-18329"
-    type: trojan
-    server: "188.114.97.6"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "188.114.97.6"
-  - name: "[OpenRay] 🇨🇦 CA-18676"
-    type: trojan
-    server: "188.114.98.0"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
-  - name: "[OpenRay] 🇨🇦 CA-17727"
-    type: trojan
-    server: "104.18.185.26"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.gossipglove.com"
   - name: "[OpenRay] 🇨🇦 CA-17930"
     type: trojan
     server: "104.16.7.70"
@@ -578,20 +894,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.creationlong.org"
-  - name: "[OpenRay] 🇨🇦 CA-17756"
-    type: trojan
-    server: "104.18.139.67"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "104.18.139.67"
   - name: "[OpenRay] 🇨🇦 CA-12160"
     type: trojan
     server: "188.114.96.3"
@@ -606,34 +908,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.multiplydose.com"
-  - name: "[OpenRay] 🇨🇦 CA-18699"
-    type: trojan
-    server: "ip.myip2.qzz.io"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.ignitelimit.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.ignitelimit.com"
-  - name: "[OpenRay] 🇨🇦 CA-17078"
-    type: trojan
-    server: "104.17.150.76"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
   - name: "[OpenRay] 🇨🇦 CA-17160"
     type: trojan
     server: "104.19.229.21"
@@ -662,20 +936,6 @@ proxies:
       path: "/tsghdws"
       headers:
         Host: "octopusss4.com"
-  - name: "[OpenRay] 🇨🇦 CA-17935"
-    type: trojan
-    server: "104.18.139.67"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
   - name: "[OpenRay] 🇨🇦 CA-18261"
     type: trojan
     server: "104.19.229.21"
@@ -690,20 +950,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.calmlunch.com"
-  - name: "[OpenRay] 🇨🇦 CA-11962"
-    type: trojan
-    server: "188.114.98.0"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.gossipglove.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "188.114.98.0"
   - name: "[OpenRay] 🇨🇦 CA-17297"
     type: trojan
     server: "104.20.6.134"
@@ -760,34 +1006,6 @@ proxies:
       path: "/assignment"
       headers:
         Host: "www.ignitelimit.com"
-  - name: "[OpenRay] 🇨🇦 CA-18757"
-    type: vless
-    server: "104.16.7.70"
-    port: 443
-    uuid: "bbd67e54-1b4b-488b-a5df-708ef896ecaa"
-    network: ws
-    udp: true
-    tls: true
-    servername: "wf1.cerosmakom.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/api/v2/sync/data-stream"
-      headers:
-        Host: "104.16.7.70"
-  - name: "[OpenRay] 🇨🇦 CA-18750"
-    type: trojan
-    server: "188.114.97.6"
-    port: 443
-    uuid: "KaQKzYh6dd"
-    network: ws
-    udp: true
-    tls: true
-    servername: "dd.aananas.ir."
-    client-fingerprint: firefox
-    ws-opts:
-      path: "/?ed=2048"
-      headers:
-        Host: "188.114.97.6"
   - name: "[OpenRay] 🇨🇦 CA-18770"
     type: vless
     server: "188.114.97.6"
@@ -936,20 +1154,6 @@ proxies:
       path: "https://chatgpt.com"
       headers:
         Host: "mitivpn.nl.sdsl.globdal.fastldy.com.mitivpn.site"
-  - name: "[OpenRay] 🇨🇦 CA-17900"
-    type: trojan
-    server: "104.20.26.246"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
   - name: "[OpenRay] 🇨🇦 CA-12178"
     type: trojan
     server: "188.114.96.3"
@@ -1048,48 +1252,6 @@ proxies:
       path: "/?ed=2048"
       headers:
         Host: "dd.aananas.ir."
-  - name: "[OpenRay] 🇨🇦 CA-18778"
-    type: trojan
-    server: "104.16.79.73"
-    port: 443
-    uuid: "09548571-364e-4876-8e92-98f423e73913"
-    network: ws
-    udp: true
-    tls: true
-    servername: "aaa.r-o-o-t2.ir"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/I1P2U8JP51av1yhmNbaBgIw8"
-      headers:
-        Host: "aaa.r-o-o-t2.ir"
-  - name: "[OpenRay] 🇨🇦 CA-18779"
-    type: trojan
-    server: "104.16.80.73"
-    port: 443
-    uuid: "09548571-364e-4876-8e92-98f423e73913"
-    network: ws
-    udp: true
-    tls: true
-    servername: "aaa.r-o-o-t2.ir"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/I1P2U8JP51av1yhmNbaBgIw8"
-      headers:
-        Host: "aaa.r-o-o-t2.ir"
-  - name: "[OpenRay] 🇨🇦 CA-18258"
-    type: vless
-    server: "188.114.97.6"
-    port: 443
-    uuid: "ed748c87-4201-4210-872e-f77265c27fde"
-    network: ws
-    udp: true
-    tls: true
-    servername: "SoftNetConnectcdn.sep-vpn.site"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "SoftNetConnectcdn.sep-vpn.site"
   - name: "[OpenRay] 🇨🇦 CA-18642"
     type: vless
     server: "172.66.136.20"
@@ -1192,175 +1354,6 @@ proxies:
   - name: "[OpenRay] 🇨🇦 CA-18073"
     type: trojan
     server: "188.114.97.6"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-17845"
-    type: trojan
-    server: "104.16.7.70"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-17718"
-    type: trojan
-    server: "104.17.72.206"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-12045"
-    type: trojan
-    server: "188.114.98.0"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmlunch.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmlunch.com"
-  - name: "[OpenRay] 🇨🇦 CA-17647"
-    type: trojan
-    server: "104.19.229.21"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.multiplydose.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.multiplydose.com"
-  - name: "[OpenRay] 🇨🇦 CA-17080"
-    type: trojan
-    server: "104.17.150.76"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-17636"
-    type: vless
-    server: "104.17.144.235"
-    port: 443
-    uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
-    network: ws
-    udp: true
-    tls: true
-    servername: "hhlfy.twiladaphne.ndjp.net"
-    client-fingerprint: random
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "hhlfy.twiladaphne.ndjp.net"
-  - name: "[OpenRay] 🇨🇦 CA-11997"
-    type: trojan
-    server: "188.114.98.0"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
-  - name: "[OpenRay] 🇨🇦 CA-18266"
-    type: trojan
-    server: "104.18.152.233"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-12179"
-    type: trojan
-    server: "188.114.96.3"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.creationlong.org"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.creationlong.org"
-  - name: "[OpenRay] 🇨🇦 CA-18872"
-    type: trojan
-    server: "188.114.97.6"
-    port: 443
-    uuid: "mitivpn"
-    network: ws
-    udp: true
-    tls: true
-    servername: "2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "https://chatgpt.com"
-      headers:
-        Host: "mitivpn.de.ssl.global.fastly.net.mitivpn.site"
-  - name: "[OpenRay] 🇨🇦 CA-14192"
-    type: vmess
-    server: "104.17.77.77"
-    port: 8443
-    uuid: "60441548-b68e-43b2-8191-e3b884be4b3c"
-    alterId: 0
-    cipher: auto
-    network: ws
-    udp: true
-    tls: true
-    servername: "v2ray1.dozapp.xyz"
-    ws-opts:
-      path: "/lMnsZUN4/"
-      headers:
-        Host: "v2ray1.dozapp.xyz"
-  - name: "[OpenRay] 🇨🇦 CA-18316"
-    type: trojan
-    server: "188.114.97.57"
     port: 443
     uuid: "humanity"
     network: ws
