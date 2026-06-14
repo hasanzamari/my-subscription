@@ -1,5 +1,90 @@
 # Clash Meta / Mihomo Configuration
 proxies:
+  - name: "[OpenRay] 🇨🇦 CA-18183"
+    type: vless
+    server: "172.67.130.152"
+    port: 80
+    uuid: "8850643f-605c-498a-8b0a-674448eee39a"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/?ed"
+      headers:
+        Host: "v2configlab.v2configlab18.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18818"
+    type: vless
+    server: "188.114.97.3"
+    port: 2086
+    uuid: "bba14c1d-f08c-4c9a-ac87-cf85d38d8aff"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/eyJqdW5rIjoiSzhjREpaaGVoVXpCN2NvNiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ"
+      headers:
+        Host: "tight-thunder-ce8e.hamid-r-aliakbari1379-0f0.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18874"
+    type: vless
+    server: "188.114.97.116"
+    port: 443
+    uuid: "20d3fe0d-bbe1-4a74-9a85-9b9ba548f7f0"
+    network: ws
+    udp: true
+    tls: true
+    servername: "long-sky-3151.sue100.workers.dev"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "long-sky-3151.sue100.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18878"
+    type: vless
+    server: "104.26.5.139"
+    port: 2095
+    uuid: "86c50e3a-5b87-49dd-bd20-03c7f2735e40"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/fp=randomized"
+      headers:
+        Host: "cnmfangbinxing.cnmfangbinxing-k.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18493"
+    type: vless
+    server: "104.21.11.152"
+    port: 8080
+    uuid: "d7a8ae86-9904-4f71-8fe4-d754ded610d7"
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/eyJqdW5rIjoiOHNqQ3Bqc2dTZlppTEl1IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560"
+      headers:
+        Host: "server6.diwir81236.workers.dev"
+  - name: "[OpenRay] 🇨🇦 CA-18511"
+    type: vmess
+    server: "172.67.174.37"
+    port: 80
+    uuid: "65b17c0b-0a52-4b54-9bc9-60e31397b841"
+    alterId: 0
+    cipher: auto
+    network: ws
+    udp: true
+    ws-opts:
+      path: "/65b17c0b-0a52-4b54-9bc9-60e31397b841-vmess"
+      headers:
+        Host: "accklsj.bufu.us.ci"
+  - name: "[OpenRay] 🇨🇦 CA-17970"
+    type: vless
+    server: "104.18.139.67"
+    port: 443
+    uuid: "c2f0a8f0-36fe-4a94-824b-bca271ca642b"
+    network: ws
+    udp: true
+    tls: true
+    servername: "alphacdn.alphashops.shop"
+    client-fingerprint: chrome
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "alphacdn.alphashops.shop"
   - name: "[OpenRay] 🇨🇦 CA-17722"
     type: trojan
     server: "188.114.97.3"
@@ -512,42 +597,6 @@ proxies:
     reality-opts:
       public-key: "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8"
       short-id: "d3ee47fc2f553c44"
-  - name: "[OpenRay] 🇨🇦 CA-19035"
-    type: vless
-    server: "104.16.0.0"
-    port: 8080
-    uuid: "b6b230c0-3d96-4697-a8f5-4f49db3063da"
-    network: ws
-    udp: true
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "tr-cd.sublink-vip2.com"
-  - name: "[OpenRay] 🇨🇦 CA-19036"
-    type: vless
-    server: "151.101.0.1"
-    port: 80
-    uuid: "b6b230c0-3d96-4697-a8f5-4f49db3063da"
-    network: ws
-    udp: true
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "max-gb1.global.ssl.fastly.net"
-  - name: "[OpenRay] 🇨🇦 CA-19041"
-    type: vless
-    server: "188.114.97.6"
-    port: 8443
-    uuid: "4675bc9a-950a-4ee3-b7b0-8b7c6232e971"
-    network: ws
-    udp: true
-    tls: true
-    servername: "bking1400cb1300.bicycleandmotorsg2.shop"
-    client-fingerprint: firefox
-    ws-opts:
-      path: "/api/v3"
-      headers:
-        Host: "188.114.97.6"
   - name: "[OpenRay] 🇨🇦 CA-17635"
     type: vless
     server: "104.16.158.249"
@@ -1252,48 +1301,6 @@ proxies:
       path: "/?ed=2048"
       headers:
         Host: "dd.aananas.ir."
-  - name: "[OpenRay] 🇨🇦 CA-18642"
-    type: vless
-    server: "172.66.136.20"
-    port: 443
-    uuid: "88290f6d-28d2-402f-9dd6-06d369d15a01"
-    network: ws
-    udp: true
-    tls: true
-    servername: "1016.BAGsElL-1016.WORkErS.DEV"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/eyJqdW5rIjoiVlVsc1I0cVozblZsZyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560"
-      headers:
-        Host: "1016.bagsell-1016.workers.dev"
-  - name: "[OpenRay] 🇨🇦 CA-18643"
-    type: vless
-    server: "172.66.136.20"
-    port: 443
-    uuid: "88290f6d-28d2-402f-9dd6-06d369d15a01"
-    network: ws
-    udp: true
-    tls: true
-    servername: "1016.BaGSeLL-1016.WorKeRS.DEv"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/eyJqdW5rIjoiN1k5U09ORjVkRHUiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560"
-      headers:
-        Host: "1016.bagsell-1016.workers.dev"
-  - name: "[OpenRay] 🇨🇦 CA-18877"
-    type: vless
-    server: "188.114.97.6"
-    port: 443
-    uuid: "c466ef48-fb57-40c6-808d-ee48d537844d"
-    network: ws
-    udp: true
-    tls: true
-    servername: "illbefine.kakoolnewsgg.workers.dev"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "illbefine.kakoolnewsgg.workers.dev"
   - name: "[OpenRay] 🇨🇦 CA-14307"
     type: vmess
     server: "104.17.77.77"
@@ -1340,20 +1347,6 @@ proxies:
   - name: "[OpenRay] 🇨🇦 CA-17719"
     type: trojan
     server: "188.114.96.4"
-    port: 443
-    uuid: "humanity"
-    network: ws
-    udp: true
-    tls: true
-    servername: "www.calmloud.com"
-    client-fingerprint: chrome
-    ws-opts:
-      path: "/assignment"
-      headers:
-        Host: "www.calmloud.com"
-  - name: "[OpenRay] 🇨🇦 CA-18073"
-    type: trojan
-    server: "188.114.97.6"
     port: 443
     uuid: "humanity"
     network: ws
