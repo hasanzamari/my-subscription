@@ -1,11 +1,11 @@
 ⏳ Smart Subscription Updated
-🕐 2026-06-14 11:31 UTC
+🕐 2026-06-14 12:10 UTC
 
 📊 Live Stats:
-├ 🗄️ Total DB: `195774`
+├ 🗄️ Total DB: `197375`
 ├ ❤️ Health Rate: `⏳ Pending Nightly Test`
 ├ 🔗 Active Sources: `19`
-└ 🆕 New Configs: `195774`
+└ 🆕 New Configs: `197375`
 
 📥 Quick Access Links (GitHub Pages:
 ▫️ 🔄 Rotation 500 (Every 3h (`500`
@@ -18,8 +18,8 @@
    └ https://hasan7z.github.io/my-subscription/output/trojan1.txt
 ▫️ 🛡️ Reality 1 (2500 Configs (`2500`
    └ https://hasan7z.github.io/my-subscription/output/reality1.txt
-▫️ 🌀 Warp (Emergency (`4`
-   └ https://hasan7z.github.io/my-subscription/output/warp.txt
+▫️ 🌀 Warp on Warp (Critical (`1`
+   └ https://hasan7z.github.io/my-subscription/output/warponwarp.txt
 ▫️ 🇩🇪 Germany (Every 12h (`500`
    └ https://hasan7z.github.io/my-subscription/output/bestGR.txt
 ▫️ 🔐 Base64 (Top 1000 (`1`
