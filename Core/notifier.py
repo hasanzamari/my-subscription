@@ -44,10 +44,10 @@ def send_telegram_document(file_path, caption=""):
         log(f"⚠️ File not found: {file_path}")
         return False
     
-    # بررسی حجم فایل (تلگرام حداکثر 50MB اجازه می‌دهد)
     file_size = os.path.getsize(file_path)
     if file_size > 50 * 1024 * 1024:
-        log(f"⚠️ File too large ({file_size / 1024 / 1024:.1f}MB): {file_path}")        return False
+        log(f"⚠️ File too large ({file_size / 1024 / 1024:.1f}MB): {file_path}")
+        return False
     
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendDocument"
     
@@ -72,16 +72,13 @@ def send_telegram_document(file_path, caption=""):
         return False
 
 def build_pages_link(filename):
-    """ساخت لینک مستقیم از طریق GitHub Pages (سریع‌تر و بدون محدودیت)"""
+    """ساخت لینک مستقیم از طریق GitHub Pages"""
     return f"https://{GITHUB_USERNAME}.github.io/my-subscription/output/{filename}"
-
 def check_health(db, sources_count, new_configs_count):
     """بررسی سلامت، ساخت گزارش متنی + لینک، و ارسال فایل‌ها"""
     os.makedirs(os.path.dirname(REPORT_FILE), exist_ok=True)
     
     total = len(db)
-    
-    # ✅ اصلاح محاسبه سلامت: فقط کانفیگ‌هایی که حداقل یک بار تست شده‌اند
     tested_configs = [i for i in db.values() if (i.get("success", 0) + i.get("fail", 0)) > 0]
     
     if len(tested_configs) > 0:
@@ -91,18 +88,17 @@ def check_health(db, sources_count, new_configs_count):
     else:
         health_str = "⏳ Pending Nightly Test"
 
-    # لیست فایل‌های مهم برای نمایش لینک و ارسال
     important_files = [
         ("rotation_500.txt", "🔄 Rotation 500 (Every 3h)"),
         ("iran_1.txt", "🇮🇷 Iran Mix 1 (2500 Configs)"),
         ("vless_1.txt", "🔹 VLESS 1 (2500 Configs)"),
-        ("trojan_1.txt", "🔻 Trojan 1 (2500 Configs)"),        ("reality_1.txt", "🛡️ Reality 1 (2500 Configs)"),
+        ("trojan_1.txt", "🔻 Trojan 1 (2500 Configs)"),
+        ("reality_1.txt", "🛡️ Reality 1 (2500 Configs)"),
         ("warp.txt", "🌀 Warp (Emergency)"),
         ("best_GR.txt", "🇩🇪 Germany (Every 12h)"),
         ("subscription_base64.txt", "🔐 Base64 (Top 1000)")
     ]
     
-    # ساخت پیام متنی زیبا
     try:
         health_value = float(health_str.replace('%', ''))
         status_emoji = "✅" if health_value > 50 else "⚠️"
@@ -138,16 +134,13 @@ def check_health(db, sources_count, new_configs_count):
     msg += f"\n🔗 *Full Dashboard & All Links:*\n"
     msg += f"👉 [Click Here](https://github.com/{GITHUB_REPO})"
     
-    # ذخیره گزارش محلی
     local_report = msg.replace("*", "").replace("_", "").replace("[Open Link](", "").replace(")", "")
     with open(REPORT_FILE, "w", encoding="utf-8") as f:
         f.write(local_report)
     
     log(f"📋 Report saved to {REPORT_FILE}")
+    send_telegram_message(msg)
     
-    # ۱. ارسال پیام متنی حاوی لینک‌ها    send_telegram_message(msg)
-    
-    # ۲. ارسال فایل‌های مهم به صورت Document
     log("📎 Starting to send files as documents...")
     sent_count = 0
     for fpath, label, count in file_info_for_docs:
@@ -156,11 +149,9 @@ def check_health(db, sources_count, new_configs_count):
             sent_count += 1
             
     log(f"✅ Notification complete: {sent_count} files sent to Telegram.")
-    
     return True
 
 if __name__ == "__main__":
-    # تست محلی (اختیاری)
     test_db = {
         "h1": {"success": 10, "fail": 2},
         "h2": {"success": 0, "fail": 0},
