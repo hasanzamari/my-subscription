@@ -1,20 +1,14 @@
-# فایل‌های بزرگ و محلی
+# ❌ این فایل‌ها هرگز آپلود نشوند (حجم بالا یا محرمانه)
 database/database.json
 database/source_cache.json
 database/sources_health.json
 output/all.txt
-output/subscription_base64.txt
 
-# فایل‌های موقت
+# ✅ این فایل‌ها مجاز به آپلود هستند (حجم کم و کاربردی)
+# output/subscription_base64.txt  (این خط را حذف کردیم تا آپلود شود)
+
+# فایل‌های موقت پایتون
 __pycache__/
 *.pyc
 *.pyo
-cleanup_report.txt
-
-# فایل‌های سیستمی
-.DS_Store
-Thumbs.db
-
-# فایل‌های زیپ
-*.zip
-*.rar
+*.log
