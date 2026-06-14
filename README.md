@@ -30,7 +30,7 @@
 ## 🎯 Specialized & Emergency Files
 | File Name | Best For | Link |
 |-----------|----------|------|
-| **🌀 Warp (Emergency)** | Severe internet disruptions / Filtering | [Click Here](https://hasan7z.github.io/my-subscription/output/warp.txt) |
+| **🌀 Warp on Warp (Critical)** | Extreme filtering / WoW protocol | [Click Here](https://hasan7z.github.io/my-subscription/output/warp_on_warp.txt) |
 | **🔄 Rotation 500** | Ultra-fast rotating 500 configs (Every 3h) | [Click Here](https://hasan7z.github.io/my-subscription/output/rotation_500.txt) |
 | **🇩🇪 Best Germany (GR)** | Stable Frankfurt/Germany configs (Every 12h) | [Click Here](https://hasan7z.github.io/my-subscription/output/best_GR.txt) |
 | **🔐 Base64 (Top 2000)** | v2rayNG / Standard Clients (Lightweight) | [Click Here](https://hasan7z.github.io/my-subscription/output/subscription_base64.txt) |
