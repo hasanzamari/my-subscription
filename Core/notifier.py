@@ -94,7 +94,7 @@ def check_health(db, sources_count, new_configs_count):
         ("vless_1.txt", "🔹 VLESS 1 (2500 Configs)"),
         ("trojan_1.txt", "🔻 Trojan 1 (2500 Configs)"),
         ("reality_1.txt", "🛡️ Reality 1 (2500 Configs)"),
-        ("warp.txt", "🌀 Warp (Emergency)"),
+        ("warp_on_warp.txt", "🌀 Warp on Warp (Critical)"),
         ("best_GR.txt", "🇩🇪 Germany (Every 12h)"),
         ("subscription_base64.txt", "🔐 Base64 (Top 1000)")
     ]
