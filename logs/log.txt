@@ -1257,3 +1257,25 @@
 [2026-06-14T04:44:27.305292] 📤 File sent: clash_meta.yaml
 [2026-06-14T04:44:27.306489] 📎 Sent 6 files to Telegram
 [2026-06-14T05:16:28.364898] ✅ Rotation successful: Extracted 500 configs (Index 2500 to 2999) to output/rotation_500.txt
+[2026-06-14T09:15:03.052293] 🚀 Starting Multi-File Universal Rotation...
+[2026-06-14T09:15:03.208634] ✅ Generated output/vless_1.txt (2500 configs)
+[2026-06-14T09:15:03.209680] ✅ Generated output/vless_2.txt (2500 configs)
+[2026-06-14T09:15:03.210722] ✅ Generated output/vless_3.txt (2500 configs)
+[2026-06-14T09:15:03.210817] 🔄 vless rotation complete: 3 files created. Next index: 2500
+[2026-06-14T09:15:03.228593] ✅ Generated output/trojan_1.txt (2500 configs)
+[2026-06-14T09:15:03.229551] ✅ Generated output/trojan_2.txt (2500 configs)
+[2026-06-14T09:15:03.230484] ✅ Generated output/trojan_3.txt (2500 configs)
+[2026-06-14T09:15:03.230557] 🔄 trojan rotation complete: 3 files created. Next index: 236
+[2026-06-14T09:15:03.234379] ✅ Generated output/vmess_1.txt (2500 configs)
+[2026-06-14T09:15:03.235636] ✅ Generated output/vmess_2.txt (2500 configs)
+[2026-06-14T09:15:03.236901] ✅ Generated output/vmess_3.txt (2500 configs)
+[2026-06-14T09:15:03.236973] 🔄 vmess rotation complete: 3 files created. Next index: 474
+[2026-06-14T09:15:03.320770] ✅ Generated output/reality_1.txt (2500 configs)
+[2026-06-14T09:15:03.321980] ✅ Generated output/reality_2.txt (2500 configs)
+[2026-06-14T09:15:03.323149] ✅ Generated output/reality_3.txt (2500 configs)
+[2026-06-14T09:15:03.323226] 🔄 reality rotation complete: 3 files created. Next index: 2500
+[2026-06-14T09:15:03.506339] ✅ Generated output/iran_1.txt (2500 configs)
+[2026-06-14T09:15:03.507473] ✅ Generated output/iran_2.txt (2500 configs)
+[2026-06-14T09:15:03.508562] ✅ Generated output/iran_3.txt (2500 configs)
+[2026-06-14T09:15:03.508639] 🔄 iran rotation complete: 3 files created. Next index: 2500
+[2026-06-14T09:15:03.524907] ✅ Multi-File Rotation completed: 5/5 protocols processed.
